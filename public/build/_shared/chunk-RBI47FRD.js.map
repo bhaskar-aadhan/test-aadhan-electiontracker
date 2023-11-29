@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../app/assets/images/index.js"],
-  "sourcesContent": ["// REMIX HMR BEGIN\nimport * as __hmr__ from \"remix:hmr\";\nif (import.meta) {\nimport.meta.hot = __hmr__.createHotContext(\n//@ts-expect-error\n\"app/assets/images/index.js\"\n);\nimport.meta.hot.lastModified = \"1701235457444.1694\";\n}\n// REMIX HMR END\n\nimport aadhanLogo from  './aadhan-logo.svg';\nimport aadhanAppLogo from  './aadhan-app-logo.svg';\nimport downArrowIcon from './down-arrow.svg';\nimport indiaMapImg from './india-map.svg';\nimport voteImg from './vote.svg';\nimport vottingBoothImg from './votting-booth.svg';\nimport chevronright from './chevron-right.svg';\n\nexport {\n    aadhanLogo,\n    aadhanAppLogo,\n    downArrowIcon,\n    indiaMapImg,\n    voteImg,\n    vottingBoothImg,\n    chevronright,\n}"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAEA,IAAI,aAAa;AACjB,cAAY,MAAc;AAAA;AAAA,IAE1B;AAAA,EACA;AACA,cAAY,IAAI,eAAe;AAC/B;",
-  "names": []
-}
