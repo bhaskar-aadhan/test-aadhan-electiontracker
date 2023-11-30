@@ -4,8 +4,7 @@ import { TabBar, StateLevel, ConstituencyLevel, Share } from '.';
 import { aadhanLogo } from '~/assets/images';
 
 const Constituency = () => {
-    const [select, setSelect] = useContext(ConstituencyContext);
-    console.log("iT", select);
+    const [ select, setSelect] = useContext(ConstituencyContext);
     return (
         <div className='bg-[#050D3E] min-h-screen text-white pt-[1rem]'>
             <div className="brand-mobile-logo pt-[1rem] pb-[2rem]">

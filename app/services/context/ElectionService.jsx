@@ -6,9 +6,6 @@ export const ElectionContext = createContext("aadhan");
 export const WebscoketProvider = ({ children }) => {
   const [webSocketData, setWebSocketData] = useState(null);
   const [stateName, setStateName] = useState("Telangana");
-  useEffect(() => {
-    console.log("window", window.FocusEvent);
-  }, []);
 
   //WEBSOCKET
   useEffect(() => {

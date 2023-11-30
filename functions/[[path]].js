@@ -3332,7 +3332,7 @@ Your code should look like:
 3. You might have more than one copy of React in the same app
 See https://reactjs.org/link/invalid-hook-call for tips about how to debug and fix this problem.`), dispatcher;
       }
-      function useContext10(Context) {
+      function useContext11(Context) {
         var dispatcher = resolveDispatcher();
         if (Context._context !== void 0) {
           var realContext = Context._context;
@@ -3352,7 +3352,7 @@ See https://reactjs.org/link/invalid-hook-call for tips about how to debug and f
         var dispatcher = resolveDispatcher();
         return dispatcher.useRef(initialValue);
       }
-      function useEffect11(create, deps) {
+      function useEffect12(create, deps) {
         var dispatcher = resolveDispatcher();
         return dispatcher.useEffect(create, deps);
       }
@@ -3881,7 +3881,7 @@ Check the top-level render call using <` + parentName + ">.");
         toArray,
         only: onlyChild
       };
-      exports.Children = Children3, exports.Component = Component3, exports.Fragment = REACT_FRAGMENT_TYPE, exports.Profiler = REACT_PROFILER_TYPE, exports.PureComponent = PureComponent, exports.StrictMode = REACT_STRICT_MODE_TYPE, exports.Suspense = REACT_SUSPENSE_TYPE, exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = ReactSharedInternals, exports.cloneElement = cloneElement$1, exports.createContext = createContext6, exports.createElement = createElement$1, exports.createFactory = createFactory, exports.createRef = createRef, exports.forwardRef = forwardRef13, exports.isValidElement = isValidElement2, exports.lazy = lazy, exports.memo = memo2, exports.startTransition = startTransition, exports.unstable_act = act, exports.useCallback = useCallback5, exports.useContext = useContext10, exports.useDebugValue = useDebugValue, exports.useDeferredValue = useDeferredValue, exports.useEffect = useEffect11, exports.useId = useId, exports.useImperativeHandle = useImperativeHandle, exports.useInsertionEffect = useInsertionEffect, exports.useLayoutEffect = useLayoutEffect4, exports.useMemo = useMemo7, exports.useReducer = useReducer, exports.useRef = useRef7, exports.useState = useState15, exports.useSyncExternalStore = useSyncExternalStore, exports.useTransition = useTransition, exports.version = ReactVersion, typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ < "u" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop == "function" && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
+      exports.Children = Children3, exports.Component = Component3, exports.Fragment = REACT_FRAGMENT_TYPE, exports.Profiler = REACT_PROFILER_TYPE, exports.PureComponent = PureComponent, exports.StrictMode = REACT_STRICT_MODE_TYPE, exports.Suspense = REACT_SUSPENSE_TYPE, exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = ReactSharedInternals, exports.cloneElement = cloneElement$1, exports.createContext = createContext6, exports.createElement = createElement$1, exports.createFactory = createFactory, exports.createRef = createRef, exports.forwardRef = forwardRef13, exports.isValidElement = isValidElement2, exports.lazy = lazy, exports.memo = memo2, exports.startTransition = startTransition, exports.unstable_act = act, exports.useCallback = useCallback5, exports.useContext = useContext11, exports.useDebugValue = useDebugValue, exports.useDeferredValue = useDeferredValue, exports.useEffect = useEffect12, exports.useId = useId, exports.useImperativeHandle = useImperativeHandle, exports.useInsertionEffect = useInsertionEffect, exports.useLayoutEffect = useLayoutEffect4, exports.useMemo = useMemo7, exports.useReducer = useReducer, exports.useRef = useRef7, exports.useState = useState15, exports.useSyncExternalStore = useSyncExternalStore, exports.useTransition = useTransition, exports.version = ReactVersion, typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ < "u" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop == "function" && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
     })();
   }
 });
@@ -26742,7 +26742,7 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
       function readContext$1(context) {
         return isInHookUserCodeInDev && error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo()."), readContext(context);
       }
-      function useContext10(context) {
+      function useContext11(context) {
         return currentHookNameInDev = "useContext", resolveCurrentlyRenderingComponent(), readContext(context);
       }
       function basicStateReducer(state, action) {
@@ -26864,7 +26864,7 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
       }
       var Dispatcher = {
         readContext: readContext$1,
-        useContext: useContext10,
+        useContext: useContext11,
         useMemo: useMemo7,
         useReducer,
         useRef: useRef7,
@@ -30294,7 +30294,7 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
       function readContext$1(context) {
         return isInHookUserCodeInDev && error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo()."), readContext(context);
       }
-      function useContext10(context) {
+      function useContext11(context) {
         return currentHookNameInDev = "useContext", resolveCurrentlyRenderingComponent(), readContext(context);
       }
       function basicStateReducer(state, action) {
@@ -30416,7 +30416,7 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
       }
       var Dispatcher = {
         readContext: readContext$1,
-        useContext: useContext10,
+        useContext: useContext11,
         useMemo: useMemo7,
         useReducer,
         useRef: useRef7,
@@ -33748,17 +33748,7 @@ __export(constituencyresults_exports, {
 var import_react38 = __toESM(require_react(), 1);
 
 // app/services/context/ConstituencyService.jsx
-var import_react3 = __toESM(require_react(), 1), import_jsx_dev_runtime3 = __toESM(require_jsx_dev_runtime(), 1), ConstituencyContext = (0, import_react3.createContext)("aadhan mobile"), ConstituencyProvider = ({ children }) => {
-  let [select, setSelect] = (0, import_react3.useState)(!0), [state, setState] = (0, import_react3.useState)("Telangana"), [constituency, setConstituency] = (0, import_react3.useState)("Gajwel");
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(ConstituencyContext.Provider, { value: [select, setSelect, state, setState, constituency, setConstituency], children }, void 0, !1, {
-    fileName: "app/services/context/ConstituencyService.jsx",
-    lineNumber: 10,
-    columnNumber: 7
-  }, this);
-};
-
-// app/components/ConstituencyResultsMobile/Constituency.jsx
-var import_react4 = __toESM(require_react(), 1);
+var import_react3 = __toESM(require_react(), 1);
 
 // app/assets/images/aadhan-logo.svg
 var aadhan_logo_default = "/build/_assets/aadhan-logo-3SWK7PN4.svg";
@@ -33793,99 +33783,151 @@ var Election_default = "/build/_assets/Election-NQWMVO7I.jpg";
 // app/assets/images/share.svg
 var share_default = "/build/_assets/share-5ZP2PDGS.svg";
 
+// app/services/context/ConstituencyService.jsx
+var import_jsx_dev_runtime3 = __toESM(require_jsx_dev_runtime(), 1), ConstituencyContext = (0, import_react3.createContext)("aadhan mobile"), ConstituencyProvider = ({ children }) => {
+  let [webSocketData, setWebSocketData] = (0, import_react3.useState)(null), [select, setSelect] = (0, import_react3.useState)(!0), [state, setState] = (0, import_react3.useState)("Telangana"), [constituency, setConstituency] = (0, import_react3.useState)("Gajwel");
+  return (0, import_react3.useEffect)(() => {
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    function handleVisibilityChange() {
+      document.visibilityState === "visible" && initializeWebSocket();
+    }
+    let initializeWebSocket = () => {
+      console.log("initializeWebSocket");
+      let socket = new WebSocket(
+        "wss://stage-cmsapis.aadhan.in/election-results/ws"
+      );
+      socket.onopen = () => {
+        console.log("WebSocket connection opened");
+      }, socket.onmessage = (event) => {
+        let wsdata = event.data, wsData = JSON.parse(wsdata);
+        setWebSocketData(wsData.avg_party_results), console.log("websocket data: ", wsData, typeof wsData);
+      }, socket.onclose = (event) => {
+        console.log(
+          `WebSocket connection closed code=${event.code}, reason=${event.reason}`
+        ), event.wasClean ? console.log(
+          `WebSocket connection closed cleanly, code=${event.code}, reason=${event.reason}`
+        ) : console.error("WebSocket connection abruptly closed");
+      }, socket.onerror = (error) => {
+        console.error("WebSocket error:", error);
+      };
+    };
+    initializeWebSocket();
+  }, []), webSocketData === null ? /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "min-h-screen grid place-content-center", style: { background: "linear-gradient( -80deg , #d7e9ff, #7db3ff, #d7e9ff)" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("img", { src: ballot_1_default, alt: "ballot gif" }, void 0, !1, {
+    fileName: "app/services/context/ConstituencyService.jsx",
+    lineNumber: 60,
+    columnNumber: 11
+  }, this) }, void 0, !1, {
+    fileName: "app/services/context/ConstituencyService.jsx",
+    lineNumber: 59,
+    columnNumber: 9
+  }, this) }, void 0, !1, {
+    fileName: "app/services/context/ConstituencyService.jsx",
+    lineNumber: 58,
+    columnNumber: 7
+  }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(ConstituencyContext.Provider, { value: [webSocketData, select, setSelect, state, setState, constituency, setConstituency], children }, void 0, !1, {
+    fileName: "app/services/context/ConstituencyService.jsx",
+    lineNumber: 66,
+    columnNumber: 7
+  }, this);
+};
+
 // app/components/ConstituencyResultsMobile/Constituency.jsx
+var import_react4 = __toESM(require_react(), 1);
 var import_jsx_dev_runtime4 = __toESM(require_jsx_dev_runtime(), 1), Constituency = () => {
   let [select, setSelect] = (0, import_react4.useContext)(ConstituencyContext);
-  return console.log("iT", select), /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "bg-[#050D3E] min-h-screen text-white pt-[1rem]", children: [
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "bg-[#050D3E] min-h-screen text-white pt-[1rem]", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "brand-mobile-logo pt-[1rem] pb-[2rem]", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("img", { src: aadhan_logo_default, alt: "aadhan app logo", className: "block mx-auto w-[23%]" }, void 0, !1, {
       fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-      lineNumber: 12,
+      lineNumber: 11,
       columnNumber: 17
     }, this) }, void 0, !1, {
       fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-      lineNumber: 11,
+      lineNumber: 10,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(TabBar_default, {}, void 0, !1, {
       fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-      lineNumber: 14,
+      lineNumber: 13,
       columnNumber: 13
     }, this),
     select ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(StateLevel_default, {}, void 0, !1, {
       fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-      lineNumber: 17,
+      lineNumber: 16,
       columnNumber: 17
     }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(ConstituencyLevel_default, {}, void 0, !1, {
       fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-      lineNumber: 19,
+      lineNumber: 18,
       columnNumber: 17
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "w-[95%] mx-auto mt-[2rem]", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(Share_default, {}, void 0, !1, {
       fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-      lineNumber: 22,
+      lineNumber: 21,
       columnNumber: 17
     }, this) }, void 0, !1, {
       fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-      lineNumber: 21,
+      lineNumber: 20,
       columnNumber: 13
     }, this)
   ] }, void 0, !0, {
     fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-    lineNumber: 10,
+    lineNumber: 9,
     columnNumber: 9
   }, this);
 }, Constituency_default = Constituency;
 
 // app/components/ConstituencyResultsMobile/StateLevel.jsx
 var import_react5 = __toESM(require_react(), 1);
-var import_jsx_dev_runtime5 = __toESM(require_jsx_dev_runtime(), 1), StateLevel = () => /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "entity-1-container w-[95%] my-3 mx-auto", children: [
-  /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "dropdown-mobile-continer w-full", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Dropdown_default, {}, void 0, !1, {
-    fileName: "app/components/ConstituencyResultsMobile/StateLevel.jsx",
-    lineNumber: 8,
-    columnNumber: 17
-  }, this) }, void 0, !1, {
-    fileName: "app/components/ConstituencyResultsMobile/StateLevel.jsx",
-    lineNumber: 7,
-    columnNumber: 13
-  }, this),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "results-mobile-container my-3", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(PartyResults_default, {}, void 0, !1, {
-    fileName: "app/components/ConstituencyResultsMobile/StateLevel.jsx",
-    lineNumber: 11,
-    columnNumber: 17
-  }, this) }, void 0, !1, {
-    fileName: "app/components/ConstituencyResultsMobile/StateLevel.jsx",
-    lineNumber: 10,
-    columnNumber: 13
-  }, this),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("p", { className: "my-3", children: [
-    "Total Seats: ",
-    ""
-  ] }, void 0, !0, {
-    fileName: "app/components/ConstituencyResultsMobile/StateLevel.jsx",
-    lineNumber: 13,
-    columnNumber: 13
-  }, this),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "flex justify-start items-center gap-2 my-2", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("p", { children: "Magic figure:" }, void 0, !1, {
+var import_jsx_dev_runtime5 = __toESM(require_jsx_dev_runtime(), 1), StateLevel = () => {
+  let [webSocketData] = (0, import_react5.useContext)(ConstituencyContext);
+  return console.log("ws component data", webSocketData), /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "entity-1-container w-[95%] my-3 mx-auto", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "dropdown-mobile-continer w-full", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Dropdown_default, {}, void 0, !1, {
       fileName: "app/components/ConstituencyResultsMobile/StateLevel.jsx",
-      lineNumber: 15,
+      lineNumber: 11,
       columnNumber: 17
+    }, this) }, void 0, !1, {
+      fileName: "app/components/ConstituencyResultsMobile/StateLevel.jsx",
+      lineNumber: 10,
+      columnNumber: 13
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "w-fit px-4 bg-[#FFA500] text-black rounded-md font-medium", children: "" }, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "results-mobile-container my-3", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(PartyResults_default, {}, void 0, !1, {
+      fileName: "app/components/ConstituencyResultsMobile/StateLevel.jsx",
+      lineNumber: 14,
+      columnNumber: 17
+    }, this) }, void 0, !1, {
+      fileName: "app/components/ConstituencyResultsMobile/StateLevel.jsx",
+      lineNumber: 13,
+      columnNumber: 13
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("p", { className: "my-3", children: [
+      "Total Seats: ",
+      ""
+    ] }, void 0, !0, {
       fileName: "app/components/ConstituencyResultsMobile/StateLevel.jsx",
       lineNumber: 16,
-      columnNumber: 17
+      columnNumber: 13
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "flex justify-start items-center gap-2 my-2", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("p", { children: "Magic figure:" }, void 0, !1, {
+        fileName: "app/components/ConstituencyResultsMobile/StateLevel.jsx",
+        lineNumber: 18,
+        columnNumber: 17
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "w-fit px-4 bg-[#FFA500] text-black rounded-md font-medium", children: "" }, void 0, !1, {
+        fileName: "app/components/ConstituencyResultsMobile/StateLevel.jsx",
+        lineNumber: 19,
+        columnNumber: 17
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/components/ConstituencyResultsMobile/StateLevel.jsx",
+      lineNumber: 17,
+      columnNumber: 13
     }, this)
   ] }, void 0, !0, {
     fileName: "app/components/ConstituencyResultsMobile/StateLevel.jsx",
-    lineNumber: 14,
-    columnNumber: 13
-  }, this)
-] }, void 0, !0, {
-  fileName: "app/components/ConstituencyResultsMobile/StateLevel.jsx",
-  lineNumber: 6,
-  columnNumber: 9
-}, this), StateLevel_default = StateLevel;
+    lineNumber: 9,
+    columnNumber: 9
+  }, this);
+}, StateLevel_default = StateLevel;
 
 // app/components/ConstituencyResultsMobile/ConstituencyLevel.jsx
 var import_react6 = __toESM(require_react(), 1);
@@ -34006,7 +34048,7 @@ function $c512c27ab02ef895$export$fd42f52fd3ae1109(rootComponentName, defaultCon
       value
     }, children);
   }
-  function useContext10(consumerName) {
+  function useContext11(consumerName) {
     let context = (0, import_react9.useContext)(Context);
     if (context)
       return context;
@@ -34016,7 +34058,7 @@ function $c512c27ab02ef895$export$fd42f52fd3ae1109(rootComponentName, defaultCon
   }
   return Provider.displayName = rootComponentName + "Provider", [
     Provider,
-    useContext10
+    useContext11
   ];
 }
 function $c512c27ab02ef895$export$50c7b4e9d9f19c1(scopeName, createContextScopeDeps = []) {
@@ -34036,7 +34078,7 @@ function $c512c27ab02ef895$export$50c7b4e9d9f19c1(scopeName, createContextScopeD
         value
       }, children);
     }
-    function useContext10(consumerName, scope) {
+    function useContext11(consumerName, scope) {
       let Context = scope?.[scopeName][index2] || BaseContext, context = (0, import_react9.useContext)(Context);
       if (context)
         return context;
@@ -34046,7 +34088,7 @@ function $c512c27ab02ef895$export$50c7b4e9d9f19c1(scopeName, createContextScopeD
     }
     return Provider.displayName = rootComponentName + "Provider", [
       Provider,
-      useContext10
+      useContext11
     ];
   }
   let createScope = () => {
@@ -41078,7 +41120,7 @@ async function copyTextToClipboard(text) {
 
 // app/components/ConstituencyResultsMobile/Share.jsx
 var import_jsx_dev_runtime16 = __toESM(require_jsx_dev_runtime(), 1), Share = () => {
-  let [copyText, setCopyText] = (0, import_react36.useState)("https://aadhan.in"), [isClicked, setIsClicked] = (0, import_react36.useState)(!1);
+  let [copyText, setCopyText] = (0, import_react36.useState)("https://adan.page.link/RUFSiafnb2NnqkRF6"), [isClicked, setIsClicked] = (0, import_react36.useState)(!1);
   return /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(Dialog, { className: "rounded-md", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(DialogTrigger, { asChild: !0, children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(Button, { className: "table__shadow rounded-full p-1 w-8 h-8 border-0 bg-blue-400 hover:rotate-[20deg] transition-transform ", variant: "outline", children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("img", { src: share_default, className: "hover:text-[black]", alt: "share" }, void 0, !1, {
       fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
@@ -41212,8 +41254,6 @@ var import_react39 = __toESM(require_react(), 1);
 var import_jsx_dev_runtime18 = __toESM(require_jsx_dev_runtime(), 1), ElectionContext = (0, import_react39.createContext)("aadhan"), WebscoketProvider = ({ children }) => {
   let [webSocketData, setWebSocketData] = (0, import_react39.useState)(null), [stateName, setStateName] = (0, import_react39.useState)("Telangana");
   return (0, import_react39.useEffect)(() => {
-    console.log("window", window.FocusEvent);
-  }, []), (0, import_react39.useEffect)(() => {
     document.addEventListener("visibilitychange", handleVisibilityChange);
     function handleVisibilityChange() {
       document.visibilityState === "visible" && initializeWebSocket();
@@ -41241,19 +41281,19 @@ var import_jsx_dev_runtime18 = __toESM(require_jsx_dev_runtime(), 1), ElectionCo
     initializeWebSocket();
   }, []), webSocketData === null ? /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "min-h-screen grid place-content-center", style: { background: "linear-gradient( -80deg , #d7e9ff, #7db3ff, #d7e9ff)" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "", children: /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("img", { src: ballot_1_default, alt: "ballot gif" }, void 0, !1, {
     fileName: "app/services/context/ElectionService.jsx",
-    lineNumber: 61,
+    lineNumber: 58,
     columnNumber: 11
   }, this) }, void 0, !1, {
     fileName: "app/services/context/ElectionService.jsx",
-    lineNumber: 60,
+    lineNumber: 57,
     columnNumber: 9
   }, this) }, void 0, !1, {
     fileName: "app/services/context/ElectionService.jsx",
-    lineNumber: 59,
+    lineNumber: 56,
     columnNumber: 7
   }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(ElectionContext.Provider, { value: [webSocketData, stateName, setStateName], children }, void 0, !1, {
     fileName: "app/services/context/ElectionService.jsx",
-    lineNumber: 67,
+    lineNumber: 64,
     columnNumber: 5
   }, this);
 };
@@ -41764,7 +41804,7 @@ var import_jsx_dev_runtime27 = __toESM(require_jsx_dev_runtime(), 1), widget = (
 }, this), widget_default = widget;
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-MS4WYGOM.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-NEMJIZPC.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XGDSMD3A.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-EYZLLD6D.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-ZFEIBNXW.js", imports: ["/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults": { id: "routes/constituencyresults", parentId: "root", path: "constituencyresults", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults-CEBLTI7D.js", imports: ["/build/_shared/chunk-5JYQUXBT.js", "/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults": { id: "routes/electionresults", parentId: "root", path: "electionresults", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults-UTQ7LTWB.js", imports: ["/build/_shared/chunk-5JYQUXBT.js", "/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/widget": { id: "routes/widget", parentId: "root", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/widget-NII7TG56.js", imports: ["/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "28a16949", hmr: { runtime: "/build/_shared/chunk-XGDSMD3A.js", timestamp: 1701348778767 }, url: "/build/manifest-28A16949.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-MS4WYGOM.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-NEMJIZPC.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XGDSMD3A.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-EYZLLD6D.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-ZFEIBNXW.js", imports: ["/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults": { id: "routes/constituencyresults", parentId: "root", path: "constituencyresults", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults-PLGCWE27.js", imports: ["/build/_shared/chunk-5JYQUXBT.js", "/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults": { id: "routes/electionresults", parentId: "root", path: "electionresults", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults-P6JNBPVI.js", imports: ["/build/_shared/chunk-5JYQUXBT.js", "/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/widget": { id: "routes/widget", parentId: "root", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/widget-NII7TG56.js", imports: ["/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "91d5a422", hmr: { runtime: "/build/_shared/chunk-XGDSMD3A.js", timestamp: 1701351625013 }, url: "/build/manifest-91D5A422.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

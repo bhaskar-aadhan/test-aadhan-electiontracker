@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ConstituencyContext } from '~/services/context/ConstituencyService';
 import { Dropdown, PartyResults } from '.';
 
 const StateLevel = () => {
+    const [ webSocketData ] = useContext(ConstituencyContext);
+    console.log("ws component data", webSocketData);
     return (
         <div className="entity-1-container w-[95%] my-3 mx-auto">
             <div className='dropdown-mobile-continer w-full'>
