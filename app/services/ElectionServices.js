@@ -29,8 +29,17 @@ const getSateData = (data, stateName)=>{
     return stateData
 }
 
+async function copyTextToClipboard(text) {
+    if ('clipboard' in navigator) {
+      return await navigator.clipboard.writeText(text);
+    } else {
+      return document.execCommand('copy', true, text);
+    }
+}
+
 export {
     addMagicFigureData,
     getMagicFigureData,
     getSateData,
+    copyTextToClipboard,
 }

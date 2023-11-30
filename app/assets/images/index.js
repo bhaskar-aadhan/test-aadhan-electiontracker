@@ -6,6 +6,9 @@ import voteImg from './vote.svg';
 import vottingBoothImg from './votting-booth.svg';
 import chevronright from './chevron-right.svg';
 import ballotGif from './ballot-1.gif';
+import whatsappImg from './whatsapp.svg';
+import electionShareImg from './Election.jpg';
+import shareIcon from './share.svg';
 
 export {
     aadhanLogo,
@@ -16,4 +19,7 @@ export {
     vottingBoothImg,
     chevronright,
     ballotGif,
+    whatsappImg,
+    electionShareImg,
+    shareIcon,
 }

@@ -1,0 +1,28 @@
+import React, { useContext } from 'react'
+import { ConstituencyContext } from '~/services/context/ConstituencyService';
+import { TabBar, StateLevel, ConstituencyLevel, Share } from '.';
+import { aadhanLogo } from '~/assets/images';
+
+const Constituency = () => {
+    const [select, setSelect] = useContext(ConstituencyContext);
+    console.log("iT", select);
+    return (
+        <div className='bg-[#050D3E] min-h-screen text-white pt-[1rem]'>
+            <div className="brand-mobile-logo pt-[1rem] pb-[2rem]">
+                <img src={aadhanLogo} alt="aadhan app logo" className='block mx-auto w-[23%]' />
+            </div>
+            <TabBar />
+            {select
+                ?
+                <StateLevel />
+                :
+                <ConstituencyLevel />
+            }
+            <div className='w-[95%] mx-auto mt-[2rem]'>
+                <Share />
+            </div>
+        </div>
+    )
+}
+
+export default Constituency
