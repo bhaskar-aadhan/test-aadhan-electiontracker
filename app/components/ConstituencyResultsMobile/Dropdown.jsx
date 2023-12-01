@@ -13,7 +13,7 @@ import { Button } from '~/components/ui/button';
 import { downArrowIcon } from '~/assets/images';
 
 const Dropdown = ({ sx }) => {
-    const [webSocketData, select, setSelect, stateNameMobile, setStateNameMobile] = useContext(ConstituencyContext)
+    const [webSocketData,select,setSelect,stateNameMobile,setStateNameMobile] = useContext(ConstituencyContext)
     console.log("state name", stateNameMobile)
     return (
         <div className={`${sx}`}>

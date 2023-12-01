@@ -1,12 +1,9 @@
 import React from 'react';
-import { ConstituencyProvider } from '../services/context/ConstituencyService';
-import { Constituency } from '../components/ConstituencyResultsMobile';
+import { Outlet } from '@remix-run/react';
 
 const ConstituencyResults = () => {
   return (
-    <ConstituencyProvider>
-      <Constituency />
-    </ConstituencyProvider>
+    <Outlet />
   )
 }
 

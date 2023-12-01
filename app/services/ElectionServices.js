@@ -36,6 +36,12 @@ const getSateLevelStateData = (data, stateName)=>{
     const stateData = data.filter((state)=>state['state'] === stateName)
     return stateData
 }
+const getConstituenciesData = (data, stateName, constituency)=>{
+    const stateData = getSateLevelStateData(data, stateName)
+    const constituenciesData = stateData[0]['constituencies'].filter((constituencie)=>constituencie['name'] === constituency)
+    constituenciesData['candidates']
+    return constituenciesData
+}
 
 async function copyTextToClipboard(text) {
     if ('clipboard' in navigator) {
@@ -51,5 +57,6 @@ export {
     getMagicFigureSateLevelData,
     getSateData,
     getSateLevelStateData,
+    getConstituenciesData,
     copyTextToClipboard,
 }

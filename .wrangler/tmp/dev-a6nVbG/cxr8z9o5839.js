@@ -33736,7 +33736,7 @@ __export(root_exports, {
   default: () => App,
   links: () => links
 });
-var tailwind_default = "/build/_assets/tailwind-OHI5VTLH.css";
+var tailwind_default = "/build/_assets/tailwind-ZHEBY3D6.css";
 var import_jsx_dev_runtime2 = __toESM(require_jsx_dev_runtime(), 1);
 var links = () => [
   { rel: "stylesheet", href: tailwind_default },
@@ -33899,7 +33899,11 @@ var CandidatesProvider = ({ children }) => {
       };
     };
     initializeWebSocket();
-  }, []), webSocket2Data === null ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "min-h-screen grid place-content-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "" }, void 0, false, {
+  }, []), webSocket2Data === null ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "min-h-screen grid place-content-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("img", { src: "", className: "", alt: "signal spinner" }, void 0, false, {
+    fileName: "app/services/context/CandidatesService.jsx",
+    lineNumber: 58,
+    columnNumber: 11
+  }, void 0) }, void 0, false, {
     fileName: "app/services/context/CandidatesService.jsx",
     lineNumber: 57,
     columnNumber: 9
@@ -33916,7 +33920,7 @@ var CandidatesProvider = ({ children }) => {
 var import_jsx_dev_runtime5 = __toESM(require_jsx_dev_runtime(), 1);
 var Constituency = () => {
   let [webSocketData, select, setSelect] = (0, import_react5.useContext)(ConstituencyContext);
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "bg-[#050D3E] min-h-screen text-white pt-[1rem]", children: [
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "bg-[#050D3E] min-h-screen text-white pt-[1rem] overflow-y-hidden", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "brand-mobile-logo pt-[1rem] pb-[2rem]", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("img", { src: aadhan_logo_default, alt: "aadhan app logo", className: "block mx-auto w-[23%]" }, void 0, false, {
       fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
       lineNumber: 13,
@@ -40823,7 +40827,7 @@ var ConstituencyResults = ({ stateLevelData }) => /* @__PURE__ */ (0, import_jsx
     lineNumber: 14,
     columnNumber: 13
   }, void 0),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(TableBody, { children: stateLevelData?.[0]?.parties.map(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(TableBody, { children: stateLevelData?.[0]?.parties?.map(
     (party) => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(TableRow, { className: "bg-[#2A3654]", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(TableCell, { className: "font-medium text-white ps-3", children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("div", { className: "flex justify-start items-center gap-2", children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("img", { className: "w-5 h-5 rounded-full", src: party.logo, alt: "party logo" }, void 0, false, {
@@ -41470,7 +41474,6 @@ var WebscoketProvider = ({ children }) => {
       console.log("initializeWebSocket");
       let socket = new WebSocket(
         "wss://stage-cmsapis.aadhan.in/election-results/ws"
-        // "wss://stage-cmsapis.aadhan.in/election-results/ws"
       );
       socket.onopen = () => {
         console.log("WebSocket connection opened");
@@ -41490,19 +41493,19 @@ var WebscoketProvider = ({ children }) => {
     initializeWebSocket();
   }, []), webSocketData === null ? /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("div", { className: "min-h-screen grid place-content-center", style: { background: "linear-gradient( -80deg , #d7e9ff, #7db3ff, #d7e9ff)" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("div", { className: "", children: /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("img", { src: ballot_1_default, alt: "ballot gif" }, void 0, false, {
     fileName: "app/services/context/ElectionService.jsx",
-    lineNumber: 59,
+    lineNumber: 58,
     columnNumber: 11
   }, void 0) }, void 0, false, {
     fileName: "app/services/context/ElectionService.jsx",
-    lineNumber: 58,
+    lineNumber: 57,
     columnNumber: 9
   }, void 0) }, void 0, false, {
     fileName: "app/services/context/ElectionService.jsx",
-    lineNumber: 57,
+    lineNumber: 56,
     columnNumber: 7
   }, void 0) : /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(ElectionContext.Provider, { value: [webSocketData, stateName, setStateName], children }, void 0, false, {
     fileName: "app/services/context/ElectionService.jsx",
-    lineNumber: 66,
+    lineNumber: 65,
     columnNumber: 5
   }, void 0);
 };
@@ -42009,7 +42012,7 @@ var widget = () => /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("div", {
   columnNumber: 5
 }, void 0);
 var widget_default = widget;
-var assets_manifest_default = { entry: { module: "/build/entry.client-MS4WYGOM.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-NEMJIZPC.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XGDSMD3A.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-YCS2HGB3.js", imports: void 0, hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: true, caseSensitive: void 0, module: "/build/routes/_index-T3XEUL7C.js", imports: ["/build/_shared/chunk-E6F3SNTZ.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/constituencyresults": { id: "routes/constituencyresults", parentId: "root", path: "constituencyresults", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults-YXD675ZG.js", imports: ["/build/_shared/chunk-TQ5OGXAG.js", "/build/_shared/chunk-E6F3SNTZ.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults": { id: "routes/electionresults", parentId: "root", path: "electionresults", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults-7HXIMGSG.js", imports: ["/build/_shared/chunk-TQ5OGXAG.js", "/build/_shared/chunk-E6F3SNTZ.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/widget": { id: "routes/widget", parentId: "root", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/widget-3TA3UF3A.js", imports: ["/build/_shared/chunk-E6F3SNTZ.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false } }, version: "0061e5c8", hmr: { runtime: "/build/_shared/chunk-XGDSMD3A.js", timestamp: 1701422098422 }, url: "/build/manifest-0061E5C8.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-MS4WYGOM.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-NEMJIZPC.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XGDSMD3A.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-6U5SH64Q.js", imports: void 0, hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: true, caseSensitive: void 0, module: "/build/routes/_index-LOENWOUI.js", imports: ["/build/_shared/chunk-A6QMKNWQ.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/constituencyresults": { id: "routes/constituencyresults", parentId: "root", path: "constituencyresults", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults-5TQAEIRT.js", imports: ["/build/_shared/chunk-TQ5OGXAG.js", "/build/_shared/chunk-A6QMKNWQ.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults": { id: "routes/electionresults", parentId: "root", path: "electionresults", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults-2LUVF5JC.js", imports: ["/build/_shared/chunk-TQ5OGXAG.js", "/build/_shared/chunk-A6QMKNWQ.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/widget": { id: "routes/widget", parentId: "root", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/widget-2KEPKJ4A.js", imports: ["/build/_shared/chunk-A6QMKNWQ.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false } }, version: "5067747f", hmr: { runtime: "/build/_shared/chunk-XGDSMD3A.js", timestamp: 1701423364894 }, url: "/build/manifest-5067747F.js" };
 var mode = "development";
 var assetsBuildDirectory = "public/build";
 var future = { v3_fetcherPersist: false };

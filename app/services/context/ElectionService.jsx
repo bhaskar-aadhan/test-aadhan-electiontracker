@@ -21,7 +21,6 @@ export const WebscoketProvider = ({ children }) => {
 
       const socket = new WebSocket(
         "wss://stage-cmsapis.aadhan.in/election-results/ws"
-        // "wss://stage-cmsapis.aadhan.in/election-results/ws"
       );
       socket.onopen = () => {
         console.log("WebSocket connection opened");
