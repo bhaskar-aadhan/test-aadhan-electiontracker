@@ -41354,7 +41354,7 @@ var WebscoketProvider = ({ children }) => {
 var import_jsx_dev_runtime19 = __toESM(require_jsx_dev_runtime(), 1);
 var Election = () => {
   let [webSocketData, stateName] = (0, import_react40.useContext)(ElectionContext), stateData = getSateData(webSocketData, stateName);
-  return console.log("sateData", stateData), /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("div", { className: "w-full min-h-screen font__nunitosans flex flex-col items-center bg-[#050D3E]", style: { background: "linear-gradient( -80deg , #d7e9ff, #7db3ff, #d7e9ff)" }, children: [
+  return console.log("sateData", stateData), /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("div", { className: "w-full min-h-screen font__nunitosans flex flex-col items-center bg-[#050D3E]", style: { background: "#B15EFF" }, children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("div", { className: "info-bar-container w-full flex items-center  bg-[#003D75] px-2 md:px-6", style: { alignSelf: "flex-start" }, children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(InfoBar_default, {}, void 0, false, {
         fileName: "app/components/ElectionResuts/Election.jsx",
@@ -41854,7 +41854,7 @@ var widget = () => /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", {
   columnNumber: 5
 }, void 0);
 var widget_default = widget;
-var assets_manifest_default = { entry: { module: "/build/entry.client-MS4WYGOM.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-NEMJIZPC.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XGDSMD3A.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-6YYLV2ZX.js", imports: void 0, hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: true, caseSensitive: void 0, module: "/build/routes/_index-ZFEIBNXW.js", imports: ["/build/_shared/chunk-O6BE6AWN.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/constituencyresults": { id: "routes/constituencyresults", parentId: "root", path: "constituencyresults", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults-O2CT6DOA.js", imports: ["/build/_shared/chunk-5JYQUXBT.js", "/build/_shared/chunk-O6BE6AWN.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults": { id: "routes/electionresults", parentId: "root", path: "electionresults", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults-P6JNBPVI.js", imports: ["/build/_shared/chunk-5JYQUXBT.js", "/build/_shared/chunk-O6BE6AWN.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/widget": { id: "routes/widget", parentId: "root", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/widget-NII7TG56.js", imports: ["/build/_shared/chunk-O6BE6AWN.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false } }, version: "f011528e", hmr: { runtime: "/build/_shared/chunk-XGDSMD3A.js", timestamp: 1701407165156 }, url: "/build/manifest-F011528E.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-MS4WYGOM.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-NEMJIZPC.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XGDSMD3A.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-6YYLV2ZX.js", imports: void 0, hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: true, caseSensitive: void 0, module: "/build/routes/_index-ZFEIBNXW.js", imports: ["/build/_shared/chunk-O6BE6AWN.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/constituencyresults": { id: "routes/constituencyresults", parentId: "root", path: "constituencyresults", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults-O2CT6DOA.js", imports: ["/build/_shared/chunk-5JYQUXBT.js", "/build/_shared/chunk-O6BE6AWN.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults": { id: "routes/electionresults", parentId: "root", path: "electionresults", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults-MRLUQWO3.js", imports: ["/build/_shared/chunk-5JYQUXBT.js", "/build/_shared/chunk-O6BE6AWN.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/widget": { id: "routes/widget", parentId: "root", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/widget-NII7TG56.js", imports: ["/build/_shared/chunk-O6BE6AWN.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false } }, version: "f81a4f52", hmr: { runtime: "/build/_shared/chunk-XGDSMD3A.js", timestamp: 1701407892463 }, url: "/build/manifest-F81A4F52.js" };
 var mode = "development";
 var assetsBuildDirectory = "public/build";
 var future = { v3_fetcherPersist: false };
@@ -42383,7 +42383,7 @@ var jsonError = async (request, env, _ctx, middlewareCtx) => {
 var middleware_miniflare3_json_error_default = jsonError;
 var wrap = void 0;
 
-// ../.wrangler/tmp/bundle-oNQ6yG/middleware-insertion-facade.js
+// ../.wrangler/tmp/bundle-McL4nY/middleware-insertion-facade.js
 var envWrappers = [wrap].filter(Boolean);
 var facade = {
   ...pages_template_worker_default,
@@ -42395,7 +42395,7 @@ var facade = {
 };
 var middleware_insertion_facade_default = facade;
 
-// ../.wrangler/tmp/bundle-oNQ6yG/middleware-loader.entry.ts
+// ../.wrangler/tmp/bundle-McL4nY/middleware-loader.entry.ts
 var __Facade_ScheduledController__ = class {
   constructor(scheduledTime, cron, noRetry) {
     this.scheduledTime = scheduledTime;
