@@ -1,10 +1,12 @@
 import React, { useContext } from 'react'
 import { ConstituencyContext } from '~/services/context/ConstituencyService';
+import { CandidatesProvider } from '~/services/context/CandidatesService';
 import { TabBar, StateLevel, ConstituencyLevel, Share } from '.';
 import { aadhanLogo } from '~/assets/images';
 
 const Constituency = () => {
-    const [ select, setSelect] = useContext(ConstituencyContext);
+    const [webSocketData, select, setSelect] = useContext(ConstituencyContext);
+
     return (
         <div className='bg-[#050D3E] min-h-screen text-white pt-[1rem]'>
             <div className="brand-mobile-logo pt-[1rem] pb-[2rem]">
@@ -15,7 +17,9 @@ const Constituency = () => {
                 ?
                 <StateLevel />
                 :
-                <ConstituencyLevel />
+                <CandidatesProvider>
+                    <ConstituencyLevel />
+                </CandidatesProvider>
             }
             <div className='w-[95%] mx-auto mt-[2rem]'>
                 <Share />

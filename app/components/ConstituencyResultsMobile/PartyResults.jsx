@@ -20,7 +20,7 @@ const PartyResults = ({ stateLevelData }) => {
                 </TableRow>
             </TableHeader>
             <TableBody>
-                {stateLevelData?.[0]?.['parties']?.map((party) =>
+                {stateLevelData?.[0]?.['parties'].map((party) =>
                     <TableRow key={party['name']} className='bg-[#2A3654]'>
                         <TableCell className="font-medium text-white ps-3">
                             <div className='flex justify-start items-center gap-2'>

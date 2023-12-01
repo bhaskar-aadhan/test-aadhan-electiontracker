@@ -4195,7 +4195,7 @@ var require_react_dom_development = __commonJS({
     (function() {
       "use strict";
       typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ < "u" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart == "function" && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
-      var React37 = require_react(), Scheduler = require_scheduler(), ReactSharedInternals = React37.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED, suppressWarning = false;
+      var React38 = require_react(), Scheduler = require_scheduler(), ReactSharedInternals = React38.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED, suppressWarning = false;
       function setSuppressWarning(newSuppressWarning) {
         suppressWarning = newSuppressWarning;
       }
@@ -5316,7 +5316,7 @@ Error generating stack: ` + x.message + `
       }
       var didWarnSelectedSetOnOption = false, didWarnInvalidChild = false, didWarnInvalidInnerHTML = false;
       function validateProps(element, props) {
-        props.value == null && (typeof props.children == "object" && props.children !== null ? React37.Children.forEach(props.children, function(child) {
+        props.value == null && (typeof props.children == "object" && props.children !== null ? React38.Children.forEach(props.children, function(child) {
           child != null && (typeof child == "string" || typeof child == "number" || didWarnInvalidChild || (didWarnInvalidChild = true, error("Cannot infer the option value of complex children. Pass a `value` prop or use a plain string as children to <option>.")));
         }) : props.dangerouslySetInnerHTML != null && (didWarnInvalidInnerHTML || (didWarnInvalidInnerHTML = true, error("Pass a `value` prop if you set dangerouslyInnerHTML so React knows which value should be selected.")))), props.selected != null && !didWarnSelectedSetOnOption && (error("Use the `defaultValue` or `value` props on <select> instead of setting `selected` on <option>."), didWarnSelectedSetOnOption = true);
       }
@@ -11011,7 +11011,7 @@ Learn more about this warning here: https://reactjs.org/link/legacy-context`, so
             callback !== null && (effect.callback = null, callCallback(callback, instance));
           }
       }
-      var fakeInternalInstance = {}, emptyRefsObject = new React37.Component().refs, didWarnAboutStateAssignmentForComponent, didWarnAboutUninitializedState, didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate, didWarnAboutLegacyLifecyclesAndDerivedState, didWarnAboutUndefinedDerivedState, warnOnUndefinedDerivedState, warnOnInvalidCallback, didWarnAboutDirectlyAssigningPropsToState, didWarnAboutContextTypeAndContextTypes, didWarnAboutInvalidateContextType;
+      var fakeInternalInstance = {}, emptyRefsObject = new React38.Component().refs, didWarnAboutStateAssignmentForComponent, didWarnAboutUninitializedState, didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate, didWarnAboutLegacyLifecyclesAndDerivedState, didWarnAboutUndefinedDerivedState, warnOnUndefinedDerivedState, warnOnInvalidCallback, didWarnAboutDirectlyAssigningPropsToState, didWarnAboutContextTypeAndContextTypes, didWarnAboutInvalidateContextType;
       {
         didWarnAboutStateAssignmentForComponent = /* @__PURE__ */ new Set(), didWarnAboutUninitializedState = /* @__PURE__ */ new Set(), didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate = /* @__PURE__ */ new Set(), didWarnAboutLegacyLifecyclesAndDerivedState = /* @__PURE__ */ new Set(), didWarnAboutDirectlyAssigningPropsToState = /* @__PURE__ */ new Set(), didWarnAboutUndefinedDerivedState = /* @__PURE__ */ new Set(), didWarnAboutContextTypeAndContextTypes = /* @__PURE__ */ new Set(), didWarnAboutInvalidateContextType = /* @__PURE__ */ new Set();
         var didWarnOnInvalidCallback = /* @__PURE__ */ new Set();
@@ -23961,7 +23961,7 @@ var require_server = __commonJS({
   "node_modules/react-router-dom/server.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    var React37 = require_react(), router = (init_router3(), __toCommonJS(router_exports)), reactRouter = (init_dist(), __toCommonJS(dist_exports)), reactRouterDom = (init_dist2(), __toCommonJS(dist_exports2));
+    var React38 = require_react(), router = (init_router3(), __toCommonJS(router_exports)), reactRouter = (init_dist(), __toCommonJS(dist_exports)), reactRouterDom = (init_dist2(), __toCommonJS(dist_exports2));
     function _interopNamespace(e) {
       if (e && e.__esModule)
         return e;
@@ -23978,7 +23978,7 @@ var require_server = __commonJS({
         }
       }), n.default = e, Object.freeze(n);
     }
-    var React__namespace = /* @__PURE__ */ _interopNamespace(React37);
+    var React__namespace = /* @__PURE__ */ _interopNamespace(React38);
     function StaticRouter({
       basename,
       children,
@@ -24213,7 +24213,7 @@ var require_react_dom_server_legacy_browser_development = __commonJS({
     "use strict";
     (function() {
       "use strict";
-      var React37 = require_react(), ReactVersion = "18.2.0", ReactSharedInternals = React37.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+      var React38 = require_react(), ReactVersion = "18.2.0", ReactSharedInternals = React38.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
       function warn(format) {
         {
           for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++)
@@ -25707,7 +25707,7 @@ var require_react_dom_server_legacy_browser_development = __commonJS({
       }
       function flattenOptionChildren(children) {
         var content = "";
-        return React37.Children.forEach(children, function(child) {
+        return React38.Children.forEach(children, function(child) {
           child != null && (content += child, !didWarnInvalidOptionChildren && typeof child != "string" && typeof child != "number" && (didWarnInvalidOptionChildren = true, error("Cannot infer the option value of complex children. Pass a `value` prop or use a plain string as children to <option>.")));
         }), content;
       }
@@ -27792,7 +27792,7 @@ var require_react_dom_server_browser_development = __commonJS({
     "use strict";
     (function() {
       "use strict";
-      var React37 = require_react(), ReactVersion = "18.2.0", ReactSharedInternals = React37.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+      var React38 = require_react(), ReactVersion = "18.2.0", ReactSharedInternals = React38.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
       function warn(format) {
         {
           for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++)
@@ -29301,7 +29301,7 @@ var require_react_dom_server_browser_development = __commonJS({
       }
       function flattenOptionChildren(children) {
         var content = "";
-        return React37.Children.forEach(children, function(child) {
+        return React38.Children.forEach(children, function(child) {
           child != null && (content += child, !didWarnInvalidOptionChildren && typeof child != "string" && typeof child != "number" && (didWarnInvalidOptionChildren = true, error("Cannot infer the option value of complex children. Pass a `value` prop or use a plain string as children to <option>.")));
         }), content;
       }
@@ -31360,14 +31360,14 @@ var require_react_jsx_dev_runtime_development = __commonJS({
     "use strict";
     (function() {
       "use strict";
-      var React37 = require_react(), REACT_ELEMENT_TYPE = Symbol.for("react.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_PROVIDER_TYPE = Symbol.for("react.provider"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen"), MAYBE_ITERATOR_SYMBOL = Symbol.iterator, FAUX_ITERATOR_SYMBOL = "@@iterator";
+      var React38 = require_react(), REACT_ELEMENT_TYPE = Symbol.for("react.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_PROVIDER_TYPE = Symbol.for("react.provider"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen"), MAYBE_ITERATOR_SYMBOL = Symbol.iterator, FAUX_ITERATOR_SYMBOL = "@@iterator";
       function getIteratorFn(maybeIterable) {
         if (maybeIterable === null || typeof maybeIterable != "object")
           return null;
         var maybeIterator = MAYBE_ITERATOR_SYMBOL && maybeIterable[MAYBE_ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL];
         return typeof maybeIterator == "function" ? maybeIterator : null;
       }
-      var ReactSharedInternals = React37.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+      var ReactSharedInternals = React38.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
       function error(format) {
         {
           for (var _len2 = arguments.length, args = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++)
@@ -31768,7 +31768,7 @@ var require_react_jsx_dev_runtime_development = __commonJS({
           value: source
         }), Object.freeze && (Object.freeze(element.props), Object.freeze(element)), element;
       };
-      function jsxDEV28(type, config, maybeKey, source, self) {
+      function jsxDEV29(type, config, maybeKey, source, self) {
         {
           var propName, props = {}, key = null, ref = null;
           maybeKey !== void 0 && (checkKeyStringCoercion(maybeKey), key = "" + maybeKey), hasValidKey(config) && (checkKeyStringCoercion(config.key), key = "" + config.key), hasValidRef(config) && (ref = config.ref, warnIfStringRefCannotBeAutoConverted(config, self));
@@ -31915,7 +31915,7 @@ Check the top-level render call using <` + parentName + ">.");
             var typeString;
             type === null ? typeString = "null" : isArray(type) ? typeString = "array" : type !== void 0 && type.$$typeof === REACT_ELEMENT_TYPE ? (typeString = "<" + (getComponentNameFromType(type.type) || "Unknown") + " />", info = " Did you accidentally export a JSX literal instead of a component?") : typeString = typeof type, error("React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", typeString, info);
           }
-          var element = jsxDEV28(type, props, key, source, self);
+          var element = jsxDEV29(type, props, key, source, self);
           if (element == null)
             return element;
           if (validType) {
@@ -33806,7 +33806,7 @@ var constituencyresults_exports = {};
 __export(constituencyresults_exports, {
   default: () => constituencyresults_default
 });
-var import_react38 = __toESM(require_react(), 1);
+var import_react39 = __toESM(require_react(), 1);
 var import_react3 = __toESM(require_react(), 1);
 var aadhan_logo_default = "/build/_assets/aadhan-logo-3SWK7PN4.svg";
 var aadhan_black_logo_default = "/build/_assets/aadhan-black-logo-6ETHD4FC.svg";
@@ -34003,7 +34003,7 @@ var ConstituencyLevel = () => /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV
     lineNumber: 11,
     columnNumber: 13
   }, void 0),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("div", { className: "results-mobile-container my-3", children: /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(PartyResults_default, {}, void 0, false, {
+  /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("div", { className: "results-mobile-container my-3", children: /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(ConstituencyResults_default, {}, void 0, false, {
     fileName: "app/components/ConstituencyResultsMobile/ConstituencyLevel.jsx",
     lineNumber: 13,
     columnNumber: 17
@@ -40689,7 +40689,7 @@ var PartyResults = ({ stateLevelData }) => /* @__PURE__ */ (0, import_jsx_dev_ru
     lineNumber: 14,
     columnNumber: 13
   }, void 0),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(TableBody, { children: stateLevelData?.[0]?.parties?.map(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(TableBody, { children: stateLevelData?.[0]?.parties.map(
     (party) => /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(TableRow, { className: "bg-[#2A3654]", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(TableCell, { className: "font-medium text-white ps-3", children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { className: "flex justify-start items-center gap-2", children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("img", { className: "w-5 h-5 rounded-full", src: party.logo, alt: "party logo" }, void 0, false, {
@@ -40742,8 +40742,94 @@ var PartyResults = ({ stateLevelData }) => /* @__PURE__ */ (0, import_jsx_dev_ru
   columnNumber: 9
 }, void 0);
 var PartyResults_default = PartyResults;
-var import_react36 = __toESM(require_react(), 1);
-var import_react33 = __toESM(require_react());
+var import_react33 = __toESM(require_react(), 1);
+var import_jsx_dev_runtime13 = __toESM(require_jsx_dev_runtime(), 1);
+var ConstituencyResults = ({ stateLevelData }) => /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(Table, { className: "state-level-table", children: [
+  /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(TableHeader, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(TableRow, { className: "text-center bg-[#34509d] border-0 border-transparent", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(TableHead, { className: "text-white ps-3", children: "Party" }, void 0, false, {
+      fileName: "app/components/ConstituencyResultsMobile/ConstituencyResults.jsx",
+      lineNumber: 16,
+      columnNumber: 21
+    }, void 0),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(TableHead, { className: "text-center text-white", children: "Leading" }, void 0, false, {
+      fileName: "app/components/ConstituencyResultsMobile/ConstituencyResults.jsx",
+      lineNumber: 17,
+      columnNumber: 21
+    }, void 0),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(TableHead, { className: "text-center text-white", children: "Won" }, void 0, false, {
+      fileName: "app/components/ConstituencyResultsMobile/ConstituencyResults.jsx",
+      lineNumber: 18,
+      columnNumber: 21
+    }, void 0),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(TableHead, { className: "text-center text-white", children: "Total" }, void 0, false, {
+      fileName: "app/components/ConstituencyResultsMobile/ConstituencyResults.jsx",
+      lineNumber: 19,
+      columnNumber: 21
+    }, void 0)
+  ] }, void 0, true, {
+    fileName: "app/components/ConstituencyResultsMobile/ConstituencyResults.jsx",
+    lineNumber: 15,
+    columnNumber: 17
+  }, void 0) }, void 0, false, {
+    fileName: "app/components/ConstituencyResultsMobile/ConstituencyResults.jsx",
+    lineNumber: 14,
+    columnNumber: 13
+  }, void 0),
+  /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(TableBody, { children: stateLevelData?.[0]?.parties.map(
+    (party) => /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(TableRow, { className: "bg-[#2A3654]", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(TableCell, { className: "font-medium text-white ps-3", children: /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("div", { className: "flex justify-start items-center gap-2", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("img", { className: "w-5 h-5 rounded-full", src: party.logo, alt: "party logo" }, void 0, false, {
+          fileName: "app/components/ConstituencyResultsMobile/ConstituencyResults.jsx",
+          lineNumber: 27,
+          columnNumber: 33
+        }, void 0),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("p", { children: party.name }, void 0, false, {
+          fileName: "app/components/ConstituencyResultsMobile/ConstituencyResults.jsx",
+          lineNumber: 28,
+          columnNumber: 33
+        }, void 0)
+      ] }, void 0, true, {
+        fileName: "app/components/ConstituencyResultsMobile/ConstituencyResults.jsx",
+        lineNumber: 26,
+        columnNumber: 29
+      }, void 0) }, void 0, false, {
+        fileName: "app/components/ConstituencyResultsMobile/ConstituencyResults.jsx",
+        lineNumber: 25,
+        columnNumber: 25
+      }, void 0),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(TableCell, { className: "text-center text-white", children: party.leading }, void 0, false, {
+        fileName: "app/components/ConstituencyResultsMobile/ConstituencyResults.jsx",
+        lineNumber: 31,
+        columnNumber: 25
+      }, void 0),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(TableCell, { className: "text-center text-white", children: party.won }, void 0, false, {
+        fileName: "app/components/ConstituencyResultsMobile/ConstituencyResults.jsx",
+        lineNumber: 32,
+        columnNumber: 25
+      }, void 0),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(TableCell, { className: "text-center font-semibold text-white", children: party.leading + party.won }, void 0, false, {
+        fileName: "app/components/ConstituencyResultsMobile/ConstituencyResults.jsx",
+        lineNumber: 33,
+        columnNumber: 25
+      }, void 0)
+    ] }, party.name, true, {
+      fileName: "app/components/ConstituencyResultsMobile/ConstituencyResults.jsx",
+      lineNumber: 24,
+      columnNumber: 21
+    }, void 0)
+  ) }, void 0, false, {
+    fileName: "app/components/ConstituencyResultsMobile/ConstituencyResults.jsx",
+    lineNumber: 22,
+    columnNumber: 13
+  }, void 0)
+] }, void 0, true, {
+  fileName: "app/components/ConstituencyResultsMobile/ConstituencyResults.jsx",
+  lineNumber: 13,
+  columnNumber: 9
+}, void 0);
+var ConstituencyResults_default = ConstituencyResults;
+var import_react37 = __toESM(require_react(), 1);
+var import_react34 = __toESM(require_react());
 var defaultAttributes = {
   xmlns: "http://www.w3.org/2000/svg",
   width: 24,
@@ -40757,8 +40843,8 @@ var defaultAttributes = {
 };
 var toKebabCase = (string) => string.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase().trim();
 var createLucideIcon = (iconName, iconNode) => {
-  let Component3 = (0, import_react33.forwardRef)(
-    ({ color = "currentColor", size: size2 = 24, strokeWidth = 2, absoluteStrokeWidth, className = "", children, ...rest }, ref) => (0, import_react33.createElement)(
+  let Component3 = (0, import_react34.forwardRef)(
+    ({ color = "currentColor", size: size2 = 24, strokeWidth = 2, absoluteStrokeWidth, className = "", children, ...rest }, ref) => (0, import_react34.createElement)(
       "svg",
       {
         ref,
@@ -40771,7 +40857,7 @@ var createLucideIcon = (iconName, iconNode) => {
         ...rest
       },
       [
-        ...iconNode.map(([tag, attrs]) => (0, import_react33.createElement)(tag, attrs)),
+        ...iconNode.map(([tag, attrs]) => (0, import_react34.createElement)(tag, attrs)),
         ...Array.isArray(children) ? children : [children]
       ]
     )
@@ -40782,18 +40868,18 @@ var Copy = createLucideIcon("Copy", [
   ["rect", { width: "14", height: "14", x: "8", y: "8", rx: "2", ry: "2", key: "17jyea" }],
   ["path", { d: "M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2", key: "zix9uf" }]
 ]);
-var React25 = __toESM(require_react(), 1);
-var import_react34 = __toESM(require_react(), 1);
+var React26 = __toESM(require_react(), 1);
+var import_react35 = __toESM(require_react(), 1);
 var $5d3850c4d0b4e6c7$var$DIALOG_NAME = "Dialog";
 var [$5d3850c4d0b4e6c7$var$createDialogContext, $5d3850c4d0b4e6c7$export$cc702773b8ea3e41] = $c512c27ab02ef895$export$50c7b4e9d9f19c1($5d3850c4d0b4e6c7$var$DIALOG_NAME);
 var [$5d3850c4d0b4e6c7$var$DialogProvider, $5d3850c4d0b4e6c7$var$useDialogContext] = $5d3850c4d0b4e6c7$var$createDialogContext($5d3850c4d0b4e6c7$var$DIALOG_NAME);
 var $5d3850c4d0b4e6c7$export$3ddf2d174ce01153 = (props) => {
-  let { __scopeDialog, children, open: openProp, defaultOpen, onOpenChange, modal = true } = props, triggerRef = (0, import_react34.useRef)(null), contentRef = (0, import_react34.useRef)(null), [open = false, setOpen] = $71cd76cc60e0454e$export$6f32135080cb4c3({
+  let { __scopeDialog, children, open: openProp, defaultOpen, onOpenChange, modal = true } = props, triggerRef = (0, import_react35.useRef)(null), contentRef = (0, import_react35.useRef)(null), [open = false, setOpen] = $71cd76cc60e0454e$export$6f32135080cb4c3({
     prop: openProp,
     defaultProp: defaultOpen,
     onChange: onOpenChange
   });
-  return /* @__PURE__ */ (0, import_react34.createElement)($5d3850c4d0b4e6c7$var$DialogProvider, {
+  return /* @__PURE__ */ (0, import_react35.createElement)($5d3850c4d0b4e6c7$var$DialogProvider, {
     scope: __scopeDialog,
     triggerRef,
     contentRef,
@@ -40802,7 +40888,7 @@ var $5d3850c4d0b4e6c7$export$3ddf2d174ce01153 = (props) => {
     descriptionId: $1746a345f3d73bb7$export$f680877a34711e37(),
     open,
     onOpenChange: setOpen,
-    onOpenToggle: (0, import_react34.useCallback)(
+    onOpenToggle: (0, import_react35.useCallback)(
       () => setOpen(
         (prevOpen) => !prevOpen
       ),
@@ -40814,9 +40900,9 @@ var $5d3850c4d0b4e6c7$export$3ddf2d174ce01153 = (props) => {
   }, children);
 };
 var $5d3850c4d0b4e6c7$var$TRIGGER_NAME = "DialogTrigger";
-var $5d3850c4d0b4e6c7$export$2e1e1122cf0cba88 = /* @__PURE__ */ (0, import_react34.forwardRef)((props, forwardedRef) => {
+var $5d3850c4d0b4e6c7$export$2e1e1122cf0cba88 = /* @__PURE__ */ (0, import_react35.forwardRef)((props, forwardedRef) => {
   let { __scopeDialog, ...triggerProps } = props, context = $5d3850c4d0b4e6c7$var$useDialogContext($5d3850c4d0b4e6c7$var$TRIGGER_NAME, __scopeDialog), composedTriggerRef = $6ed0406888f73fc4$export$c7b2cbe3552a0d05(forwardedRef, context.triggerRef);
-  return /* @__PURE__ */ (0, import_react34.createElement)($8927f6f2acc4f386$export$250ffa63cdc0d034.button, _extends7({
+  return /* @__PURE__ */ (0, import_react35.createElement)($8927f6f2acc4f386$export$250ffa63cdc0d034.button, _extends7({
     type: "button",
     "aria-haspopup": "dialog",
     "aria-expanded": context.open,
@@ -40833,40 +40919,40 @@ var [$5d3850c4d0b4e6c7$var$PortalProvider, $5d3850c4d0b4e6c7$var$usePortalContex
 });
 var $5d3850c4d0b4e6c7$export$dad7c95542bacce0 = (props) => {
   let { __scopeDialog, forceMount, children, container } = props, context = $5d3850c4d0b4e6c7$var$useDialogContext($5d3850c4d0b4e6c7$var$PORTAL_NAME, __scopeDialog);
-  return /* @__PURE__ */ (0, import_react34.createElement)($5d3850c4d0b4e6c7$var$PortalProvider, {
+  return /* @__PURE__ */ (0, import_react35.createElement)($5d3850c4d0b4e6c7$var$PortalProvider, {
     scope: __scopeDialog,
     forceMount
-  }, import_react34.Children.map(
+  }, import_react35.Children.map(
     children,
-    (child) => /* @__PURE__ */ (0, import_react34.createElement)($921a889cee6df7e8$export$99c2b779aa4e8b8b, {
+    (child) => /* @__PURE__ */ (0, import_react35.createElement)($921a889cee6df7e8$export$99c2b779aa4e8b8b, {
       present: forceMount || context.open
-    }, /* @__PURE__ */ (0, import_react34.createElement)($f1701beae083dbae$export$602eac185826482c, {
+    }, /* @__PURE__ */ (0, import_react35.createElement)($f1701beae083dbae$export$602eac185826482c, {
       asChild: true,
       container
     }, child))
   ));
 };
 var $5d3850c4d0b4e6c7$var$OVERLAY_NAME = "DialogOverlay";
-var $5d3850c4d0b4e6c7$export$bd1d06c79be19e17 = /* @__PURE__ */ (0, import_react34.forwardRef)((props, forwardedRef) => {
+var $5d3850c4d0b4e6c7$export$bd1d06c79be19e17 = /* @__PURE__ */ (0, import_react35.forwardRef)((props, forwardedRef) => {
   let portalContext = $5d3850c4d0b4e6c7$var$usePortalContext($5d3850c4d0b4e6c7$var$OVERLAY_NAME, props.__scopeDialog), { forceMount = portalContext.forceMount, ...overlayProps } = props, context = $5d3850c4d0b4e6c7$var$useDialogContext($5d3850c4d0b4e6c7$var$OVERLAY_NAME, props.__scopeDialog);
-  return context.modal ? /* @__PURE__ */ (0, import_react34.createElement)($921a889cee6df7e8$export$99c2b779aa4e8b8b, {
+  return context.modal ? /* @__PURE__ */ (0, import_react35.createElement)($921a889cee6df7e8$export$99c2b779aa4e8b8b, {
     present: forceMount || context.open
-  }, /* @__PURE__ */ (0, import_react34.createElement)($5d3850c4d0b4e6c7$var$DialogOverlayImpl, _extends7({}, overlayProps, {
+  }, /* @__PURE__ */ (0, import_react35.createElement)($5d3850c4d0b4e6c7$var$DialogOverlayImpl, _extends7({}, overlayProps, {
     ref: forwardedRef
   }))) : null;
 });
-var $5d3850c4d0b4e6c7$var$DialogOverlayImpl = /* @__PURE__ */ (0, import_react34.forwardRef)((props, forwardedRef) => {
+var $5d3850c4d0b4e6c7$var$DialogOverlayImpl = /* @__PURE__ */ (0, import_react35.forwardRef)((props, forwardedRef) => {
   let { __scopeDialog, ...overlayProps } = props, context = $5d3850c4d0b4e6c7$var$useDialogContext($5d3850c4d0b4e6c7$var$OVERLAY_NAME, __scopeDialog);
   return (
     // Make sure `Content` is scrollable even when it doesn't live inside `RemoveScroll`
     // ie. when `Overlay` and `Content` are siblings
-    /* @__PURE__ */ (0, import_react34.createElement)(Combination_default, {
+    /* @__PURE__ */ (0, import_react35.createElement)(Combination_default, {
       as: $5e63c961fc1ce211$export$8c6ed5c666ac1360,
       allowPinchZoom: true,
       shards: [
         context.contentRef
       ]
-    }, /* @__PURE__ */ (0, import_react34.createElement)($8927f6f2acc4f386$export$250ffa63cdc0d034.div, _extends7({
+    }, /* @__PURE__ */ (0, import_react35.createElement)($8927f6f2acc4f386$export$250ffa63cdc0d034.div, _extends7({
       "data-state": $5d3850c4d0b4e6c7$var$getState(context.open)
     }, overlayProps, {
       ref: forwardedRef,
@@ -40878,23 +40964,23 @@ var $5d3850c4d0b4e6c7$var$DialogOverlayImpl = /* @__PURE__ */ (0, import_react34
   );
 });
 var $5d3850c4d0b4e6c7$var$CONTENT_NAME = "DialogContent";
-var $5d3850c4d0b4e6c7$export$b6d9565de1e068cf = /* @__PURE__ */ (0, import_react34.forwardRef)((props, forwardedRef) => {
+var $5d3850c4d0b4e6c7$export$b6d9565de1e068cf = /* @__PURE__ */ (0, import_react35.forwardRef)((props, forwardedRef) => {
   let portalContext = $5d3850c4d0b4e6c7$var$usePortalContext($5d3850c4d0b4e6c7$var$CONTENT_NAME, props.__scopeDialog), { forceMount = portalContext.forceMount, ...contentProps } = props, context = $5d3850c4d0b4e6c7$var$useDialogContext($5d3850c4d0b4e6c7$var$CONTENT_NAME, props.__scopeDialog);
-  return /* @__PURE__ */ (0, import_react34.createElement)($921a889cee6df7e8$export$99c2b779aa4e8b8b, {
+  return /* @__PURE__ */ (0, import_react35.createElement)($921a889cee6df7e8$export$99c2b779aa4e8b8b, {
     present: forceMount || context.open
-  }, context.modal ? /* @__PURE__ */ (0, import_react34.createElement)($5d3850c4d0b4e6c7$var$DialogContentModal, _extends7({}, contentProps, {
+  }, context.modal ? /* @__PURE__ */ (0, import_react35.createElement)($5d3850c4d0b4e6c7$var$DialogContentModal, _extends7({}, contentProps, {
     ref: forwardedRef
-  })) : /* @__PURE__ */ (0, import_react34.createElement)($5d3850c4d0b4e6c7$var$DialogContentNonModal, _extends7({}, contentProps, {
+  })) : /* @__PURE__ */ (0, import_react35.createElement)($5d3850c4d0b4e6c7$var$DialogContentNonModal, _extends7({}, contentProps, {
     ref: forwardedRef
   })));
 });
-var $5d3850c4d0b4e6c7$var$DialogContentModal = /* @__PURE__ */ (0, import_react34.forwardRef)((props, forwardedRef) => {
-  let context = $5d3850c4d0b4e6c7$var$useDialogContext($5d3850c4d0b4e6c7$var$CONTENT_NAME, props.__scopeDialog), contentRef = (0, import_react34.useRef)(null), composedRefs = $6ed0406888f73fc4$export$c7b2cbe3552a0d05(forwardedRef, context.contentRef, contentRef);
-  return (0, import_react34.useEffect)(() => {
+var $5d3850c4d0b4e6c7$var$DialogContentModal = /* @__PURE__ */ (0, import_react35.forwardRef)((props, forwardedRef) => {
+  let context = $5d3850c4d0b4e6c7$var$useDialogContext($5d3850c4d0b4e6c7$var$CONTENT_NAME, props.__scopeDialog), contentRef = (0, import_react35.useRef)(null), composedRefs = $6ed0406888f73fc4$export$c7b2cbe3552a0d05(forwardedRef, context.contentRef, contentRef);
+  return (0, import_react35.useEffect)(() => {
     let content = contentRef.current;
     if (content)
       return hideOthers(content);
-  }, []), /* @__PURE__ */ (0, import_react34.createElement)($5d3850c4d0b4e6c7$var$DialogContentImpl, _extends7({}, props, {
+  }, []), /* @__PURE__ */ (0, import_react35.createElement)($5d3850c4d0b4e6c7$var$DialogContentImpl, _extends7({}, props, {
     ref: composedRefs,
     trapFocus: context.open,
     disableOutsidePointerEvents: true,
@@ -40912,9 +40998,9 @@ var $5d3850c4d0b4e6c7$var$DialogContentModal = /* @__PURE__ */ (0, import_react3
     )
   }));
 });
-var $5d3850c4d0b4e6c7$var$DialogContentNonModal = /* @__PURE__ */ (0, import_react34.forwardRef)((props, forwardedRef) => {
-  let context = $5d3850c4d0b4e6c7$var$useDialogContext($5d3850c4d0b4e6c7$var$CONTENT_NAME, props.__scopeDialog), hasInteractedOutsideRef = (0, import_react34.useRef)(false), hasPointerDownOutsideRef = (0, import_react34.useRef)(false);
-  return /* @__PURE__ */ (0, import_react34.createElement)($5d3850c4d0b4e6c7$var$DialogContentImpl, _extends7({}, props, {
+var $5d3850c4d0b4e6c7$var$DialogContentNonModal = /* @__PURE__ */ (0, import_react35.forwardRef)((props, forwardedRef) => {
+  let context = $5d3850c4d0b4e6c7$var$useDialogContext($5d3850c4d0b4e6c7$var$CONTENT_NAME, props.__scopeDialog), hasInteractedOutsideRef = (0, import_react35.useRef)(false), hasPointerDownOutsideRef = (0, import_react35.useRef)(false);
+  return /* @__PURE__ */ (0, import_react35.createElement)($5d3850c4d0b4e6c7$var$DialogContentImpl, _extends7({}, props, {
     ref: forwardedRef,
     trapFocus: false,
     disableOutsidePointerEvents: false,
@@ -40934,15 +41020,15 @@ var $5d3850c4d0b4e6c7$var$DialogContentNonModal = /* @__PURE__ */ (0, import_rea
     }
   }));
 });
-var $5d3850c4d0b4e6c7$var$DialogContentImpl = /* @__PURE__ */ (0, import_react34.forwardRef)((props, forwardedRef) => {
-  let { __scopeDialog, trapFocus, onOpenAutoFocus, onCloseAutoFocus, ...contentProps } = props, context = $5d3850c4d0b4e6c7$var$useDialogContext($5d3850c4d0b4e6c7$var$CONTENT_NAME, __scopeDialog), contentRef = (0, import_react34.useRef)(null), composedRefs = $6ed0406888f73fc4$export$c7b2cbe3552a0d05(forwardedRef, contentRef);
-  return $3db38b7d1fb3fe6a$export$b7ece24a22aeda8c(), /* @__PURE__ */ (0, import_react34.createElement)(import_react34.Fragment, null, /* @__PURE__ */ (0, import_react34.createElement)($d3863c46a17e8a28$export$20e40289641fbbb6, {
+var $5d3850c4d0b4e6c7$var$DialogContentImpl = /* @__PURE__ */ (0, import_react35.forwardRef)((props, forwardedRef) => {
+  let { __scopeDialog, trapFocus, onOpenAutoFocus, onCloseAutoFocus, ...contentProps } = props, context = $5d3850c4d0b4e6c7$var$useDialogContext($5d3850c4d0b4e6c7$var$CONTENT_NAME, __scopeDialog), contentRef = (0, import_react35.useRef)(null), composedRefs = $6ed0406888f73fc4$export$c7b2cbe3552a0d05(forwardedRef, contentRef);
+  return $3db38b7d1fb3fe6a$export$b7ece24a22aeda8c(), /* @__PURE__ */ (0, import_react35.createElement)(import_react35.Fragment, null, /* @__PURE__ */ (0, import_react35.createElement)($d3863c46a17e8a28$export$20e40289641fbbb6, {
     asChild: true,
     loop: true,
     trapped: trapFocus,
     onMountAutoFocus: onOpenAutoFocus,
     onUnmountAutoFocus: onCloseAutoFocus
-  }, /* @__PURE__ */ (0, import_react34.createElement)($5cb92bef7577960e$export$177fb62ff3ec1f22, _extends7({
+  }, /* @__PURE__ */ (0, import_react35.createElement)($5cb92bef7577960e$export$177fb62ff3ec1f22, _extends7({
     role: "dialog",
     id: context.contentId,
     "aria-describedby": context.descriptionId,
@@ -40954,27 +41040,27 @@ var $5d3850c4d0b4e6c7$var$DialogContentImpl = /* @__PURE__ */ (0, import_react34
   }))), false);
 });
 var $5d3850c4d0b4e6c7$var$TITLE_NAME = "DialogTitle";
-var $5d3850c4d0b4e6c7$export$16f7638e4a34b909 = /* @__PURE__ */ (0, import_react34.forwardRef)((props, forwardedRef) => {
+var $5d3850c4d0b4e6c7$export$16f7638e4a34b909 = /* @__PURE__ */ (0, import_react35.forwardRef)((props, forwardedRef) => {
   let { __scopeDialog, ...titleProps } = props, context = $5d3850c4d0b4e6c7$var$useDialogContext($5d3850c4d0b4e6c7$var$TITLE_NAME, __scopeDialog);
-  return /* @__PURE__ */ (0, import_react34.createElement)($8927f6f2acc4f386$export$250ffa63cdc0d034.h2, _extends7({
+  return /* @__PURE__ */ (0, import_react35.createElement)($8927f6f2acc4f386$export$250ffa63cdc0d034.h2, _extends7({
     id: context.titleId
   }, titleProps, {
     ref: forwardedRef
   }));
 });
 var $5d3850c4d0b4e6c7$var$DESCRIPTION_NAME = "DialogDescription";
-var $5d3850c4d0b4e6c7$export$94e94c2ec2c954d5 = /* @__PURE__ */ (0, import_react34.forwardRef)((props, forwardedRef) => {
+var $5d3850c4d0b4e6c7$export$94e94c2ec2c954d5 = /* @__PURE__ */ (0, import_react35.forwardRef)((props, forwardedRef) => {
   let { __scopeDialog, ...descriptionProps } = props, context = $5d3850c4d0b4e6c7$var$useDialogContext($5d3850c4d0b4e6c7$var$DESCRIPTION_NAME, __scopeDialog);
-  return /* @__PURE__ */ (0, import_react34.createElement)($8927f6f2acc4f386$export$250ffa63cdc0d034.p, _extends7({
+  return /* @__PURE__ */ (0, import_react35.createElement)($8927f6f2acc4f386$export$250ffa63cdc0d034.p, _extends7({
     id: context.descriptionId
   }, descriptionProps, {
     ref: forwardedRef
   }));
 });
 var $5d3850c4d0b4e6c7$var$CLOSE_NAME = "DialogClose";
-var $5d3850c4d0b4e6c7$export$fba2fb7cd781b7ac = /* @__PURE__ */ (0, import_react34.forwardRef)((props, forwardedRef) => {
+var $5d3850c4d0b4e6c7$export$fba2fb7cd781b7ac = /* @__PURE__ */ (0, import_react35.forwardRef)((props, forwardedRef) => {
   let { __scopeDialog, ...closeProps } = props, context = $5d3850c4d0b4e6c7$var$useDialogContext($5d3850c4d0b4e6c7$var$CLOSE_NAME, __scopeDialog);
-  return /* @__PURE__ */ (0, import_react34.createElement)($8927f6f2acc4f386$export$250ffa63cdc0d034.button, _extends7({
+  return /* @__PURE__ */ (0, import_react35.createElement)($8927f6f2acc4f386$export$250ffa63cdc0d034.button, _extends7({
     type: "button"
   }, closeProps, {
     ref: forwardedRef,
@@ -41001,11 +41087,11 @@ var $5d3850c4d0b4e6c7$export$7c6e2c02157bb7d2 = $5d3850c4d0b4e6c7$export$b6d9565
 var $5d3850c4d0b4e6c7$export$f99233281efd08a0 = $5d3850c4d0b4e6c7$export$16f7638e4a34b909;
 var $5d3850c4d0b4e6c7$export$393edc798c47379d = $5d3850c4d0b4e6c7$export$94e94c2ec2c954d5;
 var $5d3850c4d0b4e6c7$export$f39c2d165cd861fe = $5d3850c4d0b4e6c7$export$fba2fb7cd781b7ac;
-var import_jsx_dev_runtime13 = __toESM(require_jsx_dev_runtime(), 1);
+var import_jsx_dev_runtime14 = __toESM(require_jsx_dev_runtime(), 1);
 var Dialog = $5d3850c4d0b4e6c7$export$be92b6f5f03c0fe9;
 var DialogTrigger = $5d3850c4d0b4e6c7$export$41fb9f06171c75f4;
 var DialogPortal = $5d3850c4d0b4e6c7$export$602eac185826482c;
-var DialogOverlay = React25.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
+var DialogOverlay = React26.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
   $5d3850c4d0b4e6c7$export$c6fdb837b070b4ff,
   {
     ref,
@@ -41025,13 +41111,13 @@ var DialogOverlay = React25.forwardRef(({ className, ...props }, ref) => /* @__P
   void 0
 ));
 DialogOverlay.displayName = $5d3850c4d0b4e6c7$export$c6fdb837b070b4ff.displayName;
-var DialogContent = React25.forwardRef(({ className, children, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(DialogPortal, { children: [
-  /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(DialogOverlay, {}, void 0, false, {
+var DialogContent = React26.forwardRef(({ className, children, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(DialogPortal, { children: [
+  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(DialogOverlay, {}, void 0, false, {
     fileName: "app/components/ui/dialog.jsx",
     lineNumber: 28,
     columnNumber: 5
   }, void 0),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
     $5d3850c4d0b4e6c7$export$7c6e2c02157bb7d2,
     {
       ref,
@@ -41042,17 +41128,17 @@ var DialogContent = React25.forwardRef(({ className, children, ...props }, ref) 
       ...props,
       children: [
         children,
-        /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
+        /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
           $5d3850c4d0b4e6c7$export$f39c2d165cd861fe,
           {
             className: "absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground",
             children: [
-              /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(Cross2Icon, { className: "h-4 w-4" }, void 0, false, {
+              /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(Cross2Icon, { className: "h-4 w-4" }, void 0, false, {
                 fileName: "app/components/ui/dialog.jsx",
                 lineNumber: 39,
                 columnNumber: 9
               }, void 0),
-              /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("span", { className: "sr-only", children: "Close" }, void 0, false, {
+              /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("span", { className: "sr-only", children: "Close" }, void 0, false, {
                 fileName: "app/components/ui/dialog.jsx",
                 lineNumber: 40,
                 columnNumber: 9
@@ -41088,7 +41174,7 @@ DialogContent.displayName = $5d3850c4d0b4e6c7$export$7c6e2c02157bb7d2.displayNam
 var DialogHeader = ({
   className,
   ...props
-}) => /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
+}) => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
   "div",
   {
     className: cn("flex flex-col space-y-1.5 text-center sm:text-left", className),
@@ -41107,7 +41193,7 @@ DialogHeader.displayName = "DialogHeader";
 var DialogFooter = ({
   className,
   ...props
-}) => /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
+}) => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
   "div",
   {
     className: cn("flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2", className),
@@ -41123,7 +41209,7 @@ var DialogFooter = ({
   void 0
 );
 DialogFooter.displayName = "DialogFooter";
-var DialogTitle = React25.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
+var DialogTitle = React26.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
   $5d3850c4d0b4e6c7$export$f99233281efd08a0,
   {
     ref,
@@ -41140,7 +41226,7 @@ var DialogTitle = React25.forwardRef(({ className, ...props }, ref) => /* @__PUR
   void 0
 ));
 DialogTitle.displayName = $5d3850c4d0b4e6c7$export$f99233281efd08a0.displayName;
-var DialogDescription = React25.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
+var DialogDescription = React26.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
   $5d3850c4d0b4e6c7$export$393edc798c47379d,
   {
     ref,
@@ -41157,9 +41243,9 @@ var DialogDescription = React25.forwardRef(({ className, ...props }, ref) => /* 
   void 0
 ));
 DialogDescription.displayName = $5d3850c4d0b4e6c7$export$393edc798c47379d.displayName;
-var React26 = __toESM(require_react(), 1);
-var import_jsx_dev_runtime14 = __toESM(require_jsx_dev_runtime(), 1);
-var Input = React26.forwardRef(({ className, type, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
+var React27 = __toESM(require_react(), 1);
+var import_jsx_dev_runtime15 = __toESM(require_jsx_dev_runtime(), 1);
+var Input = React27.forwardRef(({ className, type, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
   "input",
   {
     type,
@@ -41180,9 +41266,9 @@ var Input = React26.forwardRef(({ className, type, ...props }, ref) => /* @__PUR
   void 0
 ));
 Input.displayName = "Input";
-var React27 = __toESM(require_react(), 1);
-var import_react35 = __toESM(require_react(), 1);
-var $b73a6c6685e72184$export$b04be29aa201d4f5 = /* @__PURE__ */ (0, import_react35.forwardRef)((props, forwardedRef) => /* @__PURE__ */ (0, import_react35.createElement)($8927f6f2acc4f386$export$250ffa63cdc0d034.label, _extends7({}, props, {
+var React28 = __toESM(require_react(), 1);
+var import_react36 = __toESM(require_react(), 1);
+var $b73a6c6685e72184$export$b04be29aa201d4f5 = /* @__PURE__ */ (0, import_react36.forwardRef)((props, forwardedRef) => /* @__PURE__ */ (0, import_react36.createElement)($8927f6f2acc4f386$export$250ffa63cdc0d034.label, _extends7({}, props, {
   ref: forwardedRef,
   onMouseDown: (event) => {
     var _props$onMouseDown;
@@ -41190,21 +41276,21 @@ var $b73a6c6685e72184$export$b04be29aa201d4f5 = /* @__PURE__ */ (0, import_react
   }
 })));
 var $b73a6c6685e72184$export$be92b6f5f03c0fe9 = $b73a6c6685e72184$export$b04be29aa201d4f5;
-var import_jsx_dev_runtime15 = __toESM(require_jsx_dev_runtime(), 1);
+var import_jsx_dev_runtime16 = __toESM(require_jsx_dev_runtime(), 1);
 var labelVariants = cva(
   "text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
 );
-var Label = React27.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)($b73a6c6685e72184$export$be92b6f5f03c0fe9, { ref, className: cn(labelVariants(), className), ...props }, void 0, false, {
+var Label = React28.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)($b73a6c6685e72184$export$be92b6f5f03c0fe9, { ref, className: cn(labelVariants(), className), ...props }, void 0, false, {
   fileName: "app/components/ui/label.jsx",
   lineNumber: 12,
   columnNumber: 3
 }, void 0));
 Label.displayName = $b73a6c6685e72184$export$be92b6f5f03c0fe9.displayName;
-var import_jsx_dev_runtime16 = __toESM(require_jsx_dev_runtime(), 1);
+var import_jsx_dev_runtime17 = __toESM(require_jsx_dev_runtime(), 1);
 var Share = () => {
-  let [copyText, setCopyText] = (0, import_react36.useState)("https://adan.page.link/RUFSiafnb2NnqkRF6"), [isClicked, setIsClicked] = (0, import_react36.useState)(false);
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(Dialog, { className: "rounded-md", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(DialogTrigger, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(Button, { className: "table__shadow rounded-full p-1 w-8 h-8 border-0 bg-blue-400 hover:rotate-[20deg] transition-transform ", variant: "outline", children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("img", { src: share_default, className: "hover:text-[black]", alt: "share" }, void 0, false, {
+  let [copyText, setCopyText] = (0, import_react37.useState)("https://adan.page.link/RUFSiafnb2NnqkRF6"), [isClicked, setIsClicked] = (0, import_react37.useState)(false);
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(Dialog, { className: "rounded-md", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(DialogTrigger, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(Button, { className: "table__shadow rounded-full p-1 w-8 h-8 border-0 bg-blue-400 hover:rotate-[20deg] transition-transform ", variant: "outline", children: /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("img", { src: share_default, className: "hover:text-[black]", alt: "share" }, void 0, false, {
       fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
       lineNumber: 25,
       columnNumber: 9
@@ -41217,9 +41303,9 @@ var Share = () => {
       lineNumber: 23,
       columnNumber: 7
     }, void 0),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(DialogContent, { className: "sm:max-w-md rounded-xl", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(DialogHeader, { children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(DialogTitle, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("img", { src: Election_default, className: "w-[95%] mx-auto rounded-lg", alt: "preview" }, void 0, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(DialogContent, { className: "sm:max-w-md rounded-xl", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(DialogHeader, { children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(DialogTitle, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("img", { src: Election_default, className: "w-[95%] mx-auto rounded-lg", alt: "preview" }, void 0, false, {
           fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
           lineNumber: 31,
           columnNumber: 13
@@ -41228,7 +41314,7 @@ var Share = () => {
           lineNumber: 30,
           columnNumber: 11
         }, void 0),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(DialogDescription, { className: "text-[15px] text-black font-medium", children: "Assembly Election Results" }, void 0, false, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(DialogDescription, { className: "text-[15px] text-black font-medium", children: "Assembly Election Results" }, void 0, false, {
           fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
           lineNumber: 33,
           columnNumber: 11
@@ -41238,14 +41324,14 @@ var Share = () => {
         lineNumber: 29,
         columnNumber: 9
       }, void 0),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { className: "flex items-center space-x-2", children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { className: "grid flex-1 gap-2", children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(Label, { htmlFor: "link", className: "sr-only", children: "Link" }, void 0, false, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("div", { className: "flex items-center space-x-2", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("div", { className: "grid flex-1 gap-2", children: [
+          /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(Label, { htmlFor: "link", className: "sr-only", children: "Link" }, void 0, false, {
             fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
             lineNumber: 39,
             columnNumber: 13
           }, void 0),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(
+          /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(
             Input,
             {
               id: "link",
@@ -41266,7 +41352,7 @@ var Share = () => {
           lineNumber: 38,
           columnNumber: 11
         }, void 0),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(Link2, { target: "_blank", to: `whatsapp://send?text=${copyText}`, children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("img", { src: whatsapp_default, className: "w-8", alt: "whatsapp" }, void 0, false, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(Link2, { target: "_blank", to: `whatsapp://send?text=${copyText}`, children: /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("img", { src: whatsapp_default, className: "w-8", alt: "whatsapp" }, void 0, false, {
           fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
           lineNumber: 48,
           columnNumber: 73
@@ -41275,13 +41361,13 @@ var Share = () => {
           lineNumber: 48,
           columnNumber: 11
         }, void 0),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(Button, { type: "submit", size: "sm", className: "px-3", children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("span", { className: "sr-only", children: "Copy" }, void 0, false, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(Button, { type: "submit", size: "sm", className: "px-3", children: [
+          /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("span", { className: "sr-only", children: "Copy" }, void 0, false, {
             fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
             lineNumber: 50,
             columnNumber: 13
           }, void 0),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(Copy, { className: `h-4 w-4 ${isClicked && "scale-[0.8]"}`, onClick: () => {
+          /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(Copy, { className: `h-4 w-4 ${isClicked && "scale-[0.8]"}`, onClick: () => {
             copyTextToClipboard(copyText), setIsClicked(true), setTimeout(() => setIsClicked(false), 100);
           } }, void 0, false, {
             fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
@@ -41310,8 +41396,8 @@ var Share = () => {
   }, void 0);
 };
 var Share_default = Share;
-var import_jsx_dev_runtime17 = __toESM(require_jsx_dev_runtime(), 1);
-var ConstituencyResults = () => /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(ConstituencyProvider, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(Constituency_default, {}, void 0, false, {
+var import_jsx_dev_runtime18 = __toESM(require_jsx_dev_runtime(), 1);
+var ConstituencyResults2 = () => /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(ConstituencyProvider, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(Constituency_default, {}, void 0, false, {
   fileName: "app/routes/constituencyresults.jsx",
   lineNumber: 8,
   columnNumber: 7
@@ -41320,19 +41406,19 @@ var ConstituencyResults = () => /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsx
   lineNumber: 7,
   columnNumber: 5
 }, void 0);
-var constituencyresults_default = ConstituencyResults;
+var constituencyresults_default = ConstituencyResults2;
 var electionresults_exports = {};
 __export(electionresults_exports, {
   default: () => Index,
   meta: () => meta
 });
+var import_react41 = __toESM(require_react(), 1);
 var import_react40 = __toESM(require_react(), 1);
-var import_react39 = __toESM(require_react(), 1);
-var import_jsx_dev_runtime18 = __toESM(require_jsx_dev_runtime(), 1);
-var ElectionContext = (0, import_react39.createContext)("aadhan");
+var import_jsx_dev_runtime19 = __toESM(require_jsx_dev_runtime(), 1);
+var ElectionContext = (0, import_react40.createContext)("aadhan");
 var WebscoketProvider = ({ children }) => {
-  let [webSocketData, setWebSocketData] = (0, import_react39.useState)(null), [stateName, setStateName] = (0, import_react39.useState)("Telangana");
-  return (0, import_react39.useEffect)(() => {
+  let [webSocketData, setWebSocketData] = (0, import_react40.useState)(null), [stateName, setStateName] = (0, import_react40.useState)("Telangana");
+  return (0, import_react40.useEffect)(() => {
     document.addEventListener("visibilitychange", handleVisibilityChange);
     function handleVisibilityChange() {
       document.visibilityState === "visible" && initializeWebSocket();
@@ -41359,7 +41445,7 @@ var WebscoketProvider = ({ children }) => {
       };
     };
     initializeWebSocket();
-  }, []), webSocketData === null ? /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "min-h-screen grid place-content-center", style: { background: "linear-gradient( -80deg , #d7e9ff, #7db3ff, #d7e9ff)" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "", children: /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("img", { src: ballot_1_default, alt: "ballot gif" }, void 0, false, {
+  }, []), webSocketData === null ? /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("div", { className: "min-h-screen grid place-content-center", style: { background: "linear-gradient( -80deg , #d7e9ff, #7db3ff, #d7e9ff)" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("div", { className: "", children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("img", { src: ballot_1_default, alt: "ballot gif" }, void 0, false, {
     fileName: "app/services/context/ElectionService.jsx",
     lineNumber: 59,
     columnNumber: 11
@@ -41371,23 +41457,23 @@ var WebscoketProvider = ({ children }) => {
     fileName: "app/services/context/ElectionService.jsx",
     lineNumber: 57,
     columnNumber: 7
-  }, void 0) : /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(ElectionContext.Provider, { value: [webSocketData, stateName, setStateName], children }, void 0, false, {
+  }, void 0) : /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(ElectionContext.Provider, { value: [webSocketData, stateName, setStateName], children }, void 0, false, {
     fileName: "app/services/context/ElectionService.jsx",
     lineNumber: 66,
     columnNumber: 5
   }, void 0);
 };
-var import_jsx_dev_runtime19 = __toESM(require_jsx_dev_runtime(), 1);
+var import_jsx_dev_runtime20 = __toESM(require_jsx_dev_runtime(), 1);
 var Election = () => {
-  let [webSocketData, stateName] = (0, import_react40.useContext)(ElectionContext), stateData = getSateData(webSocketData[0].states, stateName);
-  return console.log("sateData", stateData), /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("div", { className: "w-full min-h-screen font__nunitosans flex flex-col items-center bg-[#050D3E]", style: { background: "#B15EFF" }, children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("div", { className: "info-bar-container w-full flex items-center  bg-[#003D75] px-2 md:px-6", style: { alignSelf: "flex-start" }, children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(InfoBar_default, {}, void 0, false, {
+  let [webSocketData, stateName] = (0, import_react41.useContext)(ElectionContext), stateData = getSateData(webSocketData[0].states, stateName);
+  return console.log("sateData", stateData), /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("div", { className: "w-full min-h-screen font__nunitosans flex flex-col items-center bg-[#050D3E]", style: { background: "#B15EFF" }, children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("div", { className: "info-bar-container w-full flex items-center  bg-[#003D75] px-2 md:px-6", style: { alignSelf: "flex-start" }, children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(InfoBar_default, {}, void 0, false, {
         fileName: "app/components/ElectionResuts/Election.jsx",
         lineNumber: 14,
         columnNumber: 9
       }, void 0),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(Download_default, {}, void 0, false, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(Download_default, {}, void 0, false, {
         fileName: "app/components/ElectionResuts/Election.jsx",
         lineNumber: 15,
         columnNumber: 9
@@ -41397,7 +41483,7 @@ var Election = () => {
       lineNumber: 13,
       columnNumber: 7
     }, void 0),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("div", { className: "w-full result-cards-container my-5 md:my-0 flex flex-1 justify-center md:content-center gap-y-5 md:gap-x-8 md:gap-y-11 flex-wrap overflow-y-auto", children: stateData[0].media_sources.map((media) => /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(Card_default, { sx: "w-[90%] mx-auto md:w-[30%]", media: media.name, parties: media.party_wise_data }, media.name, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("div", { className: "w-full result-cards-container my-5 md:my-0 flex flex-1 justify-center md:content-center gap-y-5 md:gap-x-8 md:gap-y-11 flex-wrap overflow-y-auto", children: stateData[0].media_sources.map((media) => /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(Card_default, { sx: "w-[90%] mx-auto md:w-[30%]", media: media.name, parties: media.party_wise_data }, media.name, false, {
       fileName: "app/components/ElectionResuts/Election.jsx",
       lineNumber: 19,
       columnNumber: 11
@@ -41413,23 +41499,23 @@ var Election = () => {
   }, void 0);
 };
 var Election_default2 = Election;
-var import_react41 = __toESM(require_react(), 1);
-var import_jsx_dev_runtime20 = __toESM(require_jsx_dev_runtime(), 1);
+var import_react42 = __toESM(require_react(), 1);
+var import_jsx_dev_runtime21 = __toESM(require_jsx_dev_runtime(), 1);
 var InfoBar = ({ sx }) => {
-  let [webSocketData, stateName] = (0, import_react41.useContext)(ElectionContext), [magicFigureData, setMagicFigureData] = (0, import_react41.useState)(null);
-  return (0, import_react41.useEffect)(() => {
+  let [webSocketData, stateName] = (0, import_react42.useContext)(ElectionContext), [magicFigureData, setMagicFigureData] = (0, import_react42.useState)(null);
+  return (0, import_react42.useEffect)(() => {
     (async () => {
       let data = await getMagicFigureData(webSocketData, stateName);
       setMagicFigureData(data);
     })();
-  }, [webSocketData, stateName]), console.log("magicFigureData: ", magicFigureData, "stateName: ", stateName, "webSocketData: ", webSocketData), /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("div", { className: "text-white text-[14px] my-2 flex-1 flex justify-start items-center gap-x-3 gap-y-2 md:gap-x-5 md:gap-y-5 flex-wrap md:flex-nowrap p-1 max-w-[1280px] font__nunitosans", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("div", { className: "hidden md:flex justify-center items-center gap-2", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("div", { className: "w-[0.4rem] h-[0.4rem] bg-red-500 rounded-full animate-pulse" }, void 0, false, {
+  }, [webSocketData, stateName]), console.log("magicFigureData: ", magicFigureData, "stateName: ", stateName, "webSocketData: ", webSocketData), /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "text-white text-[14px] my-2 flex-1 flex justify-start items-center gap-x-3 gap-y-2 md:gap-x-5 md:gap-y-5 flex-wrap md:flex-nowrap p-1 max-w-[1280px] font__nunitosans", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "hidden md:flex justify-center items-center gap-2", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "w-[0.4rem] h-[0.4rem] bg-red-500 rounded-full animate-pulse" }, void 0, false, {
         fileName: "app/components/ElectionResuts/InfoBar.jsx",
         lineNumber: 21,
         columnNumber: 17
       }, void 0),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("div", { children: "LIVE" }, void 0, false, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { children: "LIVE" }, void 0, false, {
         fileName: "app/components/ElectionResuts/InfoBar.jsx",
         lineNumber: 22,
         columnNumber: 17
@@ -41439,12 +41525,12 @@ var InfoBar = ({ sx }) => {
       lineNumber: 20,
       columnNumber: 13
     }, void 0),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("div", { className: "font-medium", children: "ASSEMBLY ELECTION RESULTS" }, void 0, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "font-medium", children: "ASSEMBLY ELECTION RESULTS" }, void 0, false, {
       fileName: "app/components/ElectionResuts/InfoBar.jsx",
       lineNumber: 26,
       columnNumber: 13
     }, void 0),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("div", { className: "", children: /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(Dropdown_default2, {}, void 0, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "", children: /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(Dropdown_default2, {}, void 0, false, {
       fileName: "app/components/ElectionResuts/InfoBar.jsx",
       lineNumber: 30,
       columnNumber: 17
@@ -41453,13 +41539,13 @@ var InfoBar = ({ sx }) => {
       lineNumber: 29,
       columnNumber: 13
     }, void 0),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("div", { className: "flex justify-center items-center gap-2", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("p", { children: "Magic figure:" }, void 0, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "flex justify-center items-center gap-2", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("p", { children: "Magic figure:" }, void 0, false, {
         fileName: "app/components/ElectionResuts/InfoBar.jsx",
         lineNumber: 33,
         columnNumber: 17
       }, void 0),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("div", { className: "w-fit px-4 bg-[#FFA500] text-black rounded-md font-medium", children: magicFigureData }, void 0, false, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "w-fit px-4 bg-[#FFA500] text-black rounded-md font-medium", children: magicFigureData }, void 0, false, {
         fileName: "app/components/ElectionResuts/InfoBar.jsx",
         lineNumber: 34,
         columnNumber: 17
@@ -41469,13 +41555,13 @@ var InfoBar = ({ sx }) => {
       lineNumber: 32,
       columnNumber: 13
     }, void 0),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("div", { className: "flex md:hidden justify-center items-center gap-2", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("div", { className: "w-[0.4rem] h-[0.4rem] bg-red-500 rounded-full animate-pulse" }, void 0, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "flex md:hidden justify-center items-center gap-2", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "w-[0.4rem] h-[0.4rem] bg-red-500 rounded-full animate-pulse" }, void 0, false, {
         fileName: "app/components/ElectionResuts/InfoBar.jsx",
         lineNumber: 37,
         columnNumber: 17
       }, void 0),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("div", { children: "LIVE" }, void 0, false, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { children: "LIVE" }, void 0, false, {
         fileName: "app/components/ElectionResuts/InfoBar.jsx",
         lineNumber: 38,
         columnNumber: 17
@@ -41492,20 +41578,20 @@ var InfoBar = ({ sx }) => {
   }, void 0);
 };
 var InfoBar_default = InfoBar;
-var import_react42 = __toESM(require_react(), 1);
+var import_react43 = __toESM(require_react(), 1);
 var import_platform = __toESM(require_platform(), 1);
-var import_jsx_dev_runtime21 = __toESM(require_jsx_dev_runtime(), 1);
+var import_jsx_dev_runtime22 = __toESM(require_jsx_dev_runtime(), 1);
 var Download = ({ sx }) => {
-  let [appLink, setAppLink] = (0, import_react42.useState)("https://aadhan.in");
-  return (0, import_react42.useEffect)(() => {
+  let [appLink, setAppLink] = (0, import_react43.useState)("https://aadhan.in");
+  return (0, import_react43.useEffect)(() => {
     import_platform.default.os.family === "Android" ? setAppLink("https://play.google.com/store/apps/details?id=com.aadhan.hixic&referrer=utm_source=website") : import_platform.default.os.family === "iOS" || import_platform.default.os.family === "OS X" ? setAppLink("https://apps.apple.com/in/app/aadhan-breaking-short-news/id1415681829") : setAppLink("/#download");
-  }, []), console.log("platform", import_platform.default.os), /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "ms-auto mt-auto md:mt-0 mb-2 md:mb-0 flex flex-col md:flex-row gap-2", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("img", { src: aadhan_logo_default, className: "w-[50%] md:w-[30%] block ms-auto md:ms-0", alt: "aadhan logo" }, void 0, false, {
+  }, []), console.log("platform", import_platform.default.os), /* @__PURE__ */ (0, import_jsx_dev_runtime22.jsxDEV)("div", { className: "ms-auto mt-auto md:mt-0 mb-2 md:mb-0 flex flex-col md:flex-row gap-2", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime22.jsxDEV)("img", { src: aadhan_logo_default, className: "w-[50%] md:w-[30%] block ms-auto md:ms-0", alt: "aadhan logo" }, void 0, false, {
       fileName: "app/components/ElectionResuts/Download.jsx",
       lineNumber: 21,
       columnNumber: 9
     }, void 0),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("button", { className: `${sx} w-fit bg-[#EFEFEF] btn__shadow text-black py-1 px-3 text-[14px] outline-none border-[1px] border-[#151515] rounded-md font-semibold  hover:scale-95 transition ease-in-out duration-300 hover:border-indigo-300`, children: /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(Link2, { to: appLink, children: "Download now" }, void 0, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime22.jsxDEV)("button", { className: `${sx} w-fit bg-[#EFEFEF] btn__shadow text-black py-1 px-3 text-[14px] outline-none border-[1px] border-[#151515] rounded-md font-semibold  hover:scale-95 transition ease-in-out duration-300 hover:border-indigo-300`, children: /* @__PURE__ */ (0, import_jsx_dev_runtime22.jsxDEV)(Link2, { to: appLink, children: "Download now" }, void 0, false, {
       fileName: "app/components/ElectionResuts/Download.jsx",
       lineNumber: 23,
       columnNumber: 13
@@ -41521,18 +41607,18 @@ var Download = ({ sx }) => {
   }, void 0);
 };
 var Download_default = Download;
-var import_react44 = __toESM(require_react(), 1);
-var import_jsx_dev_runtime22 = __toESM(require_jsx_dev_runtime(), 1);
+var import_react45 = __toESM(require_react(), 1);
+var import_jsx_dev_runtime23 = __toESM(require_jsx_dev_runtime(), 1);
 var Dropdown2 = ({ sx }) => {
-  let [webSocketData, stateName, setStateName] = (0, import_react44.useContext)(ElectionContext);
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime22.jsxDEV)("div", { className: `${sx} dropdown-ui-container`, children: /* @__PURE__ */ (0, import_jsx_dev_runtime22.jsxDEV)(DropdownMenu, { children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime22.jsxDEV)(DropdownMenuTrigger, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_dev_runtime22.jsxDEV)(Button, { className: "min-w-[155px] justify-start", variant: "outline", children: /* @__PURE__ */ (0, import_jsx_dev_runtime22.jsxDEV)("div", { className: "w-full flex justify-between items-center", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime22.jsxDEV)("p", { children: stateName }, void 0, false, {
+  let [webSocketData, stateName, setStateName] = (0, import_react45.useContext)(ElectionContext);
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)("div", { className: `${sx} dropdown-ui-container`, children: /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)(DropdownMenu, { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)(DropdownMenuTrigger, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)(Button, { className: "min-w-[155px] justify-start", variant: "outline", children: /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)("div", { className: "w-full flex justify-between items-center", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)("p", { children: stateName }, void 0, false, {
         fileName: "app/components/ElectionResuts/Dropdown.jsx",
         lineNumber: 23,
         columnNumber: 29
       }, void 0),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime22.jsxDEV)("img", { src: down_arrow_default, alt: "down icon" }, void 0, false, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)("img", { src: down_arrow_default, alt: "down icon" }, void 0, false, {
         fileName: "app/components/ElectionResuts/Dropdown.jsx",
         lineNumber: 24,
         columnNumber: 29
@@ -41550,18 +41636,18 @@ var Dropdown2 = ({ sx }) => {
       lineNumber: 20,
       columnNumber: 17
     }, void 0),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime22.jsxDEV)(DropdownMenuContent, { className: "w-[180px]", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime22.jsxDEV)(DropdownMenuLabel, { children: "Select a State" }, void 0, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)(DropdownMenuContent, { className: "w-[180px]", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)(DropdownMenuLabel, { children: "Select a State" }, void 0, false, {
         fileName: "app/components/ElectionResuts/Dropdown.jsx",
         lineNumber: 29,
         columnNumber: 21
       }, void 0),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime22.jsxDEV)(DropdownMenuSeparator, {}, void 0, false, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)(DropdownMenuSeparator, {}, void 0, false, {
         fileName: "app/components/ElectionResuts/Dropdown.jsx",
         lineNumber: 30,
         columnNumber: 21
       }, void 0),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime22.jsxDEV)(DropdownMenuRadioGroup, { value: stateName, onValueChange: setStateName, children: webSocketData?.[0]?.states?.map((state) => /* @__PURE__ */ (0, import_jsx_dev_runtime22.jsxDEV)(DropdownMenuRadioItem, { value: state.name, children: state.name }, state.name, false, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)(DropdownMenuRadioGroup, { value: stateName, onValueChange: setStateName, children: webSocketData?.[0]?.states?.map((state) => /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)(DropdownMenuRadioItem, { value: state.name, children: state.name }, state.name, false, {
         fileName: "app/components/ElectionResuts/Dropdown.jsx",
         lineNumber: 33,
         columnNumber: 29
@@ -41586,15 +41672,15 @@ var Dropdown2 = ({ sx }) => {
   }, void 0);
 };
 var Dropdown_default2 = Dropdown2;
-var import_react45 = __toESM(require_react(), 1);
-var import_jsx_dev_runtime23 = __toESM(require_jsx_dev_runtime(), 1);
-var Card = ({ w, h, sx, media, parties }) => /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)("div", { className: `${sx}`, style: { width: `${w}`, height: `${h}` }, children: [
-  /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)("div", { className: "ps-3 py-1 text-black font-semibold rounded-md", children: media }, void 0, false, {
+var import_react46 = __toESM(require_react(), 1);
+var import_jsx_dev_runtime24 = __toESM(require_jsx_dev_runtime(), 1);
+var Card = ({ w, h, sx, media, parties }) => /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)("div", { className: `${sx}`, style: { width: `${w}`, height: `${h}` }, children: [
+  /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)("div", { className: "ps-3 py-1 text-black font-semibold rounded-md", children: media }, void 0, false, {
     fileName: "app/components/ElectionResuts/Card.jsx",
     lineNumber: 7,
     columnNumber: 13
   }, void 0),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)("div", { className: "card-table-container table__shadow rounded-[7px]", children: /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)(PartyResults_default2, { parties }, void 0, false, {
+  /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)("div", { className: "card-table-container table__shadow rounded-[7px]", children: /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(PartyResults_default2, { parties }, void 0, false, {
     fileName: "app/components/ElectionResuts/Card.jsx",
     lineNumber: 11,
     columnNumber: 17
@@ -41609,26 +41695,26 @@ var Card = ({ w, h, sx, media, parties }) => /* @__PURE__ */ (0, import_jsx_dev_
   columnNumber: 9
 }, void 0);
 var Card_default = Card;
-var import_react46 = __toESM(require_react(), 1);
-var import_jsx_dev_runtime24 = __toESM(require_jsx_dev_runtime(), 1);
-var PartyResults2 = ({ parties }) => /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(Table, { className: "election-level-table", children: [
-  /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(TableHeader, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(TableRow, { className: "text-center bg-[#34509d] border-0 border-transparent", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(TableHead, { className: "text-white text-[1rem] ps-4", children: "Party" }, void 0, false, {
+var import_react47 = __toESM(require_react(), 1);
+var import_jsx_dev_runtime25 = __toESM(require_jsx_dev_runtime(), 1);
+var PartyResults2 = ({ parties }) => /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)(Table, { className: "election-level-table", children: [
+  /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)(TableHeader, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)(TableRow, { className: "text-center bg-[#34509d] border-0 border-transparent", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)(TableHead, { className: "text-white text-[1rem] ps-4", children: "Party" }, void 0, false, {
       fileName: "app/components/ElectionResuts/PartyResults.jsx",
       lineNumber: 16,
       columnNumber: 21
     }, void 0),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(TableHead, { className: "text-center text-[1rem] text-white", children: "Leading" }, void 0, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)(TableHead, { className: "text-center text-[1rem] text-white", children: "Leading" }, void 0, false, {
       fileName: "app/components/ElectionResuts/PartyResults.jsx",
       lineNumber: 17,
       columnNumber: 21
     }, void 0),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(TableHead, { className: "text-center text-[1rem] text-white", children: "Won" }, void 0, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)(TableHead, { className: "text-center text-[1rem] text-white", children: "Won" }, void 0, false, {
       fileName: "app/components/ElectionResuts/PartyResults.jsx",
       lineNumber: 18,
       columnNumber: 21
     }, void 0),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(TableHead, { className: "text-center text-[1rem] text-white", children: "Total" }, void 0, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)(TableHead, { className: "text-center text-[1rem] text-white", children: "Total" }, void 0, false, {
       fileName: "app/components/ElectionResuts/PartyResults.jsx",
       lineNumber: 19,
       columnNumber: 21
@@ -41642,14 +41728,14 @@ var PartyResults2 = ({ parties }) => /* @__PURE__ */ (0, import_jsx_dev_runtime2
     lineNumber: 14,
     columnNumber: 13
   }, void 0),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(TableBody, { children: parties.map((party) => /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(TableRow, { className: "bg-[#1D2949] text-white", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(TableCell, { className: "font-medium text-white ps-5", children: /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)("div", { className: "flex justify-start items-center gap-2", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)("img", { className: "w-5 h-5 rounded-full", src: party.logo, alt: "" }, void 0, false, {
+  /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)(TableBody, { children: parties.map((party) => /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)(TableRow, { className: "bg-[#1D2949] text-white", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)(TableCell, { className: "font-medium text-white ps-5", children: /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)("div", { className: "flex justify-start items-center gap-2", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)("img", { className: "w-5 h-5 rounded-full", src: party.logo, alt: "" }, void 0, false, {
         fileName: "app/components/ElectionResuts/PartyResults.jsx",
         lineNumber: 27,
         columnNumber: 29
       }, void 0),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)("p", { children: party.name }, void 0, false, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)("p", { children: party.name }, void 0, false, {
         fileName: "app/components/ElectionResuts/PartyResults.jsx",
         lineNumber: 28,
         columnNumber: 29
@@ -41663,17 +41749,17 @@ var PartyResults2 = ({ parties }) => /* @__PURE__ */ (0, import_jsx_dev_runtime2
       lineNumber: 25,
       columnNumber: 21
     }, void 0),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(TableCell, { className: "text-center text-[16px] text-white", children: party.leading }, void 0, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)(TableCell, { className: "text-center text-[16px] text-white", children: party.leading }, void 0, false, {
       fileName: "app/components/ElectionResuts/PartyResults.jsx",
       lineNumber: 31,
       columnNumber: 21
     }, void 0),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(TableCell, { className: "text-center text-[16px] text-white", children: party.won }, void 0, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)(TableCell, { className: "text-center text-[16px] text-white", children: party.won }, void 0, false, {
       fileName: "app/components/ElectionResuts/PartyResults.jsx",
       lineNumber: 32,
       columnNumber: 21
     }, void 0),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(TableCell, { className: "text-center text-[16px] text-[white]", children: party.leading + party.won }, void 0, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)(TableCell, { className: "text-center text-[16px] text-[white]", children: party.leading + party.won }, void 0, false, {
       fileName: "app/components/ElectionResuts/PartyResults.jsx",
       lineNumber: 33,
       columnNumber: 21
@@ -41693,13 +41779,13 @@ var PartyResults2 = ({ parties }) => /* @__PURE__ */ (0, import_jsx_dev_runtime2
   columnNumber: 9
 }, void 0);
 var PartyResults_default2 = PartyResults2;
-var import_jsx_dev_runtime25 = __toESM(require_jsx_dev_runtime(), 1);
+var import_jsx_dev_runtime26 = __toESM(require_jsx_dev_runtime(), 1);
 var meta = () => [
   { title: "New Remix App" },
   { name: "description", content: "Welcome to Remix!" }
 ];
 function Index() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)(WebscoketProvider, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)(Election_default2, {}, void 0, false, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(WebscoketProvider, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(Election_default2, {}, void 0, false, {
     fileName: "app/routes/electionresults.tsx",
     lineNumber: 16,
     columnNumber: 7
@@ -41714,29 +41800,29 @@ __export(index_exports, {
   default: () => Index2,
   meta: () => meta2
 });
-var import_react47 = __toESM(require_react(), 1);
-var import_jsx_dev_runtime26 = __toESM(require_jsx_dev_runtime(), 1);
+var import_react48 = __toESM(require_react(), 1);
+var import_jsx_dev_runtime27 = __toESM(require_jsx_dev_runtime(), 1);
 var meta2 = () => [
   { title: "New Remix App" },
   { name: "description", content: "Welcome to Remix!" }
 ];
 function Index2() {
-  let [mounted, setMounted] = (0, import_react47.useState)(false);
-  return (0, import_react47.useEffect)(() => {
+  let [mounted, setMounted] = (0, import_react48.useState)(false);
+  return (0, import_react48.useEffect)(() => {
     setMounted(true);
-  }, []), mounted ? /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("div", { className: "min-h-screen w-full grid place-content-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("div", { className: "w-full mx-auto border-[1px] border-red-300 table__shadow rounded-md", style: { padding: "2rem" }, children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("img", { src: aadhan_black_logo_default, alt: "aadhan logo", className: "block mx-auto" }, void 0, false, {
+  }, []), mounted ? /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "min-h-screen w-full grid place-content-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "w-full mx-auto border-[1px] border-red-300 table__shadow rounded-md", style: { padding: "2rem" }, children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("img", { src: aadhan_black_logo_default, alt: "aadhan logo", className: "block mx-auto" }, void 0, false, {
       fileName: "app/routes/_index.tsx",
       lineNumber: 42,
       columnNumber: 9
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("div", { className: "route-links-container my-5 flex flex-col justify-center items-start gap-2", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(Link2, { className: "route-link text-blue-700 hover:text-blue-500 underline", to: "/electionresults", children: "Election Results" }, void 0, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "route-links-container my-5 flex flex-col justify-center items-start gap-2", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)(Link2, { className: "route-link text-blue-700 hover:text-blue-500 underline", to: "/electionresults", children: "Election Results" }, void 0, false, {
         fileName: "app/routes/_index.tsx",
         lineNumber: 44,
         columnNumber: 13
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(Link2, { className: "route-link text-blue-700 hover:text-blue-500 underline", to: "/constituencyresults", children: "Constituency Results" }, void 0, false, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)(Link2, { className: "route-link text-blue-700 hover:text-blue-500 underline", to: "/constituencyresults", children: "Constituency Results" }, void 0, false, {
         fileName: "app/routes/_index.tsx",
         lineNumber: 45,
         columnNumber: 13
@@ -41760,20 +41846,20 @@ var widget_exports = {};
 __export(widget_exports, {
   default: () => widget_default
 });
-var import_react49 = __toESM(require_react(), 1);
-var import_jsx_dev_runtime27 = __toESM(require_jsx_dev_runtime(), 1);
-var widget = () => /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "bg-[#262C42] min-h-screen relative text-white font__chivo overflow-hidden", children: [
-  /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "widget-container h-screen pb-[32.5px] flex items-end overflow-hidden", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "widget-container-1 flex-1 p-[0.5rem]", children: /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "body-widget-container pt-2 font-semibold flex justify-start items-center gap-3", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("img", { src: vote_default, alt: "vote", className: "translate-y-8 z-0" }, void 0, false, {
+var import_react50 = __toESM(require_react(), 1);
+var import_jsx_dev_runtime28 = __toESM(require_jsx_dev_runtime(), 1);
+var widget = () => /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("div", { className: "bg-[#262C42] min-h-screen relative text-white font__chivo overflow-hidden", children: [
+  /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("div", { className: "widget-container h-screen pb-[32.5px] flex items-end overflow-hidden", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("div", { className: "widget-container-1 flex-1 p-[0.5rem]", children: /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("div", { className: "body-widget-container pt-2 font-semibold flex justify-start items-center gap-3", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("img", { src: vote_default, alt: "vote", className: "translate-y-8 z-0" }, void 0, false, {
         fileName: "app/routes/widget.jsx",
         lineNumber: 10,
         columnNumber: 11
       }, void 0),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "info-widget-container text-[1.2rem]", children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("p", { children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("div", { className: "info-widget-container text-[1.2rem]", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("p", { children: [
           "ASSEMBLY ",
-          /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("br", {}, void 0, false, {
+          /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("br", {}, void 0, false, {
             fileName: "app/routes/widget.jsx",
             lineNumber: 12,
             columnNumber: 25
@@ -41784,14 +41870,14 @@ var widget = () => /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", {
           lineNumber: 12,
           columnNumber: 13
         }, void 0),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "flex justify-between items-center", children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("p", { children: [
-            /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("span", { className: "text-[#FFC700]", children: "RESULTS" }, void 0, false, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("div", { className: "flex justify-between items-center", children: [
+          /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("p", { children: [
+            /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("span", { className: "text-[#FFC700]", children: "RESULTS" }, void 0, false, {
               fileName: "app/routes/widget.jsx",
               lineNumber: 14,
               columnNumber: 18
             }, void 0),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("br", {}, void 0, false, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("br", {}, void 0, false, {
               fileName: "app/routes/widget.jsx",
               lineNumber: 14,
               columnNumber: 65
@@ -41802,7 +41888,7 @@ var widget = () => /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", {
             lineNumber: 14,
             columnNumber: 15
           }, void 0),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("img", { src: votting_booth_default, alt: "votting booth", className: "translate-x-[1rem]" }, void 0, false, {
+          /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("img", { src: votting_booth_default, alt: "votting booth", className: "translate-x-[1rem]" }, void 0, false, {
             fileName: "app/routes/widget.jsx",
             lineNumber: 15,
             columnNumber: 15
@@ -41826,7 +41912,7 @@ var widget = () => /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", {
       lineNumber: 8,
       columnNumber: 7
     }, void 0),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "widget-container-2 flex-1 flex justify-end items-end", children: /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("img", { src: india_map_default, alt: "bharath map", className: "object-contain w-full max-h-[135px]" }, void 0, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("div", { className: "widget-container-2 flex-1 flex justify-end items-end", children: /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("img", { src: india_map_default, alt: "bharath map", className: "object-contain w-full max-h-[135px]" }, void 0, false, {
       fileName: "app/routes/widget.jsx",
       lineNumber: 21,
       columnNumber: 9
@@ -41840,9 +41926,9 @@ var widget = () => /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", {
     lineNumber: 7,
     columnNumber: 7
   }, void 0),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "live-mobile-container px-2 fixed bottom-0 py-1 z-10 bg-[#3E4355] w-full flex justify-between items-center", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "live-widget-container font__poppins bg-[red] text-[11px] w-fit px-2 rounded-sm font-semibold my-1 flex justify-center items-center gap-1", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("span", { className: "inline-block w-[0.3rem] h-[0.3rem] animate-pulse bg-white rounded-full font-semibold" }, void 0, false, {
+  /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("div", { className: "live-mobile-container px-2 fixed bottom-0 py-1 z-10 bg-[#3E4355] w-full flex justify-between items-center", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("div", { className: "live-widget-container font__poppins bg-[red] text-[11px] w-fit px-2 rounded-sm font-semibold my-1 flex justify-center items-center gap-1", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("span", { className: "inline-block w-[0.3rem] h-[0.3rem] animate-pulse bg-white rounded-full font-semibold" }, void 0, false, {
         fileName: "app/routes/widget.jsx",
         lineNumber: 26,
         columnNumber: 11
@@ -41853,13 +41939,13 @@ var widget = () => /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", {
       lineNumber: 25,
       columnNumber: 9
     }, void 0),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "flex justify-center items-center text-[13px] gap-1 text-white", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("p", { children: "Live Results " }, void 0, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("div", { className: "flex justify-center items-center text-[13px] gap-1 text-white", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("p", { children: "Live Results " }, void 0, false, {
         fileName: "app/routes/widget.jsx",
         lineNumber: 29,
         columnNumber: 11
       }, void 0),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("img", { src: chevron_right_default, alt: "chevron right" }, void 0, false, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("img", { src: chevron_right_default, alt: "chevron right" }, void 0, false, {
         fileName: "app/routes/widget.jsx",
         lineNumber: 30,
         columnNumber: 11
@@ -41880,7 +41966,7 @@ var widget = () => /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", {
   columnNumber: 5
 }, void 0);
 var widget_default = widget;
-var assets_manifest_default = { entry: { module: "/build/entry.client-MS4WYGOM.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-NEMJIZPC.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XGDSMD3A.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-YZUIQM2I.js", imports: void 0, hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: true, caseSensitive: void 0, module: "/build/routes/_index-ZFEIBNXW.js", imports: ["/build/_shared/chunk-O6BE6AWN.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/constituencyresults": { id: "routes/constituencyresults", parentId: "root", path: "constituencyresults", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults-3P5IWKBZ.js", imports: ["/build/_shared/chunk-MTQQC3WS.js", "/build/_shared/chunk-O6BE6AWN.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults": { id: "routes/electionresults", parentId: "root", path: "electionresults", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults-ZTCSVRUM.js", imports: ["/build/_shared/chunk-MTQQC3WS.js", "/build/_shared/chunk-O6BE6AWN.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/widget": { id: "routes/widget", parentId: "root", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/widget-NII7TG56.js", imports: ["/build/_shared/chunk-O6BE6AWN.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false } }, version: "22adb48d", hmr: { runtime: "/build/_shared/chunk-XGDSMD3A.js", timestamp: 1701415610751 }, url: "/build/manifest-22ADB48D.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-MS4WYGOM.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-NEMJIZPC.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XGDSMD3A.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-YZUIQM2I.js", imports: void 0, hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: true, caseSensitive: void 0, module: "/build/routes/_index-ZFEIBNXW.js", imports: ["/build/_shared/chunk-O6BE6AWN.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/constituencyresults": { id: "routes/constituencyresults", parentId: "root", path: "constituencyresults", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults-MUI7B6GK.js", imports: ["/build/_shared/chunk-MTQQC3WS.js", "/build/_shared/chunk-O6BE6AWN.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults": { id: "routes/electionresults", parentId: "root", path: "electionresults", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults-ZTCSVRUM.js", imports: ["/build/_shared/chunk-MTQQC3WS.js", "/build/_shared/chunk-O6BE6AWN.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/widget": { id: "routes/widget", parentId: "root", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/widget-NII7TG56.js", imports: ["/build/_shared/chunk-O6BE6AWN.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false } }, version: "3748d64e", hmr: { runtime: "/build/_shared/chunk-XGDSMD3A.js", timestamp: 1701416016348 }, url: "/build/manifest-3748D64E.js" };
 var mode = "development";
 var assetsBuildDirectory = "public/build";
 var future = { v3_fetcherPersist: false };

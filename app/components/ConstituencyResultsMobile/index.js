@@ -4,6 +4,7 @@ import ConstituencyLevel from "./ConstituencyLevel";
 import TabBar from "./TabBar";
 import Dropdown from './Dropdown';
 import PartyResults from "./PartyResults";
+import ConstituencyResults from './ConstituencyResults';
 import Share from './Share';
 
 export{
@@ -13,5 +14,6 @@ export{
     TabBar,
     Dropdown,
     PartyResults,
+    ConstituencyResults,
     Share,
 }

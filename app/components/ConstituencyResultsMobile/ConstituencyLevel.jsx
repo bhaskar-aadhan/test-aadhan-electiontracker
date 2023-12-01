@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dropdown, PartyResults } from '.';
+import { Dropdown, ConstituencyResults } from '.';
 
 const ConstituencyLevel = () => {
     return (
@@ -10,7 +10,7 @@ const ConstituencyLevel = () => {
             </div>
             <p className='my-3'>Round No: 5</p>
             <div className='results-mobile-container my-3'>
-                <PartyResults />
+                <ConstituencyResults />
             </div>
         </div>
     )

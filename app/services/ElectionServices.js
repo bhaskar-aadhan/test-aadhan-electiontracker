@@ -22,6 +22,11 @@ const getMagicFigureData = async(data ,stateName) => {
     const magicFigure =  await stateData?.['magic_figure']
     return magicFigure
 }
+const getMagicFigureSateLevelData = (data ,stateName) => {
+    const stateData = getSateLevelStateData(data, stateName)
+    const magicFigure =  getMagicFigure(stateData?.[0]?.['total_constituencies'])
+    return magicFigure
+}
 
 const getSateData = (data, stateName)=>{
     const stateData = data.filter((state)=>state['name'] === stateName)
@@ -43,6 +48,7 @@ async function copyTextToClipboard(text) {
 export {
     addMagicFigureData,
     getMagicFigureData,
+    getMagicFigureSateLevelData,
     getSateData,
     getSateLevelStateData,
     copyTextToClipboard,

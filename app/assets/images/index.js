@@ -9,6 +9,7 @@ import ballotGif from './ballot-1.gif';
 import whatsappImg from './whatsapp.svg';
 import electionShareImg from './Election.jpg';
 import shareIcon from './share.svg';
+import signalSpinner from './signalSpinner.svg';
 
 export {
     aadhanLogo,
@@ -22,4 +23,5 @@ export {
     whatsappImg,
     electionShareImg,
     shareIcon,
+    signalSpinner,
 }
