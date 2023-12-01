@@ -1,6 +1,7 @@
 import React from "react";
 import type { MetaFunction } from "@remix-run/cloudflare";
 import { Outlet } from "@remix-run/react";
+import { WebscoketProvider } from '~/services/context/ElectionService';
 
 export const meta: MetaFunction = () => {
   return [
@@ -11,9 +12,9 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <>
+    <WebscoketProvider>
       <Outlet />
-    </>
+    </WebscoketProvider>
 
   );
 }

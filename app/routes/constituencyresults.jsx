@@ -1,9 +1,12 @@
 import React from 'react';
 import { Outlet } from '@remix-run/react';
+import { ConstituencyProvider } from '~/services/context/ConstituencyService';
 
 const ConstituencyResults = () => {
   return (
-    <Outlet />
+    <ConstituencyProvider>
+      <Outlet />
+    </ConstituencyProvider>
   )
 }
 

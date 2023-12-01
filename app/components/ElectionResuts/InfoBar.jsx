@@ -16,7 +16,7 @@ const InfoBar = ({ sx }) => {
 
     console.log("magicFigureData: ", magicFigureData, "stateName: ", stateName, "webSocketData: ", webSocketData)
     return (
-        <div className='text-white text-[14px] my-2 flex-1 flex justify-start items-center gap-x-3 gap-y-2 md:gap-x-5 md:gap-y-5 flex-wrap md:flex-nowrap p-1 max-w-[1280px] font__nunitosans'>
+        <div className='text-white text-[14px] my-2 pt-[55px] md:pt-0 flex-1 flex justify-start items-center gap-x-3 gap-y-2 md:gap-x-5 md:gap-y-5 flex-wrap md:flex-nowrap p-1 max-w-[1280px] font__nunitosans'>
             <div className='hidden md:flex justify-center items-center gap-2'>
                 <div className='w-[0.4rem] h-[0.4rem] bg-red-500 rounded-full animate-pulse'></div>
                 <div>

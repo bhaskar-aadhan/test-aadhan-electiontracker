@@ -710,14 +710,14 @@ function matchRoutes(routes2, locationArg, basename) {
 function flattenRoutes(routes2, branches, parentsMeta, parentPath) {
   branches === void 0 && (branches = []), parentsMeta === void 0 && (parentsMeta = []), parentPath === void 0 && (parentPath = "");
   let flattenRoute = (route, index2, relativePath) => {
-    let meta5 = {
+    let meta4 = {
       relativePath: relativePath === void 0 ? route.path || "" : relativePath,
       caseSensitive: route.caseSensitive === !0,
       childrenIndex: index2,
       route
     };
-    meta5.relativePath.startsWith("/") && (invariant(meta5.relativePath.startsWith(parentPath), 'Absolute route path "' + meta5.relativePath + '" nested under path ' + ('"' + parentPath + '" is not valid. An absolute child route path ') + "must start with the combined path of all its parent routes."), meta5.relativePath = meta5.relativePath.slice(parentPath.length));
-    let path = joinPaths([parentPath, meta5.relativePath]), routesMeta = parentsMeta.concat(meta5);
+    meta4.relativePath.startsWith("/") && (invariant(meta4.relativePath.startsWith(parentPath), 'Absolute route path "' + meta4.relativePath + '" nested under path ' + ('"' + parentPath + '" is not valid. An absolute child route path ') + "must start with the combined path of all its parent routes."), meta4.relativePath = meta4.relativePath.slice(parentPath.length));
+    let path = joinPaths([parentPath, meta4.relativePath]), routesMeta = parentsMeta.concat(meta4);
     route.children && route.children.length > 0 && (invariant(
       // Our types know better, but runtime JS may not!
       // @ts-expect-error
@@ -749,7 +749,7 @@ function explodeOptionalSegments(path) {
   return result.push(...restExploded.map((subpath) => subpath === "" ? required : [required, subpath].join("/"))), isOptional && result.push(...restExploded), result.map((exploded) => path.startsWith("/") && exploded === "" ? "/" : exploded);
 }
 function rankRouteBranches(branches) {
-  branches.sort((a, b) => a.score !== b.score ? b.score - a.score : compareIndexes(a.routesMeta.map((meta5) => meta5.childrenIndex), b.routesMeta.map((meta5) => meta5.childrenIndex)));
+  branches.sort((a, b) => a.score !== b.score ? b.score - a.score : compareIndexes(a.routesMeta.map((meta4) => meta4.childrenIndex), b.routesMeta.map((meta4) => meta4.childrenIndex)));
 }
 function computeScore(path, index2) {
   let segments = path.split("/"), initialScore = segments.length;
@@ -773,15 +773,15 @@ function matchRouteBranch(branch, pathname) {
     routesMeta
   } = branch, matchedParams = {}, matchedPathname = "/", matches = [];
   for (let i = 0; i < routesMeta.length; ++i) {
-    let meta5 = routesMeta[i], end = i === routesMeta.length - 1, remainingPathname = matchedPathname === "/" ? pathname : pathname.slice(matchedPathname.length) || "/", match = matchPath({
-      path: meta5.relativePath,
-      caseSensitive: meta5.caseSensitive,
+    let meta4 = routesMeta[i], end = i === routesMeta.length - 1, remainingPathname = matchedPathname === "/" ? pathname : pathname.slice(matchedPathname.length) || "/", match = matchPath({
+      path: meta4.relativePath,
+      caseSensitive: meta4.caseSensitive,
       end
     }, remainingPathname);
     if (!match)
       return null;
     Object.assign(matchedParams, match.params);
-    let route = meta5.route;
+    let route = meta4.route;
     matches.push({
       // TODO: Can this as be avoided?
       params: matchedParams,
@@ -3332,7 +3332,7 @@ Your code should look like:
 3. You might have more than one copy of React in the same app
 See https://reactjs.org/link/invalid-hook-call for tips about how to debug and fix this problem.`), dispatcher;
       }
-      function useContext14(Context) {
+      function useContext16(Context) {
         var dispatcher = resolveDispatcher();
         if (Context._context !== void 0) {
           var realContext = Context._context;
@@ -3881,7 +3881,7 @@ Check the top-level render call using <` + parentName + ">.");
         toArray,
         only: onlyChild
       };
-      exports.Children = Children3, exports.Component = Component3, exports.Fragment = REACT_FRAGMENT_TYPE, exports.Profiler = REACT_PROFILER_TYPE, exports.PureComponent = PureComponent, exports.StrictMode = REACT_STRICT_MODE_TYPE, exports.Suspense = REACT_SUSPENSE_TYPE, exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = ReactSharedInternals, exports.cloneElement = cloneElement$1, exports.createContext = createContext6, exports.createElement = createElement$1, exports.createFactory = createFactory, exports.createRef = createRef, exports.forwardRef = forwardRef13, exports.isValidElement = isValidElement2, exports.lazy = lazy, exports.memo = memo, exports.startTransition = startTransition, exports.unstable_act = act, exports.useCallback = useCallback5, exports.useContext = useContext14, exports.useDebugValue = useDebugValue, exports.useDeferredValue = useDeferredValue, exports.useEffect = useEffect12, exports.useId = useId, exports.useImperativeHandle = useImperativeHandle, exports.useInsertionEffect = useInsertionEffect, exports.useLayoutEffect = useLayoutEffect4, exports.useMemo = useMemo7, exports.useReducer = useReducer, exports.useRef = useRef7, exports.useState = useState15, exports.useSyncExternalStore = useSyncExternalStore, exports.useTransition = useTransition, exports.version = ReactVersion, typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ < "u" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop == "function" && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
+      exports.Children = Children3, exports.Component = Component3, exports.Fragment = REACT_FRAGMENT_TYPE, exports.Profiler = REACT_PROFILER_TYPE, exports.PureComponent = PureComponent, exports.StrictMode = REACT_STRICT_MODE_TYPE, exports.Suspense = REACT_SUSPENSE_TYPE, exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = ReactSharedInternals, exports.cloneElement = cloneElement$1, exports.createContext = createContext6, exports.createElement = createElement$1, exports.createFactory = createFactory, exports.createRef = createRef, exports.forwardRef = forwardRef13, exports.isValidElement = isValidElement2, exports.lazy = lazy, exports.memo = memo, exports.startTransition = startTransition, exports.unstable_act = act, exports.useCallback = useCallback5, exports.useContext = useContext16, exports.useDebugValue = useDebugValue, exports.useDeferredValue = useDeferredValue, exports.useEffect = useEffect12, exports.useId = useId, exports.useImperativeHandle = useImperativeHandle, exports.useInsertionEffect = useInsertionEffect, exports.useLayoutEffect = useLayoutEffect4, exports.useMemo = useMemo7, exports.useReducer = useReducer, exports.useRef = useRef7, exports.useState = useState15, exports.useSyncExternalStore = useSyncExternalStore, exports.useTransition = useTransition, exports.version = ReactVersion, typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ < "u" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop == "function" && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
     })();
   }
 });
@@ -4185,7 +4185,7 @@ var require_react_dom_development = __commonJS({
     (function() {
       "use strict";
       typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ < "u" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart == "function" && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
-      var React41 = require_react(), Scheduler = require_scheduler(), ReactSharedInternals = React41.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED, suppressWarning = !1;
+      var React43 = require_react(), Scheduler = require_scheduler(), ReactSharedInternals = React43.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED, suppressWarning = !1;
       function setSuppressWarning(newSuppressWarning) {
         suppressWarning = newSuppressWarning;
       }
@@ -4213,7 +4213,7 @@ var require_react_dom_development = __commonJS({
           argsWithFormat.unshift("Warning: " + format), Function.prototype.apply.call(console[level], console, argsWithFormat);
         }
       }
-      var FunctionComponent = 0, ClassComponent = 1, IndeterminateComponent = 2, HostRoot = 3, HostPortal = 4, HostComponent = 5, HostText = 6, Fragment7 = 7, Mode = 8, ContextConsumer = 9, ContextProvider = 10, ForwardRef = 11, Profiler = 12, SuspenseComponent = 13, MemoComponent = 14, SimpleMemoComponent = 15, LazyComponent = 16, IncompleteClassComponent = 17, DehydratedFragment = 18, SuspenseListComponent = 19, ScopeComponent = 21, OffscreenComponent = 22, LegacyHiddenComponent = 23, CacheComponent = 24, TracingMarkerComponent = 25, enableClientRenderFallbackOnTextMismatch = !0, enableNewReconciler = !1, enableLazyContextPropagation = !1, enableLegacyHidden = !1, enableSuspenseAvoidThisFallback = !1, disableCommentsAsDOMContainers = !0, enableCustomElementPropertySupport = !1, warnAboutStringRefs = !1, enableSchedulingProfiler = !0, enableProfilerTimer = !0, enableProfilerCommitHooks = !0, allNativeEvents = /* @__PURE__ */ new Set(), registrationNameDependencies = {}, possibleRegistrationNames = {};
+      var FunctionComponent = 0, ClassComponent = 1, IndeterminateComponent = 2, HostRoot = 3, HostPortal = 4, HostComponent = 5, HostText = 6, Fragment6 = 7, Mode = 8, ContextConsumer = 9, ContextProvider = 10, ForwardRef = 11, Profiler = 12, SuspenseComponent = 13, MemoComponent = 14, SimpleMemoComponent = 15, LazyComponent = 16, IncompleteClassComponent = 17, DehydratedFragment = 18, SuspenseListComponent = 19, ScopeComponent = 21, OffscreenComponent = 22, LegacyHiddenComponent = 23, CacheComponent = 24, TracingMarkerComponent = 25, enableClientRenderFallbackOnTextMismatch = !0, enableNewReconciler = !1, enableLazyContextPropagation = !1, enableLegacyHidden = !1, enableSuspenseAvoidThisFallback = !1, disableCommentsAsDOMContainers = !0, enableCustomElementPropertySupport = !1, warnAboutStringRefs = !1, enableSchedulingProfiler = !0, enableProfilerTimer = !0, enableProfilerCommitHooks = !0, allNativeEvents = /* @__PURE__ */ new Set(), registrationNameDependencies = {}, possibleRegistrationNames = {};
       function registerTwoPhaseEvent(registrationName, dependencies) {
         registerDirectEvent(registrationName, dependencies), registerDirectEvent(registrationName + "Capture", dependencies);
       }
@@ -5063,7 +5063,7 @@ Error generating stack: ` + x.message + `
             return "DehydratedFragment";
           case ForwardRef:
             return getWrappedName$1(type, type.render, "ForwardRef");
-          case Fragment7:
+          case Fragment6:
             return "Fragment";
           case HostComponent:
             return type;
@@ -5307,7 +5307,7 @@ Error generating stack: ` + x.message + `
       }
       var didWarnSelectedSetOnOption = !1, didWarnInvalidChild = !1, didWarnInvalidInnerHTML = !1;
       function validateProps(element, props) {
-        props.value == null && (typeof props.children == "object" && props.children !== null ? React41.Children.forEach(props.children, function(child) {
+        props.value == null && (typeof props.children == "object" && props.children !== null ? React43.Children.forEach(props.children, function(child) {
           child != null && (typeof child == "string" || typeof child == "number" || didWarnInvalidChild || (didWarnInvalidChild = !0, error("Cannot infer the option value of complex children. Pass a `value` prop or use a plain string as children to <option>.")));
         }) : props.dangerouslySetInnerHTML != null && (didWarnInvalidInnerHTML || (didWarnInvalidInnerHTML = !0, error("Pass a `value` prop if you set dangerouslyInnerHTML so React knows which value should be selected.")))), props.selected != null && !didWarnSelectedSetOnOption && (error("Use the `defaultValue` or `value` props on <select> instead of setting `selected` on <option>."), didWarnSelectedSetOnOption = !0);
       }
@@ -11003,7 +11003,7 @@ Learn more about this warning here: https://reactjs.org/link/legacy-context`, so
             callback !== null && (effect.callback = null, callCallback(callback, instance));
           }
       }
-      var fakeInternalInstance = {}, emptyRefsObject = new React41.Component().refs, didWarnAboutStateAssignmentForComponent, didWarnAboutUninitializedState, didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate, didWarnAboutLegacyLifecyclesAndDerivedState, didWarnAboutUndefinedDerivedState, warnOnUndefinedDerivedState, warnOnInvalidCallback, didWarnAboutDirectlyAssigningPropsToState, didWarnAboutContextTypeAndContextTypes, didWarnAboutInvalidateContextType;
+      var fakeInternalInstance = {}, emptyRefsObject = new React43.Component().refs, didWarnAboutStateAssignmentForComponent, didWarnAboutUninitializedState, didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate, didWarnAboutLegacyLifecyclesAndDerivedState, didWarnAboutUndefinedDerivedState, warnOnUndefinedDerivedState, warnOnInvalidCallback, didWarnAboutDirectlyAssigningPropsToState, didWarnAboutContextTypeAndContextTypes, didWarnAboutInvalidateContextType;
       {
         didWarnAboutStateAssignmentForComponent = /* @__PURE__ */ new Set(), didWarnAboutUninitializedState = /* @__PURE__ */ new Set(), didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate = /* @__PURE__ */ new Set(), didWarnAboutLegacyLifecyclesAndDerivedState = /* @__PURE__ */ new Set(), didWarnAboutDirectlyAssigningPropsToState = /* @__PURE__ */ new Set(), didWarnAboutUndefinedDerivedState = /* @__PURE__ */ new Set(), didWarnAboutContextTypeAndContextTypes = /* @__PURE__ */ new Set(), didWarnAboutInvalidateContextType = /* @__PURE__ */ new Set();
         var didWarnOnInvalidCallback = /* @__PURE__ */ new Set();
@@ -11392,7 +11392,7 @@ See https://reactjs.org/link/refs-must-have-owner for more information.`);
           }
         }
         function updateFragment2(returnFiber, current2, fragment, lanes, key) {
-          if (current2 === null || current2.tag !== Fragment7) {
+          if (current2 === null || current2.tag !== Fragment6) {
             var created = createFiberFromFragment(fragment, returnFiber.mode, lanes, key);
             return created.return = returnFiber, created;
           } else {
@@ -11620,7 +11620,7 @@ See https://reactjs.org/link/refs-must-have-owner for more information.`);
             if (child.key === key) {
               var elementType = element.type;
               if (elementType === REACT_FRAGMENT_TYPE) {
-                if (child.tag === Fragment7) {
+                if (child.tag === Fragment6) {
                   deleteRemainingChildren(returnFiber, child.sibling);
                   var existing = useFiber(child, element.props.children);
                   return existing.return = returnFiber, existing._debugSource = element._source, existing._debugOwner = element._owner, existing;
@@ -14210,7 +14210,7 @@ Check the render method of \`` + ownerName + "`.");
             var type = workInProgress2.type, _unresolvedProps2 = workInProgress2.pendingProps, _resolvedProps2 = workInProgress2.elementType === type ? _unresolvedProps2 : resolveDefaultProps(type, _unresolvedProps2);
             return updateForwardRef(current2, workInProgress2, type, _resolvedProps2, renderLanes2);
           }
-          case Fragment7:
+          case Fragment6:
             return updateFragment(current2, workInProgress2, renderLanes2);
           case Mode:
             return updateMode(current2, workInProgress2, renderLanes2);
@@ -14362,7 +14362,7 @@ Check the render method of \`` + ownerName + "`.");
           case SimpleMemoComponent:
           case FunctionComponent:
           case ForwardRef:
-          case Fragment7:
+          case Fragment6:
           case Mode:
           case Profiler:
           case ContextConsumer:
@@ -16919,7 +16919,7 @@ Check the render method of \`` + ownerName + "`.");
         return fiber._debugSource = element._source, fiber._debugOwner = element._owner, fiber;
       }
       function createFiberFromFragment(elements, mode2, lanes, key) {
-        var fiber = createFiber(Fragment7, elements, key, mode2);
+        var fiber = createFiber(Fragment6, elements, key, mode2);
         return fiber.lanes = lanes, fiber;
       }
       function createFiberFromProfiler(pendingProps, mode2, lanes, key) {
@@ -17765,14 +17765,14 @@ function convertRouteMatchToUiMatch(match, loaderData) {
 function flattenRoutes2(routes2, branches, parentsMeta, parentPath) {
   branches === void 0 && (branches = []), parentsMeta === void 0 && (parentsMeta = []), parentPath === void 0 && (parentPath = "");
   let flattenRoute = (route, index2, relativePath) => {
-    let meta5 = {
+    let meta4 = {
       relativePath: relativePath === void 0 ? route.path || "" : relativePath,
       caseSensitive: route.caseSensitive === !0,
       childrenIndex: index2,
       route
     };
-    meta5.relativePath.startsWith("/") && (invariant3(meta5.relativePath.startsWith(parentPath), 'Absolute route path "' + meta5.relativePath + '" nested under path ' + ('"' + parentPath + '" is not valid. An absolute child route path ') + "must start with the combined path of all its parent routes."), meta5.relativePath = meta5.relativePath.slice(parentPath.length));
-    let path = joinPaths2([parentPath, meta5.relativePath]), routesMeta = parentsMeta.concat(meta5);
+    meta4.relativePath.startsWith("/") && (invariant3(meta4.relativePath.startsWith(parentPath), 'Absolute route path "' + meta4.relativePath + '" nested under path ' + ('"' + parentPath + '" is not valid. An absolute child route path ') + "must start with the combined path of all its parent routes."), meta4.relativePath = meta4.relativePath.slice(parentPath.length));
+    let path = joinPaths2([parentPath, meta4.relativePath]), routesMeta = parentsMeta.concat(meta4);
     route.children && route.children.length > 0 && (invariant3(
       // Our types know better, but runtime JS may not!
       // @ts-expect-error
@@ -17804,7 +17804,7 @@ function explodeOptionalSegments2(path) {
   return result.push(...restExploded.map((subpath) => subpath === "" ? required : [required, subpath].join("/"))), isOptional && result.push(...restExploded), result.map((exploded) => path.startsWith("/") && exploded === "" ? "/" : exploded);
 }
 function rankRouteBranches2(branches) {
-  branches.sort((a, b) => a.score !== b.score ? b.score - a.score : compareIndexes2(a.routesMeta.map((meta5) => meta5.childrenIndex), b.routesMeta.map((meta5) => meta5.childrenIndex)));
+  branches.sort((a, b) => a.score !== b.score ? b.score - a.score : compareIndexes2(a.routesMeta.map((meta4) => meta4.childrenIndex), b.routesMeta.map((meta4) => meta4.childrenIndex)));
 }
 function computeScore2(path, index2) {
   let segments = path.split("/"), initialScore = segments.length;
@@ -17828,15 +17828,15 @@ function matchRouteBranch2(branch, pathname) {
     routesMeta
   } = branch, matchedParams = {}, matchedPathname = "/", matches = [];
   for (let i = 0; i < routesMeta.length; ++i) {
-    let meta5 = routesMeta[i], end = i === routesMeta.length - 1, remainingPathname = matchedPathname === "/" ? pathname : pathname.slice(matchedPathname.length) || "/", match = matchPath2({
-      path: meta5.relativePath,
-      caseSensitive: meta5.caseSensitive,
+    let meta4 = routesMeta[i], end = i === routesMeta.length - 1, remainingPathname = matchedPathname === "/" ? pathname : pathname.slice(matchedPathname.length) || "/", match = matchPath2({
+      path: meta4.relativePath,
+      caseSensitive: meta4.caseSensitive,
       end
     }, remainingPathname);
     if (!match)
       return null;
     Object.assign(matchedParams, match.params);
-    let route = meta5.route;
+    let route = meta4.route;
     matches.push({
       // TODO: Can this as be avoided?
       params: matchedParams,
@@ -20823,14 +20823,14 @@ function convertRouteMatchToUiMatch2(match, loaderData) {
 function flattenRoutes3(routes2, branches, parentsMeta, parentPath) {
   branches === void 0 && (branches = []), parentsMeta === void 0 && (parentsMeta = []), parentPath === void 0 && (parentPath = "");
   let flattenRoute = (route, index2, relativePath) => {
-    let meta5 = {
+    let meta4 = {
       relativePath: relativePath === void 0 ? route.path || "" : relativePath,
       caseSensitive: route.caseSensitive === !0,
       childrenIndex: index2,
       route
     };
-    meta5.relativePath.startsWith("/") && (invariant4(meta5.relativePath.startsWith(parentPath), 'Absolute route path "' + meta5.relativePath + '" nested under path ' + ('"' + parentPath + '" is not valid. An absolute child route path ') + "must start with the combined path of all its parent routes."), meta5.relativePath = meta5.relativePath.slice(parentPath.length));
-    let path = joinPaths3([parentPath, meta5.relativePath]), routesMeta = parentsMeta.concat(meta5);
+    meta4.relativePath.startsWith("/") && (invariant4(meta4.relativePath.startsWith(parentPath), 'Absolute route path "' + meta4.relativePath + '" nested under path ' + ('"' + parentPath + '" is not valid. An absolute child route path ') + "must start with the combined path of all its parent routes."), meta4.relativePath = meta4.relativePath.slice(parentPath.length));
+    let path = joinPaths3([parentPath, meta4.relativePath]), routesMeta = parentsMeta.concat(meta4);
     route.children && route.children.length > 0 && (invariant4(
       // Our types know better, but runtime JS may not!
       // @ts-expect-error
@@ -20862,7 +20862,7 @@ function explodeOptionalSegments3(path) {
   return result.push(...restExploded.map((subpath) => subpath === "" ? required : [required, subpath].join("/"))), isOptional && result.push(...restExploded), result.map((exploded) => path.startsWith("/") && exploded === "" ? "/" : exploded);
 }
 function rankRouteBranches3(branches) {
-  branches.sort((a, b) => a.score !== b.score ? b.score - a.score : compareIndexes3(a.routesMeta.map((meta5) => meta5.childrenIndex), b.routesMeta.map((meta5) => meta5.childrenIndex)));
+  branches.sort((a, b) => a.score !== b.score ? b.score - a.score : compareIndexes3(a.routesMeta.map((meta4) => meta4.childrenIndex), b.routesMeta.map((meta4) => meta4.childrenIndex)));
 }
 function computeScore3(path, index2) {
   let segments = path.split("/"), initialScore = segments.length;
@@ -20886,15 +20886,15 @@ function matchRouteBranch3(branch, pathname) {
     routesMeta
   } = branch, matchedParams = {}, matchedPathname = "/", matches = [];
   for (let i = 0; i < routesMeta.length; ++i) {
-    let meta5 = routesMeta[i], end = i === routesMeta.length - 1, remainingPathname = matchedPathname === "/" ? pathname : pathname.slice(matchedPathname.length) || "/", match = matchPath3({
-      path: meta5.relativePath,
-      caseSensitive: meta5.caseSensitive,
+    let meta4 = routesMeta[i], end = i === routesMeta.length - 1, remainingPathname = matchedPathname === "/" ? pathname : pathname.slice(matchedPathname.length) || "/", match = matchPath3({
+      path: meta4.relativePath,
+      caseSensitive: meta4.caseSensitive,
       end
     }, remainingPathname);
     if (!match)
       return null;
     Object.assign(matchedParams, match.params);
-    let route = meta5.route;
+    let route = meta4.route;
     matches.push({
       // TODO: Can this as be avoided?
       params: matchedParams,
@@ -23852,7 +23852,7 @@ var require_server = __commonJS({
   "node_modules/react-router-dom/server.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: !0 });
-    var React41 = require_react(), router = (init_router3(), __toCommonJS(router_exports)), reactRouter = (init_dist(), __toCommonJS(dist_exports)), reactRouterDom = (init_dist2(), __toCommonJS(dist_exports2));
+    var React43 = require_react(), router = (init_router3(), __toCommonJS(router_exports)), reactRouter = (init_dist(), __toCommonJS(dist_exports)), reactRouterDom = (init_dist2(), __toCommonJS(dist_exports2));
     function _interopNamespace(e) {
       if (e && e.__esModule)
         return e;
@@ -23869,7 +23869,7 @@ var require_server = __commonJS({
         }
       }), n.default = e, Object.freeze(n);
     }
-    var React__namespace = /* @__PURE__ */ _interopNamespace(React41);
+    var React__namespace = /* @__PURE__ */ _interopNamespace(React43);
     function StaticRouter({
       basename,
       children,
@@ -24106,7 +24106,7 @@ var require_react_dom_server_legacy_browser_development = __commonJS({
     "use strict";
     (function() {
       "use strict";
-      var React41 = require_react(), ReactVersion = "18.2.0", ReactSharedInternals = React41.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+      var React43 = require_react(), ReactVersion = "18.2.0", ReactSharedInternals = React43.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
       function warn(format) {
         {
           for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++)
@@ -25600,7 +25600,7 @@ var require_react_dom_server_legacy_browser_development = __commonJS({
       }
       function flattenOptionChildren(children) {
         var content = "";
-        return React41.Children.forEach(children, function(child) {
+        return React43.Children.forEach(children, function(child) {
           child != null && (content += child, !didWarnInvalidOptionChildren && typeof child != "string" && typeof child != "number" && (didWarnInvalidOptionChildren = !0, error("Cannot infer the option value of complex children. Pass a `value` prop or use a plain string as children to <option>.")));
         }), content;
       }
@@ -26742,7 +26742,7 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
       function readContext$1(context) {
         return isInHookUserCodeInDev && error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo()."), readContext(context);
       }
-      function useContext14(context) {
+      function useContext16(context) {
         return currentHookNameInDev = "useContext", resolveCurrentlyRenderingComponent(), readContext(context);
       }
       function basicStateReducer(state, action) {
@@ -26864,7 +26864,7 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
       }
       var Dispatcher = {
         readContext: readContext$1,
-        useContext: useContext14,
+        useContext: useContext16,
         useMemo: useMemo7,
         useReducer,
         useRef: useRef7,
@@ -27687,7 +27687,7 @@ var require_react_dom_server_browser_development = __commonJS({
     "use strict";
     (function() {
       "use strict";
-      var React41 = require_react(), ReactVersion = "18.2.0", ReactSharedInternals = React41.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+      var React43 = require_react(), ReactVersion = "18.2.0", ReactSharedInternals = React43.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
       function warn(format) {
         {
           for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++)
@@ -29196,7 +29196,7 @@ var require_react_dom_server_browser_development = __commonJS({
       }
       function flattenOptionChildren(children) {
         var content = "";
-        return React41.Children.forEach(children, function(child) {
+        return React43.Children.forEach(children, function(child) {
           child != null && (content += child, !didWarnInvalidOptionChildren && typeof child != "string" && typeof child != "number" && (didWarnInvalidOptionChildren = !0, error("Cannot infer the option value of complex children. Pass a `value` prop or use a plain string as children to <option>.")));
         }), content;
       }
@@ -30294,7 +30294,7 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
       function readContext$1(context) {
         return isInHookUserCodeInDev && error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo()."), readContext(context);
       }
-      function useContext14(context) {
+      function useContext16(context) {
         return currentHookNameInDev = "useContext", resolveCurrentlyRenderingComponent(), readContext(context);
       }
       function basicStateReducer(state, action) {
@@ -30416,7 +30416,7 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
       }
       var Dispatcher = {
         readContext: readContext$1,
-        useContext: useContext14,
+        useContext: useContext16,
         useMemo: useMemo7,
         useReducer,
         useRef: useRef7,
@@ -31259,14 +31259,14 @@ var require_react_jsx_dev_runtime_development = __commonJS({
     "use strict";
     (function() {
       "use strict";
-      var React41 = require_react(), REACT_ELEMENT_TYPE = Symbol.for("react.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_PROVIDER_TYPE = Symbol.for("react.provider"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen"), MAYBE_ITERATOR_SYMBOL = Symbol.iterator, FAUX_ITERATOR_SYMBOL = "@@iterator";
+      var React43 = require_react(), REACT_ELEMENT_TYPE = Symbol.for("react.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_PROVIDER_TYPE = Symbol.for("react.provider"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen"), MAYBE_ITERATOR_SYMBOL = Symbol.iterator, FAUX_ITERATOR_SYMBOL = "@@iterator";
       function getIteratorFn(maybeIterable) {
         if (maybeIterable === null || typeof maybeIterable != "object")
           return null;
         var maybeIterator = MAYBE_ITERATOR_SYMBOL && maybeIterable[MAYBE_ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL];
         return typeof maybeIterator == "function" ? maybeIterator : null;
       }
-      var ReactSharedInternals = React41.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+      var ReactSharedInternals = React43.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
       function error(format) {
         {
           for (var _len2 = arguments.length, args = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++)
@@ -31667,7 +31667,7 @@ var require_react_jsx_dev_runtime_development = __commonJS({
           value: source
         }), Object.freeze && (Object.freeze(element.props), Object.freeze(element)), element;
       };
-      function jsxDEV35(type, config, maybeKey, source, self) {
+      function jsxDEV36(type, config, maybeKey, source, self) {
         {
           var propName, props = {}, key = null, ref = null;
           maybeKey !== void 0 && (checkKeyStringCoercion(maybeKey), key = "" + maybeKey), hasValidKey(config) && (checkKeyStringCoercion(config.key), key = "" + config.key), hasValidRef(config) && (ref = config.ref, warnIfStringRefCannotBeAutoConverted(config, self));
@@ -31814,7 +31814,7 @@ Check the top-level render call using <` + parentName + ">.");
             var typeString;
             type === null ? typeString = "null" : isArray(type) ? typeString = "array" : type !== void 0 && type.$$typeof === REACT_ELEMENT_TYPE ? (typeString = "<" + (getComponentNameFromType(type.type) || "Unknown") + " />", info = " Did you accidentally export a JSX literal instead of a component?") : typeString = typeof type, error("React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", typeString, info);
           }
-          var element = jsxDEV35(type, props, key, source, self);
+          var element = jsxDEV36(type, props, key, source, self);
           if (element == null)
             return element;
           if (validType) {
@@ -32618,7 +32618,7 @@ function Meta() {
     let errorIdx = routerMatches.findIndex((m) => errors[m.route.id]);
     _matches = routerMatches.slice(0, errorIdx + 1), error = errors[routerMatches[errorIdx].route.id];
   }
-  let meta5 = [], leafMeta = null, matches = [];
+  let meta4 = [], leafMeta = null, matches = [];
   for (let i = 0; i < _matches.length; i++) {
     let _match = _matches[i], routeId = _match.route.id, data = loaderData[routeId], params = _match.params, routeModule = routeModules[routeId], routeMeta = [], match = {
       id: routeId,
@@ -32639,9 +32639,9 @@ function Meta() {
       throw new Error("The route at " + _match.route.path + ` returns an invalid value. All route meta functions must return an array of meta objects.
 
 To reference the meta function API, see https://remix.run/route/meta`);
-    match.meta = routeMeta, matches[i] = match, meta5 = [...routeMeta], leafMeta = meta5;
+    match.meta = routeMeta, matches[i] = match, meta4 = [...routeMeta], leafMeta = meta4;
   }
-  return /* @__PURE__ */ React3.createElement(React3.Fragment, null, meta5.flat().map((metaProps) => {
+  return /* @__PURE__ */ React3.createElement(React3.Fragment, null, meta4.flat().map((metaProps) => {
     if (!metaProps)
       return null;
     if ("tagName" in metaProps) {
@@ -33672,7 +33672,7 @@ __export(root_exports, {
 });
 
 // app/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-USR5JZX2.css";
+var tailwind_default = "/build/_assets/tailwind-DZYLDSWJ.css";
 
 // app/root.tsx
 var import_jsx_dev_runtime2 = __toESM(require_jsx_dev_runtime(), 1), links = () => [
@@ -34025,7 +34025,7 @@ function $c512c27ab02ef895$export$fd42f52fd3ae1109(rootComponentName, defaultCon
       value
     }, children);
   }
-  function useContext14(consumerName) {
+  function useContext16(consumerName) {
     let context = (0, import_react7.useContext)(Context);
     if (context)
       return context;
@@ -34035,7 +34035,7 @@ function $c512c27ab02ef895$export$fd42f52fd3ae1109(rootComponentName, defaultCon
   }
   return Provider.displayName = rootComponentName + "Provider", [
     Provider,
-    useContext14
+    useContext16
   ];
 }
 function $c512c27ab02ef895$export$50c7b4e9d9f19c1(scopeName, createContextScopeDeps = []) {
@@ -34055,7 +34055,7 @@ function $c512c27ab02ef895$export$50c7b4e9d9f19c1(scopeName, createContextScopeD
         value
       }, children);
     }
-    function useContext14(consumerName, scope) {
+    function useContext16(consumerName, scope) {
       let Context = scope?.[scopeName][index2] || BaseContext, context = (0, import_react7.useContext)(Context);
       if (context)
         return context;
@@ -34065,7 +34065,7 @@ function $c512c27ab02ef895$export$50c7b4e9d9f19c1(scopeName, createContextScopeD
     }
     return Provider.displayName = rootComponentName + "Provider", [
       Provider,
-      useContext14
+      useContext16
     ];
   }
   let createScope = () => {
@@ -41714,7 +41714,7 @@ var import_jsx_dev_runtime24 = __toESM(require_jsx_dev_runtime(), 1), InfoBar = 
       let data = await getMagicFigureData(webSocketData, stateName);
       setMagicFigureData(data);
     })();
-  }, [webSocketData, stateName]), console.log("magicFigureData: ", magicFigureData, "stateName: ", stateName, "webSocketData: ", webSocketData), /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)("div", { className: "text-white text-[14px] my-2 flex-1 flex justify-start items-center gap-x-3 gap-y-2 md:gap-x-5 md:gap-y-5 flex-wrap md:flex-nowrap p-1 max-w-[1280px] font__nunitosans", children: [
+  }, [webSocketData, stateName]), console.log("magicFigureData: ", magicFigureData, "stateName: ", stateName, "webSocketData: ", webSocketData), /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)("div", { className: "text-white text-[14px] my-2 pt-[55px] md:pt-0 flex-1 flex justify-start items-center gap-x-3 gap-y-2 md:gap-x-5 md:gap-y-5 flex-wrap md:flex-nowrap p-1 max-w-[1280px] font__nunitosans", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)("div", { className: "hidden md:flex justify-center items-center gap-2", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)("div", { className: "w-[0.4rem] h-[0.4rem] bg-red-500 rounded-full animate-pulse" }, void 0, !1, {
         fileName: "app/components/ElectionResuts/InfoBar.jsx",
@@ -42122,55 +42122,120 @@ var import_jsx_dev_runtime30 = __toESM(require_jsx_dev_runtime(), 1), widget = (
   columnNumber: 5
 }, this), electionresults_widget_default = widget;
 
+// app/routes/constituencyresults.m.jsx
+var constituencyresults_m_exports = {};
+__export(constituencyresults_m_exports, {
+  default: () => constituencyresults_m_default
+});
+var import_react51 = __toESM(require_react(), 1);
+var import_jsx_dev_runtime31 = __toESM(require_jsx_dev_runtime(), 1), ConstituencyResults4 = () => {
+  let [webSocketData, select, setSelect] = (0, import_react51.useContext)(ConstituencyContext);
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime31.jsxDEV)("div", { className: "bg-[#050D3E] min-h-screen text-white pt-[9rem] overflow-y-hidden", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime31.jsxDEV)(TabBar_default, {}, void 0, !1, {
+      fileName: "app/routes/constituencyresults.m.jsx",
+      lineNumber: 9,
+      columnNumber: 13
+    }, this),
+    select ? /* @__PURE__ */ (0, import_jsx_dev_runtime31.jsxDEV)(StateLevel_default, {}, void 0, !1, {
+      fileName: "app/routes/constituencyresults.m.jsx",
+      lineNumber: 12,
+      columnNumber: 17
+    }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime31.jsxDEV)(ConstituencyLevel_default, {}, void 0, !1, {
+      fileName: "app/routes/constituencyresults.m.jsx",
+      lineNumber: 14,
+      columnNumber: 17
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime31.jsxDEV)("div", { className: "w-[95%] mx-auto mt-[2rem]", children: /* @__PURE__ */ (0, import_jsx_dev_runtime31.jsxDEV)(Share_default, {}, void 0, !1, {
+      fileName: "app/routes/constituencyresults.m.jsx",
+      lineNumber: 17,
+      columnNumber: 17
+    }, this) }, void 0, !1, {
+      fileName: "app/routes/constituencyresults.m.jsx",
+      lineNumber: 16,
+      columnNumber: 13
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/routes/constituencyresults.m.jsx",
+    lineNumber: 8,
+    columnNumber: 5
+  }, this);
+}, constituencyresults_m_default = ConstituencyResults4;
+
 // app/routes/constituencyresults.jsx
 var constituencyresults_exports = {};
 __export(constituencyresults_exports, {
   default: () => constituencyresults_default
 });
-var import_react51 = __toESM(require_react(), 1);
-var import_jsx_dev_runtime31 = __toESM(require_jsx_dev_runtime(), 1), ConstituencyResults4 = () => /* @__PURE__ */ (0, import_jsx_dev_runtime31.jsxDEV)(Outlet, {}, void 0, !1, {
+var import_react52 = __toESM(require_react(), 1);
+var import_jsx_dev_runtime32 = __toESM(require_jsx_dev_runtime(), 1), ConstituencyResults5 = () => /* @__PURE__ */ (0, import_jsx_dev_runtime32.jsxDEV)(ConstituencyProvider, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime32.jsxDEV)(Outlet, {}, void 0, !1, {
   fileName: "app/routes/constituencyresults.jsx",
-  lineNumber: 6,
-  columnNumber: 5
-}, this), constituencyresults_default = ConstituencyResults4;
-
-// app/routes/electionresults.m.tsx
-var electionresults_m_exports = {};
-__export(electionresults_m_exports, {
-  default: () => electionresults_m_default,
-  meta: () => meta2
-});
-var import_jsx_dev_runtime32 = __toESM(require_jsx_dev_runtime(), 1), meta2 = () => [
-  { title: "New Remix App" },
-  { name: "description", content: "Welcome to Remix!" }
-], electionresults2 = () => /* @__PURE__ */ (0, import_jsx_dev_runtime32.jsxDEV)(WebscoketProvider, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime32.jsxDEV)(Election_default2, {}, void 0, !1, {
-  fileName: "app/routes/electionresults.m.tsx",
-  lineNumber: 16,
+  lineNumber: 8,
   columnNumber: 7
 }, this) }, void 0, !1, {
-  fileName: "app/routes/electionresults.m.tsx",
-  lineNumber: 15,
+  fileName: "app/routes/constituencyresults.jsx",
+  lineNumber: 7,
   columnNumber: 5
-}, this), electionresults_m_default = electionresults2;
+}, this), constituencyresults_default = ConstituencyResults5;
+
+// app/routes/electionresults.m.jsx
+var electionresults_m_exports = {};
+__export(electionresults_m_exports, {
+  default: () => electionresults_m_default
+});
+var import_react54 = __toESM(require_react(), 1);
+var import_jsx_dev_runtime33 = __toESM(require_jsx_dev_runtime(), 1), ElectionresultsMobile = () => {
+  let [webSocketData, stateName] = (0, import_react54.useContext)(ElectionContext), stateData = getSateData(webSocketData[0].states, stateName);
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)("div", { className: "w-full min-h-screen font__nunitosans flex flex-col items-center bg-[#050D3E]", style: { background: "linear-gradient( -80deg , #d7e9ff, #7db3ff, #d7e9ff)" }, children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)("div", { className: "info-bar-container w-full flex items-center  bg-[#003D75] px-2 md:px-6", style: { alignSelf: "flex-start" }, children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)(InfoBar_default, {}, void 0, !1, {
+        fileName: "app/routes/electionresults.m.jsx",
+        lineNumber: 13,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)(Download_default, {}, void 0, !1, {
+        fileName: "app/routes/electionresults.m.jsx",
+        lineNumber: 14,
+        columnNumber: 11
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/routes/electionresults.m.jsx",
+      lineNumber: 12,
+      columnNumber: 9
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)("div", { className: "w-full result-cards-container my-5 md:my-0 flex flex-1 justify-center md:content-center gap-y-5 md:gap-x-8 md:gap-y-11 flex-wrap overflow-y-auto", children: stateData[0].media_sources.map((media) => /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)(Card_default, { sx: "w-[90%] mx-auto md:w-[30%]", media: media.name, parties: media.party_wise_data }, media.name, !1, {
+      fileName: "app/routes/electionresults.m.jsx",
+      lineNumber: 18,
+      columnNumber: 13
+    }, this)) }, void 0, !1, {
+      fileName: "app/routes/electionresults.m.jsx",
+      lineNumber: 16,
+      columnNumber: 9
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/routes/electionresults.m.jsx",
+    lineNumber: 10,
+    columnNumber: 7
+  }, this);
+}, electionresults_m_default = ElectionresultsMobile;
 
 // app/routes/electionresults.tsx
 var electionresults_exports = {};
 __export(electionresults_exports, {
   default: () => Index,
-  meta: () => meta3
+  meta: () => meta2
 });
-var import_jsx_dev_runtime33 = __toESM(require_jsx_dev_runtime(), 1), meta3 = () => [
+var import_jsx_dev_runtime34 = __toESM(require_jsx_dev_runtime(), 1), meta2 = () => [
   { title: "New Remix App" },
   { name: "description", content: "Welcome to Remix!" }
 ];
 function Index() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)(import_jsx_dev_runtime33.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)(Outlet, {}, void 0, !1, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)(WebscoketProvider, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)(Outlet, {}, void 0, !1, {
     fileName: "app/routes/electionresults.tsx",
-    lineNumber: 15,
+    lineNumber: 16,
     columnNumber: 7
   }, this) }, void 0, !1, {
     fileName: "app/routes/electionresults.tsx",
-    lineNumber: 14,
+    lineNumber: 15,
     columnNumber: 5
   }, this);
 }
@@ -42179,30 +42244,30 @@ function Index() {
 var index_exports = {};
 __export(index_exports, {
   default: () => Index2,
-  meta: () => meta4
+  meta: () => meta3
 });
-var import_react54 = __toESM(require_react(), 1);
-var import_jsx_dev_runtime34 = __toESM(require_jsx_dev_runtime(), 1), meta4 = () => [
+var import_react56 = __toESM(require_react(), 1);
+var import_jsx_dev_runtime35 = __toESM(require_jsx_dev_runtime(), 1), meta3 = () => [
   { title: "New Remix App" },
   { name: "description", content: "Welcome to Remix!" }
 ];
 function Index2() {
-  let [mounted, setMounted] = (0, import_react54.useState)(!1);
-  return (0, import_react54.useEffect)(() => {
+  let [mounted, setMounted] = (0, import_react56.useState)(!1);
+  return (0, import_react56.useEffect)(() => {
     setMounted(!0);
-  }, []), mounted ? /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)("div", { className: "min-h-screen w-full grid place-content-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)("div", { className: "w-full mx-auto border-[1px] border-red-300 table__shadow rounded-md", style: { padding: "2rem" }, children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)("img", { src: aadhan_black_logo_default, alt: "aadhan logo", className: "block mx-auto" }, void 0, !1, {
+  }, []), mounted ? /* @__PURE__ */ (0, import_jsx_dev_runtime35.jsxDEV)("div", { className: "min-h-screen w-full grid place-content-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime35.jsxDEV)("div", { className: "w-full mx-auto border-[1px] border-red-300 table__shadow rounded-md", style: { padding: "2rem" }, children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime35.jsxDEV)("img", { src: aadhan_black_logo_default, alt: "aadhan logo", className: "block mx-auto" }, void 0, !1, {
       fileName: "app/routes/_index.tsx",
       lineNumber: 42,
       columnNumber: 9
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)("div", { className: "route-links-container my-5 flex flex-col justify-center items-start gap-2", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)(Link2, { className: "route-link text-blue-700 hover:text-blue-500 underline", to: "/electionresults", children: "Election Results" }, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime35.jsxDEV)("div", { className: "route-links-container my-5 flex flex-col justify-center items-start gap-2", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime35.jsxDEV)(Link2, { className: "route-link text-blue-700 hover:text-blue-500 underline", to: "/electionresults", children: "Election Results" }, void 0, !1, {
         fileName: "app/routes/_index.tsx",
         lineNumber: 44,
         columnNumber: 13
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)(Link2, { className: "route-link text-blue-700 hover:text-blue-500 underline", to: "/constituencyresults", children: "Constituency Results" }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime35.jsxDEV)(Link2, { className: "route-link text-blue-700 hover:text-blue-500 underline", to: "/constituencyresults", children: "Constituency Results" }, void 0, !1, {
         fileName: "app/routes/_index.tsx",
         lineNumber: 45,
         columnNumber: 13
@@ -42224,7 +42289,7 @@ function Index2() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-J34ZKFTX.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-NEMJIZPC.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-XGDSMD3A.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-2BOCWCAO.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-7WP2HN3I.js", imports: ["/build/_shared/chunk-A6QMKNWQ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults": { id: "routes/constituencyresults", parentId: "root", path: "constituencyresults", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults-UITWEUJI.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults._index": { id: "routes/constituencyresults._index", parentId: "routes/constituencyresults", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/constituencyresults._index-UT3DPM5F.js", imports: ["/build/_shared/chunk-IQUM3FX6.js", "/build/_shared/chunk-A6QMKNWQ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults.widget": { id: "routes/constituencyresults.widget", parentId: "routes/constituencyresults", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults.widget-7M5UWQL5.js", imports: ["/build/_shared/chunk-A6QMKNWQ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults": { id: "routes/electionresults", parentId: "root", path: "electionresults", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults-VCQC76ZZ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults._index": { id: "routes/electionresults._index", parentId: "routes/electionresults", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/electionresults._index-Q4RJDNUH.js", imports: ["/build/_shared/chunk-2NXLLEUQ.js", "/build/_shared/chunk-IQUM3FX6.js", "/build/_shared/chunk-A6QMKNWQ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults.m": { id: "routes/electionresults.m", parentId: "routes/electionresults", path: "m", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults.m-2QOPE4RK.js", imports: ["/build/_shared/chunk-2NXLLEUQ.js", "/build/_shared/chunk-IQUM3FX6.js", "/build/_shared/chunk-A6QMKNWQ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults.widget": { id: "routes/electionresults.widget", parentId: "routes/electionresults", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults.widget-3AMZIQDS.js", imports: ["/build/_shared/chunk-A6QMKNWQ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "7c52f1b4", hmr: { runtime: "/build/_shared/chunk-XGDSMD3A.js", timestamp: 1701434663962 }, url: "/build/manifest-7C52F1B4.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-J34ZKFTX.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-NEMJIZPC.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-XGDSMD3A.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-O4Y4ZPNK.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-JPXHFPIY.js", imports: ["/build/_shared/chunk-A6QMKNWQ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults": { id: "routes/constituencyresults", parentId: "root", path: "constituencyresults", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults-HBNYJ2EP.js", imports: ["/build/_shared/chunk-JQV7P34H.js", "/build/_shared/chunk-A6QMKNWQ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults._index": { id: "routes/constituencyresults._index", parentId: "routes/constituencyresults", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/constituencyresults._index-GE6SUNWQ.js", imports: ["/build/_shared/chunk-735DMWP7.js", "/build/_shared/chunk-2JNNEWYZ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults.m": { id: "routes/constituencyresults.m", parentId: "routes/constituencyresults", path: "m", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults.m-7B7QUR33.js", imports: ["/build/_shared/chunk-735DMWP7.js", "/build/_shared/chunk-2JNNEWYZ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults.widget": { id: "routes/constituencyresults.widget", parentId: "routes/constituencyresults", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults.widget-7M5UWQL5.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults": { id: "routes/electionresults", parentId: "root", path: "electionresults", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults-QUJVGPIQ.js", imports: ["/build/_shared/chunk-SNPRY6S6.js", "/build/_shared/chunk-A6QMKNWQ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults._index": { id: "routes/electionresults._index", parentId: "routes/electionresults", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/electionresults._index-BULH2TYK.js", imports: ["/build/_shared/chunk-RACEBSVL.js", "/build/_shared/chunk-2JNNEWYZ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults.m": { id: "routes/electionresults.m", parentId: "routes/electionresults", path: "m", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults.m-23QDFB4D.js", imports: ["/build/_shared/chunk-RACEBSVL.js", "/build/_shared/chunk-2JNNEWYZ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults.widget": { id: "routes/electionresults.widget", parentId: "routes/electionresults", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults.widget-3AMZIQDS.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "1107cad1", hmr: { runtime: "/build/_shared/chunk-XGDSMD3A.js", timestamp: 1701436466323 }, url: "/build/manifest-1107CAD1.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
@@ -42267,6 +42332,14 @@ var mode = "development", assetsBuildDirectory = "public/build", future = { v3_f
     index: void 0,
     caseSensitive: void 0,
     module: electionresults_widget_exports
+  },
+  "routes/constituencyresults.m": {
+    id: "routes/constituencyresults.m",
+    parentId: "routes/constituencyresults",
+    path: "m",
+    index: void 0,
+    caseSensitive: void 0,
+    module: constituencyresults_m_exports
   },
   "routes/constituencyresults": {
     id: "routes/constituencyresults",

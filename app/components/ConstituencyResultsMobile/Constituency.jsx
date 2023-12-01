@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { ConstituencyContext } from '~/services/context/ConstituencyService';
 import { TabBar, StateLevel, ConstituencyLevel, Share } from '.';
-import { aadhanLogo, signalSpinner } from '~/assets/images';
+import { aadhanLogo } from '~/assets/images';
 
 const Constituency = () => {
     const [webSocketData, select, setSelect] = useContext(ConstituencyContext);
