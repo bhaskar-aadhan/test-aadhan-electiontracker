@@ -42,7 +42,7 @@ export const ConstituencyProvider = ({ children }) => {
           );
         } else {
           console.error("WebSocket connection abruptly closed");
-          // setTimeout(initializeWebSocket, 1000);
+          setTimeout(initializeWebSocket, 1000);
         }
       };
       socket.onerror = (error) => {

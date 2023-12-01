@@ -33806,7 +33806,7 @@ var import_jsx_dev_runtime3 = __toESM(require_jsx_dev_runtime(), 1), Constituenc
           `WebSocket connection closed code=${event.code}, reason=${event.reason}`
         ), event.wasClean ? console.log(
           `WebSocket connection closed cleanly, code=${event.code}, reason=${event.reason}`
-        ) : console.error("WebSocket connection abruptly closed");
+        ) : (console.error("WebSocket connection abruptly closed"), setTimeout(initializeWebSocket, 1e3));
       }, socket.onerror = (error) => {
         console.error("WebSocket error:", error);
       };
@@ -33858,7 +33858,7 @@ var import_jsx_dev_runtime4 = __toESM(require_jsx_dev_runtime(), 1), CandidatesC
           `WebSocket connection closed code=${event.code}, reason=${event.reason}`
         ), event.wasClean ? console.log(
           `WebSocket connection closed cleanly, code=${event.code}, reason=${event.reason}`
-        ) : console.error("WebSocket connection abruptly closed");
+        ) : (console.error("WebSocket connection abruptly closed"), setTimeout(initializeWebSocket, 1e3));
       }, socket.onerror = (error) => {
         console.error("WebSocket error:", error);
       };
@@ -41415,7 +41415,7 @@ var import_jsx_dev_runtime20 = __toESM(require_jsx_dev_runtime(), 1), ElectionCo
           `WebSocket connection closed code=${event.code}, reason=${event.reason}`
         ), event.wasClean ? console.log(
           `WebSocket connection closed cleanly, code=${event.code}, reason=${event.reason}`
-        ) : console.error("WebSocket connection abruptly closed");
+        ) : (console.error("WebSocket connection abruptly closed"), setTimeout(initializeWebSocket, 1e3));
       }, socket.onerror = (error) => {
         console.error("WebSocket error:", error);
       };
@@ -41946,7 +41946,7 @@ var import_jsx_dev_runtime29 = __toESM(require_jsx_dev_runtime(), 1), widget = (
 }, this), widget_default = widget;
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-MS4WYGOM.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-NEMJIZPC.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XGDSMD3A.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-YCS2HGB3.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-T3XEUL7C.js", imports: ["/build/_shared/chunk-E6F3SNTZ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults": { id: "routes/constituencyresults", parentId: "root", path: "constituencyresults", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults-FQYNUOGE.js", imports: ["/build/_shared/chunk-TQ5OGXAG.js", "/build/_shared/chunk-E6F3SNTZ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults": { id: "routes/electionresults", parentId: "root", path: "electionresults", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults-3B6PJNKL.js", imports: ["/build/_shared/chunk-TQ5OGXAG.js", "/build/_shared/chunk-E6F3SNTZ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/widget": { id: "routes/widget", parentId: "root", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/widget-3TA3UF3A.js", imports: ["/build/_shared/chunk-E6F3SNTZ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "4a1f6a48", hmr: { runtime: "/build/_shared/chunk-XGDSMD3A.js", timestamp: 1701419827751 }, url: "/build/manifest-4A1F6A48.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-MS4WYGOM.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-NEMJIZPC.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XGDSMD3A.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-YCS2HGB3.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-T3XEUL7C.js", imports: ["/build/_shared/chunk-E6F3SNTZ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults": { id: "routes/constituencyresults", parentId: "root", path: "constituencyresults", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults-YXD675ZG.js", imports: ["/build/_shared/chunk-TQ5OGXAG.js", "/build/_shared/chunk-E6F3SNTZ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults": { id: "routes/electionresults", parentId: "root", path: "electionresults", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults-7HXIMGSG.js", imports: ["/build/_shared/chunk-TQ5OGXAG.js", "/build/_shared/chunk-E6F3SNTZ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/widget": { id: "routes/widget", parentId: "root", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/widget-3TA3UF3A.js", imports: ["/build/_shared/chunk-E6F3SNTZ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "0061e5c8", hmr: { runtime: "/build/_shared/chunk-XGDSMD3A.js", timestamp: 1701422098422 }, url: "/build/manifest-0061E5C8.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
