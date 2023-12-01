@@ -33672,7 +33672,7 @@ __export(root_exports, {
 });
 
 // app/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-UREJ7EVX.css";
+var tailwind_default = "/build/_assets/tailwind-SPSCFHRY.css";
 
 // app/root.tsx
 var import_jsx_dev_runtime2 = __toESM(require_jsx_dev_runtime(), 1), links = () => [
@@ -33794,13 +33794,13 @@ var import_jsx_dev_runtime3 = __toESM(require_jsx_dev_runtime(), 1), Constituenc
     let initializeWebSocket = () => {
       console.log("initializeWebSocket");
       let socket = new WebSocket(
-        "wss://stage-cmsapis.aadhan.in/election-results/ws"
+        "wss://stage-cmsapis.aadhan.in/election-results/ws2"
       );
       socket.onopen = () => {
         console.log("WebSocket connection opened");
       }, socket.onmessage = (event) => {
         let wsdata = event.data, wsData = JSON.parse(wsdata);
-        setWebSocketData(wsData.avg_party_results), console.log("websocket data: ", wsData, typeof wsData);
+        setWebSocketData(wsData), console.log("websocket data: ", wsData, typeof wsData);
       }, socket.onclose = (event) => {
         console.log(
           `WebSocket connection closed code=${event.code}, reason=${event.reason}`
@@ -33877,25 +33877,39 @@ var import_jsx_dev_runtime4 = __toESM(require_jsx_dev_runtime(), 1), Constituenc
 
 // app/components/ConstituencyResultsMobile/StateLevel.jsx
 var import_react5 = __toESM(require_react(), 1);
+
+// app/services/ElectionServices.js
+var getMagicFigure = (data) => {
+  let result = data / 2;
+  return Number.isInteger(result) ? result += 1 : result = Math.ceil(result), result;
+}, addMagicFigureData = (data) => data?.map((state) => {
+  let magicFigure = getMagicFigure(state.total_constituencies);
+  return { ...state, magic_figure: magicFigure };
+}), getMagicFigureData = async (data, stateName) => await (await (await addMagicFigureData(data?.[0]?.states))?.find((state) => state.name === stateName))?.magic_figure, getSateData = (data, stateName) => data.filter((state) => state.name === stateName), getSateLevelStateData = (data, stateName) => data.filter((state) => state.state === stateName);
+async function copyTextToClipboard(text) {
+  return "clipboard" in navigator ? await navigator.clipboard.writeText(text) : document.execCommand("copy", !0, text);
+}
+
+// app/components/ConstituencyResultsMobile/StateLevel.jsx
 var import_jsx_dev_runtime5 = __toESM(require_jsx_dev_runtime(), 1), StateLevel = () => {
-  let [webSocketData] = (0, import_react5.useContext)(ConstituencyContext);
-  return console.log("ws component data", webSocketData), /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "entity-1-container w-[95%] my-3 mx-auto", children: [
+  let [webSocketData, select, setSelect, stateName, setStateName] = (0, import_react5.useContext)(ConstituencyContext), stateLevelData = getSateLevelStateData(webSocketData, stateName);
+  return console.log("state level sdata", stateLevelData), /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "entity-1-container w-[95%] my-3 mx-auto", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "dropdown-mobile-continer w-full", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Dropdown_default, {}, void 0, !1, {
       fileName: "app/components/ConstituencyResultsMobile/StateLevel.jsx",
-      lineNumber: 11,
+      lineNumber: 13,
       columnNumber: 17
     }, this) }, void 0, !1, {
       fileName: "app/components/ConstituencyResultsMobile/StateLevel.jsx",
-      lineNumber: 10,
+      lineNumber: 12,
       columnNumber: 13
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "results-mobile-container my-3", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(PartyResults_default, {}, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "results-mobile-container my-3", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(PartyResults_default, { stateLevelData }, void 0, !1, {
       fileName: "app/components/ConstituencyResultsMobile/StateLevel.jsx",
-      lineNumber: 14,
+      lineNumber: 16,
       columnNumber: 17
     }, this) }, void 0, !1, {
       fileName: "app/components/ConstituencyResultsMobile/StateLevel.jsx",
-      lineNumber: 13,
+      lineNumber: 15,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("p", { className: "my-3", children: [
@@ -33903,28 +33917,28 @@ var import_jsx_dev_runtime5 = __toESM(require_jsx_dev_runtime(), 1), StateLevel 
       ""
     ] }, void 0, !0, {
       fileName: "app/components/ConstituencyResultsMobile/StateLevel.jsx",
-      lineNumber: 16,
+      lineNumber: 18,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "flex justify-start items-center gap-2 my-2", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("p", { children: "Magic figure:" }, void 0, !1, {
         fileName: "app/components/ConstituencyResultsMobile/StateLevel.jsx",
-        lineNumber: 18,
+        lineNumber: 20,
         columnNumber: 17
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "w-fit px-4 bg-[#FFA500] text-black rounded-md font-medium", children: "" }, void 0, !1, {
         fileName: "app/components/ConstituencyResultsMobile/StateLevel.jsx",
-        lineNumber: 19,
+        lineNumber: 21,
         columnNumber: 17
       }, this)
     ] }, void 0, !0, {
       fileName: "app/components/ConstituencyResultsMobile/StateLevel.jsx",
-      lineNumber: 17,
+      lineNumber: 19,
       columnNumber: 13
     }, this)
   ] }, void 0, !0, {
     fileName: "app/components/ConstituencyResultsMobile/StateLevel.jsx",
-    lineNumber: 9,
+    lineNumber: 11,
     columnNumber: 9
   }, this);
 }, StateLevel_default = StateLevel;
@@ -40513,7 +40527,7 @@ var TableRow = React23.forwardRef(({ className, ...props }, ref) => /* @__PURE__
   {
     ref,
     className: cn(
-      "border-b-[0.5px] border-b-[#5e5c5c] transition-colors even:bg-[#293861] data-[state=selected]:bg-muted",
+      "table-row border-b-[0.5px] border-b-[#5e5c5c] transition-colors data-[state=selected]:bg-muted",
       className
     ),
     ...props
@@ -40587,7 +40601,7 @@ var TableCaption = React23.forwardRef(({ className, ...props }, ref) => /* @__PU
 TableCaption.displayName = "TableCaption";
 
 // app/components/ConstituencyResultsMobile/PartyResults.jsx
-var import_jsx_dev_runtime12 = __toESM(require_jsx_dev_runtime(), 1), PartyResults = () => /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(Table, { className: "", children: [
+var import_jsx_dev_runtime12 = __toESM(require_jsx_dev_runtime(), 1), PartyResults = ({ stateLevelData }) => /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(Table, { className: "state-level-table", children: [
   /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(TableHeader, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(TableRow, { className: "text-center bg-[#34509d] border-0 border-transparent", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(TableHead, { className: "text-white ps-3", children: "Party" }, void 0, !1, {
       fileName: "app/components/ConstituencyResultsMobile/PartyResults.jsx",
@@ -40618,47 +40632,49 @@ var import_jsx_dev_runtime12 = __toESM(require_jsx_dev_runtime(), 1), PartyResul
     lineNumber: 14,
     columnNumber: 13
   }, this),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(TableBody, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(TableRow, { className: "bg-[#dff1df]", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(TableCell, { className: "font-medium text-black ps-3", children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { className: "flex justify-start items-center gap-2", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("img", { className: "w-5 h-5 rounded-full", src: "", alt: "" }, void 0, !1, {
+  /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(TableBody, { children: stateLevelData?.[0]?.parties?.map(
+    (party) => /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(TableRow, { className: "bg-[#2A3654]", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(TableCell, { className: "font-medium text-white ps-3", children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { className: "flex justify-start items-center gap-2", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("img", { className: "w-5 h-5 rounded-full", src: party.logo, alt: "party logo" }, void 0, !1, {
+          fileName: "app/components/ConstituencyResultsMobile/PartyResults.jsx",
+          lineNumber: 27,
+          columnNumber: 33
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("p", { children: party.name }, void 0, !1, {
+          fileName: "app/components/ConstituencyResultsMobile/PartyResults.jsx",
+          lineNumber: 28,
+          columnNumber: 33
+        }, this)
+      ] }, void 0, !0, {
         fileName: "app/components/ConstituencyResultsMobile/PartyResults.jsx",
-        lineNumber: 27,
+        lineNumber: 26,
         columnNumber: 29
+      }, this) }, void 0, !1, {
+        fileName: "app/components/ConstituencyResultsMobile/PartyResults.jsx",
+        lineNumber: 25,
+        columnNumber: 25
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("p", {}, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(TableCell, { className: "text-center text-white", children: party.leading }, void 0, !1, {
         fileName: "app/components/ConstituencyResultsMobile/PartyResults.jsx",
-        lineNumber: 28,
-        columnNumber: 29
+        lineNumber: 31,
+        columnNumber: 25
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(TableCell, { className: "text-center text-white", children: party.won }, void 0, !1, {
+        fileName: "app/components/ConstituencyResultsMobile/PartyResults.jsx",
+        lineNumber: 32,
+        columnNumber: 25
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(TableCell, { className: "text-center font-semibold text-white", children: party.leading + party.won }, void 0, !1, {
+        fileName: "app/components/ConstituencyResultsMobile/PartyResults.jsx",
+        lineNumber: 33,
+        columnNumber: 25
       }, this)
-    ] }, void 0, !0, {
+    ] }, party.name, !0, {
       fileName: "app/components/ConstituencyResultsMobile/PartyResults.jsx",
-      lineNumber: 26,
-      columnNumber: 25
-    }, this) }, void 0, !1, {
-      fileName: "app/components/ConstituencyResultsMobile/PartyResults.jsx",
-      lineNumber: 25,
-      columnNumber: 21
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(TableCell, { className: "text-center text-black", children: "" }, void 0, !1, {
-      fileName: "app/components/ConstituencyResultsMobile/PartyResults.jsx",
-      lineNumber: 31,
-      columnNumber: 21
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(TableCell, { className: "text-center text-black", children: "" }, void 0, !1, {
-      fileName: "app/components/ConstituencyResultsMobile/PartyResults.jsx",
-      lineNumber: 32,
-      columnNumber: 21
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(TableCell, { className: "text-center text-[indigo]", children: "" }, void 0, !1, {
-      fileName: "app/components/ConstituencyResultsMobile/PartyResults.jsx",
-      lineNumber: 33,
+      lineNumber: 24,
       columnNumber: 21
     }, this)
-  ] }, "", !0, {
-    fileName: "app/components/ConstituencyResultsMobile/PartyResults.jsx",
-    lineNumber: 24,
-    columnNumber: 17
-  }, this) }, void 0, !1, {
+  ) }, void 0, !1, {
     fileName: "app/components/ConstituencyResultsMobile/PartyResults.jsx",
     lineNumber: 22,
     columnNumber: 13
@@ -41113,18 +41129,6 @@ var import_jsx_dev_runtime15 = __toESM(require_jsx_dev_runtime(), 1), labelVaria
 }, this));
 Label.displayName = $b73a6c6685e72184$export$be92b6f5f03c0fe9.displayName;
 
-// app/services/ElectionServices.js
-var getMagicFigure = (data) => {
-  let result = data / 2;
-  return Number.isInteger(result) ? result += 1 : result = Math.ceil(result), result;
-}, addMagicFigureData = (data) => data?.map((state) => {
-  let magicFigure = getMagicFigure(state.total_constituencies);
-  return { ...state, magic_figure: magicFigure };
-}), getMagicFigureData = async (data, stateName) => await (await (await addMagicFigureData(data?.[0]?.states))?.find((state) => state.name === stateName))?.magic_figure, getSateData = (data, stateName) => data[0].states.filter((state) => state.name === stateName);
-async function copyTextToClipboard(text) {
-  return "clipboard" in navigator ? await navigator.clipboard.writeText(text) : document.execCommand("copy", !0, text);
-}
-
 // app/components/ConstituencyResultsMobile/Share.jsx
 var import_jsx_dev_runtime16 = __toESM(require_jsx_dev_runtime(), 1), Share = () => {
   let [copyText, setCopyText] = (0, import_react36.useState)("https://adan.page.link/RUFSiafnb2NnqkRF6"), [isClicked, setIsClicked] = (0, import_react36.useState)(!1);
@@ -41191,10 +41195,10 @@ var import_jsx_dev_runtime16 = __toESM(require_jsx_dev_runtime(), 1), Share = ()
           lineNumber: 38,
           columnNumber: 11
         }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(Link2, { target: "_blank", to: copyText, children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("img", { src: whatsapp_default, className: "w-8", alt: "whatsapp" }, void 0, !1, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(Link2, { target: "_blank", to: `whatsapp://send?text=${copyText}`, children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("img", { src: whatsapp_default, className: "w-8", alt: "whatsapp" }, void 0, !1, {
           fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
           lineNumber: 48,
-          columnNumber: 47
+          columnNumber: 73
         }, this) }, void 0, !1, {
           fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
           lineNumber: 48,
@@ -41203,19 +41207,19 @@ var import_jsx_dev_runtime16 = __toESM(require_jsx_dev_runtime(), 1), Share = ()
         /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(Button, { type: "submit", size: "sm", className: "px-3", children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("span", { className: "sr-only", children: "Copy" }, void 0, !1, {
             fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
-            lineNumber: 52,
+            lineNumber: 50,
             columnNumber: 13
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(Copy, { className: `h-4 w-4 ${isClicked && "scale-[0.8]"}`, onClick: () => {
             copyTextToClipboard(copyText), setIsClicked(!0), setTimeout(() => setIsClicked(!1), 100);
           } }, void 0, !1, {
             fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
-            lineNumber: 53,
+            lineNumber: 51,
             columnNumber: 13
           }, this)
         ] }, void 0, !0, {
           fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
-          lineNumber: 51,
+          lineNumber: 49,
           columnNumber: 11
         }, this)
       ] }, void 0, !0, {
@@ -41308,7 +41312,7 @@ var import_jsx_dev_runtime18 = __toESM(require_jsx_dev_runtime(), 1), ElectionCo
 
 // app/components/ElectionResuts/Election.jsx
 var import_jsx_dev_runtime19 = __toESM(require_jsx_dev_runtime(), 1), Election = () => {
-  let [webSocketData, stateName] = (0, import_react40.useContext)(ElectionContext), stateData = getSateData(webSocketData, stateName);
+  let [webSocketData, stateName] = (0, import_react40.useContext)(ElectionContext), stateData = getSateData(webSocketData[0].states, stateName);
   return console.log("sateData", stateData), /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("div", { className: "w-full min-h-screen font__nunitosans flex flex-col items-center bg-[#050D3E]", style: { background: "#B15EFF" }, children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("div", { className: "info-bar-container w-full flex items-center  bg-[#003D75] px-2 md:px-6", style: { alignSelf: "flex-start" }, children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(InfoBar_default, {}, void 0, !1, {
@@ -41540,7 +41544,7 @@ var import_jsx_dev_runtime23 = __toESM(require_jsx_dev_runtime(), 1), Card = ({ 
 
 // app/components/ElectionResuts/PartyResults.jsx
 var import_react46 = __toESM(require_react(), 1);
-var import_jsx_dev_runtime24 = __toESM(require_jsx_dev_runtime(), 1), PartyResults2 = ({ parties }) => /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(Table, { className: "", children: [
+var import_jsx_dev_runtime24 = __toESM(require_jsx_dev_runtime(), 1), PartyResults2 = ({ parties }) => /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(Table, { className: "election-level-table", children: [
   /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(TableHeader, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(TableRow, { className: "text-center bg-[#34509d] border-0 border-transparent", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(TableHead, { className: "text-white text-[1rem] ps-4", children: "Party" }, void 0, !1, {
       fileName: "app/components/ElectionResuts/PartyResults.jsx",
@@ -41812,7 +41816,7 @@ var import_jsx_dev_runtime27 = __toESM(require_jsx_dev_runtime(), 1), widget = (
 }, this), widget_default = widget;
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-MS4WYGOM.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-NEMJIZPC.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XGDSMD3A.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-6YYLV2ZX.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-ZFEIBNXW.js", imports: ["/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults": { id: "routes/constituencyresults", parentId: "root", path: "constituencyresults", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults-O2CT6DOA.js", imports: ["/build/_shared/chunk-5JYQUXBT.js", "/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults": { id: "routes/electionresults", parentId: "root", path: "electionresults", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults-MA6CMA3B.js", imports: ["/build/_shared/chunk-5JYQUXBT.js", "/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/widget": { id: "routes/widget", parentId: "root", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/widget-NII7TG56.js", imports: ["/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "014f8167", hmr: { runtime: "/build/_shared/chunk-XGDSMD3A.js", timestamp: 1701410316776 }, url: "/build/manifest-014F8167.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-MS4WYGOM.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-NEMJIZPC.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XGDSMD3A.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-YZUIQM2I.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-ZFEIBNXW.js", imports: ["/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults": { id: "routes/constituencyresults", parentId: "root", path: "constituencyresults", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults-3P5IWKBZ.js", imports: ["/build/_shared/chunk-MTQQC3WS.js", "/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults": { id: "routes/electionresults", parentId: "root", path: "electionresults", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults-ZTCSVRUM.js", imports: ["/build/_shared/chunk-MTQQC3WS.js", "/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/widget": { id: "routes/widget", parentId: "root", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/widget-NII7TG56.js", imports: ["/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "22adb48d", hmr: { runtime: "/build/_shared/chunk-XGDSMD3A.js", timestamp: 1701415610751 }, url: "/build/manifest-22ADB48D.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

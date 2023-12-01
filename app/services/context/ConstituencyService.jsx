@@ -22,7 +22,7 @@ export const ConstituencyProvider = ({ children }) => {
       console.log("initializeWebSocket");
 
       const socket = new WebSocket(
-        "wss://stage-cmsapis.aadhan.in/election-results/ws"
+        "wss://stage-cmsapis.aadhan.in/election-results/ws2"
       );
       socket.onopen = () => {
         console.log("WebSocket connection opened");
@@ -30,7 +30,7 @@ export const ConstituencyProvider = ({ children }) => {
       socket.onmessage = (event) => {
         const wsdata = event.data;
         const wsData = JSON.parse(wsdata);
-        setWebSocketData(wsData['avg_party_results']);
+        setWebSocketData(wsData);
         console.log("websocket data: ", wsData, typeof wsData);
       };
       socket.onclose = (event) => {

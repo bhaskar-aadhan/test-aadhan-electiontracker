@@ -10,7 +10,7 @@ import {
 
 const PartyResults = ({parties}) => {
     return (
-        <Table className="">
+        <Table className="election-level-table">
             <TableHeader>
                 <TableRow className="text-center bg-[#34509d] border-0 border-transparent">
                     <TableHead className="text-white text-[1rem] ps-4">Party</TableHead>

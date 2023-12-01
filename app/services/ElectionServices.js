@@ -24,8 +24,11 @@ const getMagicFigureData = async(data ,stateName) => {
 }
 
 const getSateData = (data, stateName)=>{
-    const websocketData =  data[0]['states']
-    const stateData = websocketData.filter((state)=>state['name'] === stateName)
+    const stateData = data.filter((state)=>state['name'] === stateName)
+    return stateData
+}
+const getSateLevelStateData = (data, stateName)=>{
+    const stateData = data.filter((state)=>state['state'] === stateName)
     return stateData
 }
 
@@ -41,5 +44,6 @@ export {
     addMagicFigureData,
     getMagicFigureData,
     getSateData,
+    getSateLevelStateData,
     copyTextToClipboard,
 }

@@ -45,9 +45,7 @@ const Share = () => {
               readOnly
             />
           </div>
-          <Link target='_blank' to={copyText}><img src={whatsappImg} className='w-8' alt='whatsapp' /></Link>
-          {/* <img src={whatsappImg} className='w-8' onClick={()=>copyTextToClipboard(copyText)} onKeyDown={()=>{}} alt='whatsapp' /> */}
-          {/* <img src={whatsappImg} onKeyDown={()=>{}} onClick={()=>navigator.clipboard.writeText("https://aadhan.in").then(()=>console.log("copied")).catch((err)=>console.log(err))} className='w-8' alt='whatsapp' /> */}
+          <Link target='_blank' to={`whatsapp://send?text=${copyText}`}><img src={whatsappImg} className='w-8' alt='whatsapp' /></Link>
           <Button type="submit" size="sm" className="px-3">
             <span className="sr-only">Copy</span>
             <Copy className={`h-4 w-4 ${isClicked && 'scale-[0.8]'}`} onClick={()=>{copyTextToClipboard(copyText); setIsClicked(true); setTimeout(()=>setIsClicked(false), 100)}} />

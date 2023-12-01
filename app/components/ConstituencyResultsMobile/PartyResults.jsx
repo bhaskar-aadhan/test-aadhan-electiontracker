@@ -8,9 +8,9 @@ import {
     TableRow,
 } from "~/components/ui/table";
 
-const PartyResults = () => {
+const PartyResults = ({ stateLevelData }) => {
     return (
-        <Table className="">
+        <Table className="state-level-table">
             <TableHeader>
                 <TableRow className="text-center bg-[#34509d] border-0 border-transparent">
                     <TableHead className="text-white ps-3">Party</TableHead>
@@ -20,19 +20,19 @@ const PartyResults = () => {
                 </TableRow>
             </TableHeader>
             <TableBody>
-               
-                <TableRow key={''} className='bg-[#dff1df]'>
-                    <TableCell className="font-medium text-black ps-3">
-                        <div className='flex justify-start items-center gap-2'>
-                            <img className='w-5 h-5 rounded-full' src={''} alt="" />
-                            <p></p>
-                        </div>
-                    </TableCell>
-                    <TableCell className="text-center text-black">{''}</TableCell>
-                    <TableCell className="text-center text-black">{''}</TableCell>
-                    <TableCell className="text-center text-[indigo]">{''}</TableCell>
-                </TableRow>
-               
+                {stateLevelData?.[0]?.['parties']?.map((party) =>
+                    <TableRow key={party['name']} className='bg-[#2A3654]'>
+                        <TableCell className="font-medium text-white ps-3">
+                            <div className='flex justify-start items-center gap-2'>
+                                <img className='w-5 h-5 rounded-full' src={party['logo']} alt="party logo" />
+                                <p>{party['name']}</p>
+                            </div>
+                        </TableCell>
+                        <TableCell className="text-center text-white">{party['leading']}</TableCell>
+                        <TableCell className="text-center text-white">{party['won']}</TableCell>
+                        <TableCell className="text-center font-semibold text-white">{party['leading'] + party['won']}</TableCell>
+                    </TableRow>
+                )}
             </TableBody>
         </Table>
     )

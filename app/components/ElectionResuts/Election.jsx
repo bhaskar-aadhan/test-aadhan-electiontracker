@@ -5,7 +5,7 @@ import { InfoBar, Card, Download } from '.';
 
 const Election = () => {
   const [webSocketData, stateName] = useContext(ElectionContext);
-  const stateData = getSateData(webSocketData, stateName)
+  const stateData = getSateData(webSocketData[0]['states'], stateName)
   console.log("sateData", stateData)
   return (
     <div className='w-full min-h-screen font__nunitosans flex flex-col items-center bg-[#050D3E]' style={{ background: '#B15EFF' }}>
