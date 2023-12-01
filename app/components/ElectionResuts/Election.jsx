@@ -1,4 +1,4 @@
-import React, { memo, useContext } from 'react';
+import React, { useContext } from 'react';
 import { ElectionContext } from '~/services/context/ElectionService';
 import { getSateData } from '~/services/ElectionServices';
 import { InfoBar, Card, Download } from '.';
@@ -23,4 +23,4 @@ const Election = () => {
   )
 }
 
-export default memo(Election)
+export default Election

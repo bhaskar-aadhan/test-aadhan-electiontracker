@@ -21,6 +21,7 @@ export const WebscoketProvider = ({ children }) => {
 
       const socket = new WebSocket(
         "wss://stage-cmsapis.aadhan.in/election-results/ws"
+        // "wss://stage-cmsapis.aadhan.in/election-results/ws"
       );
       socket.onopen = () => {
         console.log("WebSocket connection opened");
@@ -28,7 +29,7 @@ export const WebscoketProvider = ({ children }) => {
       socket.onmessage = (event) => {
         const wsdata = event.data;
         const wsData = JSON.parse(wsdata);
-        setWebSocketData(wsData['election_results']);
+        setWebSocketData(wsData);
         console.log("websocket data: ", wsData, typeof wsData);
       };
       socket.onclose = (event) => {
@@ -60,6 +61,7 @@ export const WebscoketProvider = ({ children }) => {
       </div>
     )
   }
+
   return (
     <ElectionContext.Provider value={[webSocketData, stateName, setStateName]}>
       {children}

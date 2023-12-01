@@ -803,7 +803,7 @@ function matchPath(pattern, pathname) {
     return null;
   let matchedPathname = match[0], pathnameBase = matchedPathname.replace(/(.)\/+$/, "$1"), captureGroups = match.slice(1);
   return {
-    params: compiledParams.reduce((memo2, _ref, index2) => {
+    params: compiledParams.reduce((memo, _ref, index2) => {
       let {
         paramName,
         isOptional
@@ -813,7 +813,7 @@ function matchPath(pattern, pathname) {
         pathnameBase = matchedPathname.slice(0, matchedPathname.length - splatValue.length).replace(/(.)\/+$/, "$1");
       }
       let value = captureGroups[index2];
-      return isOptional && !value ? memo2[paramName] = void 0 : memo2[paramName] = safelyDecodeURIComponent(value || "", paramName), memo2;
+      return isOptional && !value ? memo[paramName] = void 0 : memo[paramName] = safelyDecodeURIComponent(value || "", paramName), memo;
     }, {}),
     pathname: matchedPathname,
     pathnameBase,
@@ -1666,7 +1666,7 @@ var json3, defer3, redirect3, redirectDocument2, redirectStatusCodes2, DEFERRED_
 
 // node_modules/@remix-run/server-runtime/dist/esm/entry.js
 function createEntryRouteModules(manifest) {
-  return Object.keys(manifest).reduce((memo2, routeId) => (memo2[routeId] = manifest[routeId].module, memo2), {});
+  return Object.keys(manifest).reduce((memo, routeId) => (memo[routeId] = manifest[routeId].module, memo), {});
 }
 var init_entry = __esm({
   "node_modules/@remix-run/server-runtime/dist/esm/entry.js"() {
@@ -3302,7 +3302,7 @@ Your code should look like:
         // with.
         type.$$typeof === REACT_MODULE_REFERENCE || type.getModuleId !== void 0));
       }
-      function memo2(type, compare) {
+      function memo(type, compare) {
         isValidElementType(type) || error("memo: The first argument must be a component. Instead received: %s", type === null ? "null" : typeof type);
         var elementType = {
           $$typeof: REACT_MEMO_TYPE,
@@ -3881,7 +3881,7 @@ Check the top-level render call using <` + parentName + ">.");
         toArray,
         only: onlyChild
       };
-      exports.Children = Children3, exports.Component = Component3, exports.Fragment = REACT_FRAGMENT_TYPE, exports.Profiler = REACT_PROFILER_TYPE, exports.PureComponent = PureComponent, exports.StrictMode = REACT_STRICT_MODE_TYPE, exports.Suspense = REACT_SUSPENSE_TYPE, exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = ReactSharedInternals, exports.cloneElement = cloneElement$1, exports.createContext = createContext6, exports.createElement = createElement$1, exports.createFactory = createFactory, exports.createRef = createRef, exports.forwardRef = forwardRef13, exports.isValidElement = isValidElement2, exports.lazy = lazy, exports.memo = memo2, exports.startTransition = startTransition, exports.unstable_act = act, exports.useCallback = useCallback5, exports.useContext = useContext11, exports.useDebugValue = useDebugValue, exports.useDeferredValue = useDeferredValue, exports.useEffect = useEffect12, exports.useId = useId, exports.useImperativeHandle = useImperativeHandle, exports.useInsertionEffect = useInsertionEffect, exports.useLayoutEffect = useLayoutEffect4, exports.useMemo = useMemo7, exports.useReducer = useReducer, exports.useRef = useRef7, exports.useState = useState15, exports.useSyncExternalStore = useSyncExternalStore, exports.useTransition = useTransition, exports.version = ReactVersion, typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ < "u" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop == "function" && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
+      exports.Children = Children3, exports.Component = Component3, exports.Fragment = REACT_FRAGMENT_TYPE, exports.Profiler = REACT_PROFILER_TYPE, exports.PureComponent = PureComponent, exports.StrictMode = REACT_STRICT_MODE_TYPE, exports.Suspense = REACT_SUSPENSE_TYPE, exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = ReactSharedInternals, exports.cloneElement = cloneElement$1, exports.createContext = createContext6, exports.createElement = createElement$1, exports.createFactory = createFactory, exports.createRef = createRef, exports.forwardRef = forwardRef13, exports.isValidElement = isValidElement2, exports.lazy = lazy, exports.memo = memo, exports.startTransition = startTransition, exports.unstable_act = act, exports.useCallback = useCallback5, exports.useContext = useContext11, exports.useDebugValue = useDebugValue, exports.useDeferredValue = useDeferredValue, exports.useEffect = useEffect12, exports.useId = useId, exports.useImperativeHandle = useImperativeHandle, exports.useInsertionEffect = useInsertionEffect, exports.useLayoutEffect = useLayoutEffect4, exports.useMemo = useMemo7, exports.useReducer = useReducer, exports.useRef = useRef7, exports.useState = useState15, exports.useSyncExternalStore = useSyncExternalStore, exports.useTransition = useTransition, exports.version = ReactVersion, typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ < "u" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop == "function" && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
     })();
   }
 });
@@ -17874,7 +17874,7 @@ function matchPath2(pattern, pathname) {
     return null;
   let matchedPathname = match[0], pathnameBase = matchedPathname.replace(/(.)\/+$/, "$1"), captureGroups = match.slice(1);
   return {
-    params: compiledParams.reduce((memo2, _ref, index2) => {
+    params: compiledParams.reduce((memo, _ref, index2) => {
       let {
         paramName,
         isOptional
@@ -17884,7 +17884,7 @@ function matchPath2(pattern, pathname) {
         pathnameBase = matchedPathname.slice(0, matchedPathname.length - splatValue.length).replace(/(.)\/+$/, "$1");
       }
       let value = captureGroups[index2];
-      return isOptional && !value ? memo2[paramName] = void 0 : memo2[paramName] = safelyDecodeURIComponent2(value || "", paramName), memo2;
+      return isOptional && !value ? memo[paramName] = void 0 : memo[paramName] = safelyDecodeURIComponent2(value || "", paramName), memo;
     }, {}),
     pathname: matchedPathname,
     pathnameBase,
@@ -20932,7 +20932,7 @@ function matchPath3(pattern, pathname) {
     return null;
   let matchedPathname = match[0], pathnameBase = matchedPathname.replace(/(.)\/+$/, "$1"), captureGroups = match.slice(1);
   return {
-    params: compiledParams.reduce((memo2, _ref, index2) => {
+    params: compiledParams.reduce((memo, _ref, index2) => {
       let {
         paramName,
         isOptional
@@ -20942,7 +20942,7 @@ function matchPath3(pattern, pathname) {
         pathnameBase = matchedPathname.slice(0, matchedPathname.length - splatValue.length).replace(/(.)\/+$/, "$1");
       }
       let value = captureGroups[index2];
-      return isOptional && !value ? memo2[paramName] = void 0 : memo2[paramName] = safelyDecodeURIComponent3(value || "", paramName), memo2;
+      return isOptional && !value ? memo[paramName] = void 0 : memo[paramName] = safelyDecodeURIComponent3(value || "", paramName), memo;
     }, {}),
     pathname: matchedPathname,
     pathnameBase,
@@ -23083,9 +23083,9 @@ function shouldProcessLinkClick(event, target) {
   !isModifiedEvent(event);
 }
 function createSearchParams(init) {
-  return init === void 0 && (init = ""), new URLSearchParams(typeof init == "string" || Array.isArray(init) || init instanceof URLSearchParams ? init : Object.keys(init).reduce((memo2, key) => {
+  return init === void 0 && (init = ""), new URLSearchParams(typeof init == "string" || Array.isArray(init) || init instanceof URLSearchParams ? init : Object.keys(init).reduce((memo, key) => {
     let value = init[key];
-    return memo2.concat(Array.isArray(value) ? value.map((v) => [key, v]) : [[key, value]]);
+    return memo.concat(Array.isArray(value) ? value.map((v) => [key, v]) : [[key, value]]);
   }, []));
 }
 function getSearchParamsForLocation(locationSearch, defaultSearchParams) {
@@ -41269,12 +41269,13 @@ var import_jsx_dev_runtime18 = __toESM(require_jsx_dev_runtime(), 1), ElectionCo
       console.log("initializeWebSocket");
       let socket = new WebSocket(
         "wss://stage-cmsapis.aadhan.in/election-results/ws"
+        // "wss://stage-cmsapis.aadhan.in/election-results/ws"
       );
       socket.onopen = () => {
         console.log("WebSocket connection opened");
       }, socket.onmessage = (event) => {
         let wsdata = event.data, wsData = JSON.parse(wsdata);
-        setWebSocketData(wsData.election_results), console.log("websocket data: ", wsData, typeof wsData);
+        setWebSocketData(wsData), console.log("websocket data: ", wsData, typeof wsData);
       }, socket.onclose = (event) => {
         console.log(
           `WebSocket connection closed code=${event.code}, reason=${event.reason}`
@@ -41288,19 +41289,19 @@ var import_jsx_dev_runtime18 = __toESM(require_jsx_dev_runtime(), 1), ElectionCo
     initializeWebSocket();
   }, []), webSocketData === null ? /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "min-h-screen grid place-content-center", style: { background: "linear-gradient( -80deg , #d7e9ff, #7db3ff, #d7e9ff)" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "", children: /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("img", { src: ballot_1_default, alt: "ballot gif" }, void 0, !1, {
     fileName: "app/services/context/ElectionService.jsx",
-    lineNumber: 58,
+    lineNumber: 59,
     columnNumber: 11
   }, this) }, void 0, !1, {
     fileName: "app/services/context/ElectionService.jsx",
-    lineNumber: 57,
+    lineNumber: 58,
     columnNumber: 9
   }, this) }, void 0, !1, {
     fileName: "app/services/context/ElectionService.jsx",
-    lineNumber: 56,
+    lineNumber: 57,
     columnNumber: 7
   }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(ElectionContext.Provider, { value: [webSocketData, stateName, setStateName], children }, void 0, !1, {
     fileName: "app/services/context/ElectionService.jsx",
-    lineNumber: 64,
+    lineNumber: 66,
     columnNumber: 5
   }, this);
 };
@@ -41339,7 +41340,7 @@ var import_jsx_dev_runtime19 = __toESM(require_jsx_dev_runtime(), 1), Election =
     lineNumber: 11,
     columnNumber: 5
   }, this);
-}, Election_default2 = (0, import_react40.memo)(Election);
+}, Election_default2 = Election;
 
 // app/components/ElectionResuts/InfoBar.jsx
 var import_react41 = __toESM(require_react(), 1);
@@ -41811,7 +41812,7 @@ var import_jsx_dev_runtime27 = __toESM(require_jsx_dev_runtime(), 1), widget = (
 }, this), widget_default = widget;
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-MS4WYGOM.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-NEMJIZPC.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XGDSMD3A.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-6YYLV2ZX.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-ZFEIBNXW.js", imports: ["/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults": { id: "routes/constituencyresults", parentId: "root", path: "constituencyresults", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults-O2CT6DOA.js", imports: ["/build/_shared/chunk-5JYQUXBT.js", "/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults": { id: "routes/electionresults", parentId: "root", path: "electionresults", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults-MRLUQWO3.js", imports: ["/build/_shared/chunk-5JYQUXBT.js", "/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/widget": { id: "routes/widget", parentId: "root", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/widget-NII7TG56.js", imports: ["/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "f81a4f52", hmr: { runtime: "/build/_shared/chunk-XGDSMD3A.js", timestamp: 1701407892463 }, url: "/build/manifest-F81A4F52.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-MS4WYGOM.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-NEMJIZPC.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XGDSMD3A.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-6YYLV2ZX.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-ZFEIBNXW.js", imports: ["/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults": { id: "routes/constituencyresults", parentId: "root", path: "constituencyresults", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults-O2CT6DOA.js", imports: ["/build/_shared/chunk-5JYQUXBT.js", "/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults": { id: "routes/electionresults", parentId: "root", path: "electionresults", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults-MA6CMA3B.js", imports: ["/build/_shared/chunk-5JYQUXBT.js", "/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/widget": { id: "routes/widget", parentId: "root", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/widget-NII7TG56.js", imports: ["/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "014f8167", hmr: { runtime: "/build/_shared/chunk-XGDSMD3A.js", timestamp: 1701410316776 }, url: "/build/manifest-014F8167.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
