@@ -11,7 +11,7 @@ const ConstituencyResults = () => {
             <div className='info-widget-container text-[1.2rem]'>
               <p>ASSEMBLY <br /> ELECTION</p>
               <div className='flex justify-between items-center'>
-                <div className='flex flex-col'><span className='text-[#FFC700] inline-block'>RESULTS</span><span className='inline-block text-[11px] font-normal'>(constituency wise)</span><span className='inline-block'>2023</span></div>
+              <p><span className='text-[#FFC700]'>RESULTS</span><br /> 2023</p>
                 <img src={vottingBoothImg} alt="votting booth" className='translate-x-[1rem]' />
               </div>
             </div>
