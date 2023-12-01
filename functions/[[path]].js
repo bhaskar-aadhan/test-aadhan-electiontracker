@@ -33672,7 +33672,7 @@ __export(root_exports, {
 });
 
 // app/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-VK47A3CM.css";
+var tailwind_default = "/build/_assets/tailwind-UREJ7EVX.css";
 
 // app/root.tsx
 var import_jsx_dev_runtime2 = __toESM(require_jsx_dev_runtime(), 1), links = () => [
@@ -33785,7 +33785,7 @@ var share_default = "/build/_assets/share-5ZP2PDGS.svg";
 
 // app/services/context/ConstituencyService.jsx
 var import_jsx_dev_runtime3 = __toESM(require_jsx_dev_runtime(), 1), ConstituencyContext = (0, import_react3.createContext)("aadhan mobile"), ConstituencyProvider = ({ children }) => {
-  let [webSocketData, setWebSocketData] = (0, import_react3.useState)(null), [select, setSelect] = (0, import_react3.useState)(!0), [state, setState] = (0, import_react3.useState)("Telangana"), [constituency, setConstituency] = (0, import_react3.useState)("Gajwel");
+  let [webSocketData, setWebSocketData] = (0, import_react3.useState)(null), [select, setSelect] = (0, import_react3.useState)(!0), [stateNameMobile, setStateNameMobile] = (0, import_react3.useState)("Telangana"), [constituency, setConstituency] = (0, import_react3.useState)("Gajwel");
   return (0, import_react3.useEffect)(() => {
     document.addEventListener("visibilitychange", handleVisibilityChange);
     function handleVisibilityChange() {
@@ -33824,7 +33824,7 @@ var import_jsx_dev_runtime3 = __toESM(require_jsx_dev_runtime(), 1), Constituenc
     fileName: "app/services/context/ConstituencyService.jsx",
     lineNumber: 58,
     columnNumber: 7
-  }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(ConstituencyContext.Provider, { value: [webSocketData, select, setSelect, state, setState, constituency, setConstituency], children }, void 0, !1, {
+  }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(ConstituencyContext.Provider, { value: [webSocketData, select, setSelect, stateNameMobile, setStateNameMobile, constituency, setConstituency], children }, void 0, !1, {
     fileName: "app/services/context/ConstituencyService.jsx",
     lineNumber: 66,
     columnNumber: 7
@@ -33971,7 +33971,7 @@ var import_jsx_dev_runtime6 = __toESM(require_jsx_dev_runtime(), 1), Constituenc
 // app/components/ConstituencyResultsMobile/TabBar.jsx
 var import_react7 = __toESM(require_react(), 1);
 var import_jsx_dev_runtime7 = __toESM(require_jsx_dev_runtime(), 1), TabBar = () => {
-  let [select, setSelect] = (0, import_react7.useContext)(ConstituencyContext);
+  let [webSocketData, select, setSelect] = (0, import_react7.useContext)(ConstituencyContext);
   return /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("div", { className: "tabBar-container text-center rounded-md w-[95%] mx-auto bg-white text-[#0165FF] flex justify-center items-center", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("div", { onClick: () => setSelect(!0), onKeyDown: () => {
     }, className: `entity-1 w-full cursor-pointer rounded-s-md flex-1 py-1 ${select && "text-white bg-[#0165FF]"}`, children: "State" }, void 0, !1, {
@@ -40379,61 +40379,68 @@ var import_jsx_dev_runtime9 = __toESM(require_jsx_dev_runtime(), 1), buttonVaria
 Button.displayName = "Button";
 
 // app/components/ConstituencyResultsMobile/Dropdown.jsx
-var import_jsx_dev_runtime10 = __toESM(require_jsx_dev_runtime(), 1), Dropdown = ({ sx }) => /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: `${sx}`, children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(DropdownMenu, { children: [
-  /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(DropdownMenuTrigger, { asChild: !0, children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(Button, { className: "min-w-[155px] justify-start", variant: "outline", children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "w-full flex justify-between items-center", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("p", { children: "" }, void 0, !1, {
+var import_jsx_dev_runtime10 = __toESM(require_jsx_dev_runtime(), 1), Dropdown = ({ sx }) => {
+  let [webSocketData, select, setSelect, stateNameMobile, setStateNameMobile] = (0, import_react31.useContext)(ConstituencyContext);
+  return console.log("state name", stateNameMobile), /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: `${sx}`, children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(DropdownMenu, { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(DropdownMenuTrigger, { asChild: !0, children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(Button, { className: "min-w-[155px] justify-start", variant: "outline", children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "w-full flex justify-between items-center", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("p", { children: stateNameMobile }, void 0, !1, {
+        fileName: "app/components/ConstituencyResultsMobile/Dropdown.jsx",
+        lineNumber: 24,
+        columnNumber: 29
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("img", { src: down_arrow_default, alt: "down icon" }, void 0, !1, {
+        fileName: "app/components/ConstituencyResultsMobile/Dropdown.jsx",
+        lineNumber: 25,
+        columnNumber: 29
+      }, this)
+    ] }, void 0, !0, {
       fileName: "app/components/ConstituencyResultsMobile/Dropdown.jsx",
       lineNumber: 23,
-      columnNumber: 29
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("img", { src: down_arrow_default, alt: "down icon" }, void 0, !1, {
+      columnNumber: 25
+    }, this) }, void 0, !1, {
       fileName: "app/components/ConstituencyResultsMobile/Dropdown.jsx",
-      lineNumber: 24,
-      columnNumber: 29
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/components/ConstituencyResultsMobile/Dropdown.jsx",
-    lineNumber: 22,
-    columnNumber: 25
-  }, this) }, void 0, !1, {
-    fileName: "app/components/ConstituencyResultsMobile/Dropdown.jsx",
-    lineNumber: 21,
-    columnNumber: 21
-  }, this) }, void 0, !1, {
-    fileName: "app/components/ConstituencyResultsMobile/Dropdown.jsx",
-    lineNumber: 20,
-    columnNumber: 17
-  }, this),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(DropdownMenuContent, { className: "w-[180px]", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(DropdownMenuLabel, { children: "Select a State" }, void 0, !1, {
+      lineNumber: 22,
+      columnNumber: 21
+    }, this) }, void 0, !1, {
+      fileName: "app/components/ConstituencyResultsMobile/Dropdown.jsx",
+      lineNumber: 21,
+      columnNumber: 17
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(DropdownMenuContent, { className: "w-[180px]", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(DropdownMenuLabel, { children: "Select a State" }, void 0, !1, {
+        fileName: "app/components/ConstituencyResultsMobile/Dropdown.jsx",
+        lineNumber: 30,
+        columnNumber: 21
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(DropdownMenuSeparator, {}, void 0, !1, {
+        fileName: "app/components/ConstituencyResultsMobile/Dropdown.jsx",
+        lineNumber: 31,
+        columnNumber: 21
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(DropdownMenuRadioGroup, { value: stateNameMobile, onValueChange: setStateNameMobile, children: webSocketData?.map((state) => /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(DropdownMenuRadioItem, { value: state.state, children: state.state }, state.state, !1, {
+        fileName: "app/components/ConstituencyResultsMobile/Dropdown.jsx",
+        lineNumber: 34,
+        columnNumber: 29
+      }, this)) }, void 0, !1, {
+        fileName: "app/components/ConstituencyResultsMobile/Dropdown.jsx",
+        lineNumber: 32,
+        columnNumber: 21
+      }, this)
+    ] }, void 0, !0, {
       fileName: "app/components/ConstituencyResultsMobile/Dropdown.jsx",
       lineNumber: 29,
-      columnNumber: 21
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(DropdownMenuSeparator, {}, void 0, !1, {
-      fileName: "app/components/ConstituencyResultsMobile/Dropdown.jsx",
-      lineNumber: 30,
-      columnNumber: 21
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(DropdownMenuRadioGroup, { value: "", onValueChange: "" }, void 0, !1, {
-      fileName: "app/components/ConstituencyResultsMobile/Dropdown.jsx",
-      lineNumber: 31,
-      columnNumber: 21
+      columnNumber: 17
     }, this)
   ] }, void 0, !0, {
     fileName: "app/components/ConstituencyResultsMobile/Dropdown.jsx",
-    lineNumber: 28,
-    columnNumber: 17
-  }, this)
-] }, void 0, !0, {
-  fileName: "app/components/ConstituencyResultsMobile/Dropdown.jsx",
-  lineNumber: 19,
-  columnNumber: 13
-}, this) }, void 0, !1, {
-  fileName: "app/components/ConstituencyResultsMobile/Dropdown.jsx",
-  lineNumber: 18,
-  columnNumber: 9
-}, this), Dropdown_default = Dropdown;
+    lineNumber: 20,
+    columnNumber: 13
+  }, this) }, void 0, !1, {
+    fileName: "app/components/ConstituencyResultsMobile/Dropdown.jsx",
+    lineNumber: 19,
+    columnNumber: 9
+  }, this);
+}, Dropdown_default = Dropdown;
 
 // app/components/ConstituencyResultsMobile/PartyResults.jsx
 var import_react32 = __toESM(require_react(), 1);
@@ -41804,7 +41811,7 @@ var import_jsx_dev_runtime27 = __toESM(require_jsx_dev_runtime(), 1), widget = (
 }, this), widget_default = widget;
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-MS4WYGOM.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-NEMJIZPC.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XGDSMD3A.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-EYZLLD6D.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-ZFEIBNXW.js", imports: ["/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults": { id: "routes/constituencyresults", parentId: "root", path: "constituencyresults", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults-PLGCWE27.js", imports: ["/build/_shared/chunk-5JYQUXBT.js", "/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults": { id: "routes/electionresults", parentId: "root", path: "electionresults", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults-P6JNBPVI.js", imports: ["/build/_shared/chunk-5JYQUXBT.js", "/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/widget": { id: "routes/widget", parentId: "root", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/widget-NII7TG56.js", imports: ["/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "91d5a422", hmr: { runtime: "/build/_shared/chunk-XGDSMD3A.js", timestamp: 1701351625013 }, url: "/build/manifest-91D5A422.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-MS4WYGOM.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-NEMJIZPC.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XGDSMD3A.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-6YYLV2ZX.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-ZFEIBNXW.js", imports: ["/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults": { id: "routes/constituencyresults", parentId: "root", path: "constituencyresults", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults-O2CT6DOA.js", imports: ["/build/_shared/chunk-5JYQUXBT.js", "/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults": { id: "routes/electionresults", parentId: "root", path: "electionresults", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults-P6JNBPVI.js", imports: ["/build/_shared/chunk-5JYQUXBT.js", "/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/widget": { id: "routes/widget", parentId: "root", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/widget-NII7TG56.js", imports: ["/build/_shared/chunk-O6BE6AWN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "f011528e", hmr: { runtime: "/build/_shared/chunk-XGDSMD3A.js", timestamp: 1701407165156 }, url: "/build/manifest-F011528E.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

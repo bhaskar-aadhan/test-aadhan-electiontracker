@@ -6,7 +6,7 @@ export const ConstituencyContext = createContext("aadhan mobile")
 export const ConstituencyProvider = ({ children }) => {
   const [webSocketData, setWebSocketData] = useState(null);
   const [ select, setSelect ] = useState(true)
-  const [ state, setState ] = useState("Telangana")
+  const [ stateNameMobile, setStateNameMobile ] = useState("Telangana")
   const [ constituency, setConstituency ] = useState("Gajwel")
 
   //WEBSOCKET
@@ -63,7 +63,7 @@ export const ConstituencyProvider = ({ children }) => {
     )
   }
   return (
-      <ConstituencyContext.Provider value={[webSocketData,select,setSelect,state,setState,constituency,setConstituency]}>
+      <ConstituencyContext.Provider value={[webSocketData,select,setSelect,stateNameMobile,setStateNameMobile,constituency,setConstituency]}>
         {children}
       </ConstituencyContext.Provider>
     )
