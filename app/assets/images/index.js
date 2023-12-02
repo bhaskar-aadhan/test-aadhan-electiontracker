@@ -10,6 +10,7 @@ import whatsappImg from './whatsapp.svg';
 import electionShareImg from './Election.jpg';
 import shareIcon from './share.svg';
 import signalSpinner from './signalSpinner.svg';
+import carrotUpIcon from'./carrot-up.svg';
 
 export {
     aadhanLogo,
@@ -24,4 +25,5 @@ export {
     electionShareImg,
     shareIcon,
     signalSpinner,
+    carrotUpIcon,
 }

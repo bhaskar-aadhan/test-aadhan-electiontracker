@@ -42,6 +42,10 @@
   background: #293861;
 }
 
+.filter-green{
+  filter: invert(56%) sepia(39%) saturate(6511%) hue-rotate(103deg) brightness(98%) contrast(102%);
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

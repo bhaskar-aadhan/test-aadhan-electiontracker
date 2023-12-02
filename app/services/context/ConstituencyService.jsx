@@ -53,19 +53,19 @@ export const ConstituencyProvider = ({ children }) => {
     };
     //ws2
     const initializeWebSocket2 = () => {
-      const socket = new WebSocket(
+      const socket2 = new WebSocket(
         "wss://stage-cmsapis.aadhan.in/election-results/ws1"
       );
-      socket.onopen = () => {
+      socket2.onopen = () => {
         console.log("WebSocket2 connection opened");
       };
-      socket.onmessage = (event) => {
+      socket2.onmessage = (event) => {
         const wsdata = event.data;
         const wsData = JSON.parse(wsdata);
         setWebSocket2Data(wsData);
         console.log("websocket2 data: ", wsData, typeof wsData);
       };
-      socket.onclose = (event) => {
+      socket2.onclose = (event) => {
         console.log(
           `WebSocket connection closed code=${event.code}, reason=${event.reason}`
         );
@@ -76,9 +76,12 @@ export const ConstituencyProvider = ({ children }) => {
         } else {
           console.error("WebSocket connection abruptly closed");
           setTimeout(initializeWebSocket, 1000);
+          setInterval(()=>{
+            socket2.send({"type":"pong"}, 1000)
+           })
         }
       };
-      socket.onerror = (error) => {
+      socket2.onerror = (error) => {
         console.error("WebSocket error:", error);
       };
     };

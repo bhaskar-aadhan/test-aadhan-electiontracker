@@ -13,16 +13,16 @@ import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
 import { Link } from '@remix-run/react';
 import { copyTextToClipboard } from '~/services/ElectionServices.js'
-import { whatsappImg, electionShareImg, shareIcon } from '~/assets/images';
+import { whatsappImg, electionShareImg } from '~/assets/images';
 
 const Share = () => {
-  const [ copyText, setCopyText ] = useState("https://adan.page.link/RUFSiafnb2NnqkRF6")
-  const [ isClicked, setIsClicked ] = useState(false)
+  const [copyText, setCopyText] = useState("https://adan.page.link/RUFSiafnb2NnqkRF6")
+  const [isClicked, setIsClicked] = useState(false)
   return (
     <Dialog className="rounded-md">
       <DialogTrigger asChild>
-        <Button className='table__shadow rounded-full p-1 w-8 h-8 border-0 bg-blue-400 hover:rotate-[20deg] transition-transform ' variant="outline">
-        <img src={shareIcon} className='hover:text-[black]' alt='share'/>
+        <Button className='wa-app-icon table__shadow p-1 w-8 h-8 border-0 bg-transparent hover:rotate-[20deg] transition-transform ' variant="outline">
+          <img src={whatsappImg} className='hover:text-[black]' alt='share' />
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-md rounded-xl">
@@ -48,7 +48,7 @@ const Share = () => {
           <Link target='_blank' to={`whatsapp://send?text=${copyText}`}><img src={whatsappImg} className='w-8' alt='whatsapp' /></Link>
           <Button type="submit" size="sm" className="px-3">
             <span className="sr-only">Copy</span>
-            <Copy className={`h-4 w-4 ${isClicked && 'scale-[0.8]'}`} onClick={()=>{copyTextToClipboard(copyText); setIsClicked(true); setTimeout(()=>setIsClicked(false), 100)}} />
+            <Copy className={`h-4 w-4 ${isClicked && 'scale-[0.8]'}`} onClick={() => { copyTextToClipboard(copyText); setIsClicked(true); setTimeout(() => setIsClicked(false), 100) }} />
           </Button>
         </div>
       </DialogContent>
