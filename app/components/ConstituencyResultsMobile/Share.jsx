@@ -16,7 +16,8 @@ import { copyTextToClipboard } from '~/services/ElectionServices.js'
 import { whatsappImg, electionShareImg } from '~/assets/images';
 
 const Share = () => {
-  const [copyText, setCopyText] = useState("https://adan.page.link/RUFSiafnb2NnqkRF6")
+  const [copyText, setCopyText] = useState("https://adan.page.link/fC66EuG84gz654tj6")
+  // const [copyText, setCopyText] = useState("https://adan.page.link/RUFSiafnb2NnqkRF6")
   const [isClicked, setIsClicked] = useState(false)
   return (
     <Dialog className="rounded-md">
