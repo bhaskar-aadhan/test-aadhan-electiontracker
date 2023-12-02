@@ -20,7 +20,8 @@
   font-family: 'Poppins', sans-serif;
 }
 
-.card-table-container .relative {
+.card-table-container .relative,
+.results-mobile-container .relative {
   border-radius: 7px;
 }
 

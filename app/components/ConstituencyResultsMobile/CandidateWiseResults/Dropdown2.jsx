@@ -29,7 +29,7 @@ const Dropdown2 = ({ sx }) => {
                     </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-[180px]">
-                    <DropdownMenuLabel>Select a constituencies</DropdownMenuLabel>
+                    <DropdownMenuLabel>Select a constituency</DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     <DropdownMenuRadioGroup value={constituency} onValueChange={setConstituency}>
                         {stateData?.[0]?.['constituencies']?.map((constituencie) => (

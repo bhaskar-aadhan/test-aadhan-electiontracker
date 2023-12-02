@@ -5,7 +5,6 @@ import { aadhanLogo } from '~/assets/images';
 
 const Constituency = () => {
     const [webSocketData, select, setSelect] = useContext(ConstituencyContext);
-
     return (
         <div className='bg-[#050D3E] min-h-screen text-white pt-[1rem] overflow-y-hidden'>
             <div className="brand-mobile-logo pt-[1rem] pb-[2rem]">

@@ -39,7 +39,6 @@ const getSateLevelStateData = (data, stateName) => {
 const getConstituenciesData = (data, stateName, constituency) => {
     const stateData = getSateLevelStateData(data, stateName)
     const constituenciesData = stateData[0]['constituencies'].filter((constituencie) => constituencie['name'] === constituency)
-    // const statusData = 
     constituenciesData.forEach((stat) => {
         const sortedData = stat['candidates'].sort((a, b) => b['total_votes'] - a['total_votes'])
         const addedData = sortedData.map((candidate, index, array) => (
@@ -48,6 +47,17 @@ const getConstituenciesData = (data, stateName, constituency) => {
         stat['candidates'] = addedData
     })
     return constituenciesData
+}
+
+const getRoundNo = (data, stateName, constituency)=>{
+    const constituenciesData = getConstituenciesData(data, stateName, constituency)
+    let lkey  = 0
+    const lastKey = constituenciesData?.[0]?.['candidates']?.map((candidate) => {
+        const keys = Object.keys(candidate['rounds'])
+        const lastKey = keys.length > 0 ? keys[keys.length - 1] : 0
+        return lastKey
+    })
+    return lastKey[0]
 }
 
 async function copyTextToClipboard(text) {
@@ -65,5 +75,6 @@ export {
     getSateData,
     getSateLevelStateData,
     getConstituenciesData,
+    getRoundNo,
     copyTextToClipboard,
 }

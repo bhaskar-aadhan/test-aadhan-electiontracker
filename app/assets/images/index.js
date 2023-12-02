@@ -8,9 +8,10 @@ import chevronright from './chevron-right.svg';
 import ballotGif from './ballot-1.gif';
 import whatsappImg from './whatsapp.svg';
 import electionShareImg from './Election.jpg';
-import shareIcon from './share.svg';
 import signalSpinner from './signalSpinner.svg';
 import carrotUpIcon from'./carrot-up.svg';
+import newspaperImg from './newspaper.svg';
+import fiveStatesImg from './five-states.svg';
 
 export {
     aadhanLogo,
@@ -23,7 +24,8 @@ export {
     ballotGif,
     whatsappImg,
     electionShareImg,
-    shareIcon,
     signalSpinner,
     carrotUpIcon,
+    newspaperImg,
+    fiveStatesImg,
 }

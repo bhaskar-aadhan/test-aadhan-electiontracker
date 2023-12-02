@@ -3332,7 +3332,7 @@ Your code should look like:
 3. You might have more than one copy of React in the same app
 See https://reactjs.org/link/invalid-hook-call for tips about how to debug and fix this problem.`), dispatcher;
       }
-      function useContext16(Context) {
+      function useContext17(Context) {
         var dispatcher = resolveDispatcher();
         if (Context._context !== void 0) {
           var realContext = Context._context;
@@ -3881,7 +3881,7 @@ Check the top-level render call using <` + parentName + ">.");
         toArray,
         only: onlyChild
       };
-      exports.Children = Children3, exports.Component = Component3, exports.Fragment = REACT_FRAGMENT_TYPE, exports.Profiler = REACT_PROFILER_TYPE, exports.PureComponent = PureComponent, exports.StrictMode = REACT_STRICT_MODE_TYPE, exports.Suspense = REACT_SUSPENSE_TYPE, exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = ReactSharedInternals, exports.cloneElement = cloneElement$1, exports.createContext = createContext6, exports.createElement = createElement$1, exports.createFactory = createFactory, exports.createRef = createRef, exports.forwardRef = forwardRef13, exports.isValidElement = isValidElement2, exports.lazy = lazy, exports.memo = memo, exports.startTransition = startTransition, exports.unstable_act = act, exports.useCallback = useCallback5, exports.useContext = useContext16, exports.useDebugValue = useDebugValue, exports.useDeferredValue = useDeferredValue, exports.useEffect = useEffect12, exports.useId = useId, exports.useImperativeHandle = useImperativeHandle, exports.useInsertionEffect = useInsertionEffect, exports.useLayoutEffect = useLayoutEffect4, exports.useMemo = useMemo7, exports.useReducer = useReducer, exports.useRef = useRef7, exports.useState = useState15, exports.useSyncExternalStore = useSyncExternalStore, exports.useTransition = useTransition, exports.version = ReactVersion, typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ < "u" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop == "function" && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
+      exports.Children = Children3, exports.Component = Component3, exports.Fragment = REACT_FRAGMENT_TYPE, exports.Profiler = REACT_PROFILER_TYPE, exports.PureComponent = PureComponent, exports.StrictMode = REACT_STRICT_MODE_TYPE, exports.Suspense = REACT_SUSPENSE_TYPE, exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = ReactSharedInternals, exports.cloneElement = cloneElement$1, exports.createContext = createContext6, exports.createElement = createElement$1, exports.createFactory = createFactory, exports.createRef = createRef, exports.forwardRef = forwardRef13, exports.isValidElement = isValidElement2, exports.lazy = lazy, exports.memo = memo, exports.startTransition = startTransition, exports.unstable_act = act, exports.useCallback = useCallback5, exports.useContext = useContext17, exports.useDebugValue = useDebugValue, exports.useDeferredValue = useDeferredValue, exports.useEffect = useEffect12, exports.useId = useId, exports.useImperativeHandle = useImperativeHandle, exports.useInsertionEffect = useInsertionEffect, exports.useLayoutEffect = useLayoutEffect4, exports.useMemo = useMemo7, exports.useReducer = useReducer, exports.useRef = useRef7, exports.useState = useState15, exports.useSyncExternalStore = useSyncExternalStore, exports.useTransition = useTransition, exports.version = ReactVersion, typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ < "u" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop == "function" && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
     })();
   }
 });
@@ -26742,7 +26742,7 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
       function readContext$1(context) {
         return isInHookUserCodeInDev && error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo()."), readContext(context);
       }
-      function useContext16(context) {
+      function useContext17(context) {
         return currentHookNameInDev = "useContext", resolveCurrentlyRenderingComponent(), readContext(context);
       }
       function basicStateReducer(state, action) {
@@ -26864,7 +26864,7 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
       }
       var Dispatcher = {
         readContext: readContext$1,
-        useContext: useContext16,
+        useContext: useContext17,
         useMemo: useMemo7,
         useReducer,
         useRef: useRef7,
@@ -30294,7 +30294,7 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
       function readContext$1(context) {
         return isInHookUserCodeInDev && error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo()."), readContext(context);
       }
-      function useContext16(context) {
+      function useContext17(context) {
         return currentHookNameInDev = "useContext", resolveCurrentlyRenderingComponent(), readContext(context);
       }
       function basicStateReducer(state, action) {
@@ -30416,7 +30416,7 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
       }
       var Dispatcher = {
         readContext: readContext$1,
-        useContext: useContext16,
+        useContext: useContext17,
         useMemo: useMemo7,
         useReducer,
         useRef: useRef7,
@@ -33672,7 +33672,7 @@ __export(root_exports, {
 });
 
 // app/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-OUVZW3M3.css";
+var tailwind_default = "/build/_assets/tailwind-AT7B5KTV.css";
 
 // app/root.tsx
 var import_jsx_dev_runtime2 = __toESM(require_jsx_dev_runtime(), 1), links = () => [
@@ -33783,6 +33783,12 @@ var Election_default = "/build/_assets/Election-NQWMVO7I.jpg";
 // app/assets/images/carrot-up.svg
 var carrot_up_default = "/build/_assets/carrot-up-65VTHZOC.svg";
 
+// app/assets/images/newspaper.svg
+var newspaper_default = "/build/_assets/newspaper-HKS7FIEH.svg";
+
+// app/assets/images/five-states.svg
+var five_states_default = "/build/_assets/five-states-GZHILIX5.svg";
+
 // app/services/context/ConstituencyService.jsx
 var import_jsx_dev_runtime3 = __toESM(require_jsx_dev_runtime(), 1), ConstituencyContext = (0, import_react3.createContext)("aadhan mobile"), ConstituencyProvider = ({ children }) => {
   let [webSocketData, setWebSocketData] = (0, import_react3.useState)(null), [select, setSelect] = (0, import_react3.useState)(!0), [stateNameMobile, setStateNameMobile] = (0, import_react3.useState)("Telangana"), [webSocket2Data, setWebSocket2Data] = (0, import_react3.useState)(null), [constituency, setConstituency] = (0, import_react3.useState)("Gajwel");
@@ -33855,39 +33861,39 @@ var import_jsx_dev_runtime4 = __toESM(require_jsx_dev_runtime(), 1), Constituenc
   return /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "bg-[#050D3E] min-h-screen text-white pt-[1rem] overflow-y-hidden", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "brand-mobile-logo pt-[1rem] pb-[2rem]", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("img", { src: aadhan_logo_default, alt: "aadhan app logo", className: "block mx-auto w-[23%]" }, void 0, !1, {
       fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-      lineNumber: 12,
+      lineNumber: 11,
       columnNumber: 17
     }, this) }, void 0, !1, {
       fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-      lineNumber: 11,
+      lineNumber: 10,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(TabBar_default, {}, void 0, !1, {
       fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-      lineNumber: 14,
+      lineNumber: 13,
       columnNumber: 13
     }, this),
     select ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(StateLevel_default, {}, void 0, !1, {
       fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-      lineNumber: 17,
+      lineNumber: 16,
       columnNumber: 17
     }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(ConstituencyLevel_default, {}, void 0, !1, {
       fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-      lineNumber: 19,
+      lineNumber: 18,
       columnNumber: 17
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "w-[95%] mx-auto mt-[2rem] flex justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(Share_default, {}, void 0, !1, {
       fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-      lineNumber: 22,
+      lineNumber: 21,
       columnNumber: 17
     }, this) }, void 0, !1, {
       fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-      lineNumber: 21,
+      lineNumber: 20,
       columnNumber: 13
     }, this)
   ] }, void 0, !0, {
     fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-    lineNumber: 10,
+    lineNumber: 9,
     columnNumber: 9
   }, this);
 }, Constituency_default = Constituency;
@@ -33911,6 +33917,12 @@ var getMagicFigure = (data) => {
     let addedData = stat.candidates.sort((a, b) => b.total_votes - a.total_votes).map((candidate, index2, array) => ({ ...candidate, status: index2 === 0 ? "Leading" : "Trailing", differData: index2 === 0 ? candidate.total_votes - array[1].total_votes : 0, color: index2 === 0 ? "#00B929" : "#FF8300" }));
     stat.candidates = addedData;
   }), constituenciesData;
+}, getRoundNo = (data, stateName, constituency) => {
+  let constituenciesData = getConstituenciesData(data, stateName, constituency), lkey = 0;
+  return (constituenciesData?.[0]?.candidates?.map((candidate) => {
+    let keys = Object.keys(candidate.rounds);
+    return keys.length > 0 ? keys[keys.length - 1] : 0;
+  }))[0];
 };
 async function copyTextToClipboard(text) {
   return "clipboard" in navigator ? await navigator.clipboard.writeText(text) : document.execCommand("copy", !0, text);
@@ -34028,7 +34040,7 @@ function $c512c27ab02ef895$export$fd42f52fd3ae1109(rootComponentName, defaultCon
       value
     }, children);
   }
-  function useContext16(consumerName) {
+  function useContext17(consumerName) {
     let context = (0, import_react7.useContext)(Context);
     if (context)
       return context;
@@ -34038,7 +34050,7 @@ function $c512c27ab02ef895$export$fd42f52fd3ae1109(rootComponentName, defaultCon
   }
   return Provider.displayName = rootComponentName + "Provider", [
     Provider,
-    useContext16
+    useContext17
   ];
 }
 function $c512c27ab02ef895$export$50c7b4e9d9f19c1(scopeName, createContextScopeDeps = []) {
@@ -34058,7 +34070,7 @@ function $c512c27ab02ef895$export$50c7b4e9d9f19c1(scopeName, createContextScopeD
         value
       }, children);
     }
-    function useContext16(consumerName, scope) {
+    function useContext17(consumerName, scope) {
       let Context = scope?.[scopeName][index2] || BaseContext, context = (0, import_react7.useContext)(Context);
       if (context)
         return context;
@@ -34068,7 +34080,7 @@ function $c512c27ab02ef895$export$50c7b4e9d9f19c1(scopeName, createContextScopeD
     }
     return Provider.displayName = rootComponentName + "Provider", [
       Provider,
-      useContext16
+      useContext17
     ];
   }
   let createScope = () => {
@@ -40452,7 +40464,7 @@ var import_jsx_dev_runtime9 = __toESM(require_jsx_dev_runtime(), 1), Dropdown2 =
       columnNumber: 17
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(DropdownMenuContent, { className: "w-[180px]", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(DropdownMenuLabel, { children: "Select a constituencies" }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(DropdownMenuLabel, { children: "Select a constituency" }, void 0, !1, {
         fileName: "app/components/ConstituencyResultsMobile/CandidateWiseResults/Dropdown2.jsx",
         lineNumber: 32,
         columnNumber: 21
@@ -40488,42 +40500,48 @@ var import_jsx_dev_runtime9 = __toESM(require_jsx_dev_runtime(), 1), Dropdown2 =
 }, Dropdown2_default = Dropdown2;
 
 // app/components/ConstituencyResultsMobile/ConstituencyLevel.jsx
-var import_jsx_dev_runtime10 = __toESM(require_jsx_dev_runtime(), 1), ConstituencyLevel = () => /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "entity-1-container w-[95%] my-3 mx-auto", children: [
-  /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "dropdown-mobile-continer w-full flex justify-start items-center gap-3", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(Dropdown_default2, {}, void 0, !1, {
+var import_jsx_dev_runtime10 = __toESM(require_jsx_dev_runtime(), 1), ConstituencyLevel = () => {
+  let [webSocketData, select, setSelect, stateNameMobile, setStateNameMobile, webSocket2Data, constituency, setConstituency] = (0, import_react31.useContext)(ConstituencyContext), lastkey = getRoundNo(webSocket2Data, stateNameMobile, constituency);
+  return console.log("last key", lastkey), /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "entity-1-container w-[95%] my-3 mx-auto", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "dropdown-mobile-continer w-full flex justify-start items-center gap-3", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(Dropdown_default2, {}, void 0, !1, {
+        fileName: "app/components/ConstituencyResultsMobile/ConstituencyLevel.jsx",
+        lineNumber: 14,
+        columnNumber: 17
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(Dropdown2_default, {}, void 0, !1, {
+        fileName: "app/components/ConstituencyResultsMobile/ConstituencyLevel.jsx",
+        lineNumber: 15,
+        columnNumber: 17
+      }, this)
+    ] }, void 0, !0, {
       fileName: "app/components/ConstituencyResultsMobile/ConstituencyLevel.jsx",
-      lineNumber: 9,
-      columnNumber: 17
+      lineNumber: 13,
+      columnNumber: 13
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(Dropdown2_default, {}, void 0, !1, {
+    lastkey > 0 && /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("p", { className: "my-3", children: [
+      "Round No: ",
+      lastkey
+    ] }, void 0, !0, {
       fileName: "app/components/ConstituencyResultsMobile/ConstituencyLevel.jsx",
-      lineNumber: 10,
+      lineNumber: 17,
+      columnNumber: 29
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "results-mobile-container my-3", children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(ConstituencyResults_default, {}, void 0, !1, {
+      fileName: "app/components/ConstituencyResultsMobile/ConstituencyLevel.jsx",
+      lineNumber: 21,
       columnNumber: 17
+    }, this) }, void 0, !1, {
+      fileName: "app/components/ConstituencyResultsMobile/ConstituencyLevel.jsx",
+      lineNumber: 20,
+      columnNumber: 13
     }, this)
   ] }, void 0, !0, {
     fileName: "app/components/ConstituencyResultsMobile/ConstituencyLevel.jsx",
-    lineNumber: 8,
-    columnNumber: 13
-  }, this),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("p", { className: "my-3", children: "Round No: 5" }, void 0, !1, {
-    fileName: "app/components/ConstituencyResultsMobile/ConstituencyLevel.jsx",
     lineNumber: 12,
-    columnNumber: 13
-  }, this),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "results-mobile-container my-3", children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(ConstituencyResults_default, {}, void 0, !1, {
-    fileName: "app/components/ConstituencyResultsMobile/ConstituencyLevel.jsx",
-    lineNumber: 14,
-    columnNumber: 17
-  }, this) }, void 0, !1, {
-    fileName: "app/components/ConstituencyResultsMobile/ConstituencyLevel.jsx",
-    lineNumber: 13,
-    columnNumber: 13
-  }, this)
-] }, void 0, !0, {
-  fileName: "app/components/ConstituencyResultsMobile/ConstituencyLevel.jsx",
-  lineNumber: 7,
-  columnNumber: 9
-}, this), ConstituencyLevel_default = ConstituencyLevel;
+    columnNumber: 9
+  }, this);
+}, ConstituencyLevel_default = ConstituencyLevel;
 
 // app/components/ConstituencyResultsMobile/TabBar.jsx
 var import_react32 = __toESM(require_react(), 1);
@@ -42052,75 +42070,86 @@ __export(electionresults_m_widget_exports, {
 var import_jsx_dev_runtime30 = __toESM(require_jsx_dev_runtime(), 1), widget = () => /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("div", { className: "bg-[#262C42] min-h-screen relative text-white font__chivo overflow-hidden", children: [
   /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("div", { className: "widget-container h-screen pb-[32.5px] flex items-end overflow-hidden", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("div", { className: "widget-container-1 flex-1 p-[0.5rem]", children: /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("div", { className: "body-widget-container pt-2 font-semibold flex justify-start items-center gap-3", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("img", { src: vote_default, alt: "vote", className: "translate-y-8 z-0" }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("div", { className: "entity-1", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("img", { src: five_states_default, alt: "five states", className: "" }, void 0, !1, {
+          fileName: "app/routes/electionresults.m.widget.tsx",
+          lineNumber: 12,
+          columnNumber: 15
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("img", { src: vote_default, alt: "vote", className: "translate-y-3 z-0" }, void 0, !1, {
+          fileName: "app/routes/electionresults.m.widget.tsx",
+          lineNumber: 13,
+          columnNumber: 15
+        }, this)
+      ] }, void 0, !0, {
         fileName: "app/routes/electionresults.m.widget.tsx",
-        lineNumber: 10,
-        columnNumber: 11
+        lineNumber: 11,
+        columnNumber: 13
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("div", { className: "info-widget-container text-[1.2rem]", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("div", { className: "info-widget-container entity-2 text-[1.2rem]", children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("p", { children: [
           "ASSEMBLY ",
           /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("br", {}, void 0, !1, {
             fileName: "app/routes/electionresults.m.widget.tsx",
-            lineNumber: 12,
-            columnNumber: 25
+            lineNumber: 16,
+            columnNumber: 27
           }, this),
           " ELECTION"
         ] }, void 0, !0, {
           fileName: "app/routes/electionresults.m.widget.tsx",
-          lineNumber: 12,
-          columnNumber: 13
+          lineNumber: 16,
+          columnNumber: 15
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("div", { className: "flex justify-between items-center", children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("p", { children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("span", { className: "text-[#FFC700]", children: "RESULTS" }, void 0, !1, {
               fileName: "app/routes/electionresults.m.widget.tsx",
-              lineNumber: 14,
-              columnNumber: 16
+              lineNumber: 18,
+              columnNumber: 20
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("br", {}, void 0, !1, {
               fileName: "app/routes/electionresults.m.widget.tsx",
-              lineNumber: 14,
-              columnNumber: 63
+              lineNumber: 18,
+              columnNumber: 67
             }, this),
             " 2023"
           ] }, void 0, !0, {
             fileName: "app/routes/electionresults.m.widget.tsx",
-            lineNumber: 14,
-            columnNumber: 13
+            lineNumber: 18,
+            columnNumber: 17
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("img", { src: votting_booth_default, alt: "votting booth", className: "translate-x-[1rem]" }, void 0, !1, {
             fileName: "app/routes/electionresults.m.widget.tsx",
-            lineNumber: 15,
-            columnNumber: 15
+            lineNumber: 19,
+            columnNumber: 17
           }, this)
         ] }, void 0, !0, {
           fileName: "app/routes/electionresults.m.widget.tsx",
-          lineNumber: 13,
-          columnNumber: 13
+          lineNumber: 17,
+          columnNumber: 15
         }, this)
       ] }, void 0, !0, {
         fileName: "app/routes/electionresults.m.widget.tsx",
-        lineNumber: 11,
-        columnNumber: 11
+        lineNumber: 15,
+        columnNumber: 13
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/electionresults.m.widget.tsx",
-      lineNumber: 9,
-      columnNumber: 9
+      lineNumber: 10,
+      columnNumber: 11
     }, this) }, void 0, !1, {
       fileName: "app/routes/electionresults.m.widget.tsx",
       lineNumber: 8,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("div", { className: "widget-container-2 flex-1 flex justify-end items-end", children: /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("img", { src: india_map_default, alt: "bharath map", className: "object-contain w-full max-h-[135px]" }, void 0, !1, {
-      fileName: "app/routes/electionresults.m.widget.tsx",
-      lineNumber: 21,
       columnNumber: 9
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("div", { className: "widget-container-2 flex-1 flex justify-end items-end", children: /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("img", { src: newspaper_default, alt: "bharath map", className: "object-contain w-full max-h-[135px]" }, void 0, !1, {
+      fileName: "app/routes/electionresults.m.widget.tsx",
+      lineNumber: 26,
+      columnNumber: 11
     }, this) }, void 0, !1, {
       fileName: "app/routes/electionresults.m.widget.tsx",
-      lineNumber: 20,
-      columnNumber: 7
+      lineNumber: 25,
+      columnNumber: 9
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/electionresults.m.widget.tsx",
@@ -42131,34 +42160,34 @@ var import_jsx_dev_runtime30 = __toESM(require_jsx_dev_runtime(), 1), widget = (
     /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("div", { className: "live-widget-container font__poppins bg-[red] text-[11px] w-fit px-2 rounded-sm font-semibold my-1 flex justify-center items-center gap-1", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("span", { className: "inline-block w-[0.3rem] h-[0.3rem] animate-pulse bg-white rounded-full font-semibold" }, void 0, !1, {
         fileName: "app/routes/electionresults.m.widget.tsx",
-        lineNumber: 26,
+        lineNumber: 31,
         columnNumber: 11
       }, this),
       " LIVE"
     ] }, void 0, !0, {
       fileName: "app/routes/electionresults.m.widget.tsx",
-      lineNumber: 25,
+      lineNumber: 30,
       columnNumber: 9
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("div", { className: "flex justify-center items-center text-[13px] gap-1 text-white", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("p", { children: "Live Results " }, void 0, !1, {
         fileName: "app/routes/electionresults.m.widget.tsx",
-        lineNumber: 29,
+        lineNumber: 34,
         columnNumber: 11
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("img", { src: chevron_right_default, alt: "chevron right" }, void 0, !1, {
         fileName: "app/routes/electionresults.m.widget.tsx",
-        lineNumber: 30,
+        lineNumber: 35,
         columnNumber: 11
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/electionresults.m.widget.tsx",
-      lineNumber: 28,
+      lineNumber: 33,
       columnNumber: 9
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/electionresults.m.widget.tsx",
-    lineNumber: 24,
+    lineNumber: 29,
     columnNumber: 7
   }, this)
 ] }, void 0, !0, {
@@ -42451,7 +42480,7 @@ function Index2() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-CCGE7VNT.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-HW4VQ743.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-XGDSMD3A.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-4KDIVJ4G.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-VZV3EODI.js", imports: ["/build/_shared/chunk-XDXXQC6D.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults": { id: "routes/constituencyresults", parentId: "root", path: "constituencyresults", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults-H7BBRQTD.js", imports: ["/build/_shared/chunk-4GAFJA2M.js", "/build/_shared/chunk-XDXXQC6D.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults._index": { id: "routes/constituencyresults._index", parentId: "routes/constituencyresults", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/constituencyresults._index-UQX7AX6B.js", imports: ["/build/_shared/chunk-JV3XQHDI.js", "/build/_shared/chunk-JNJH32ZZ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults.m": { id: "routes/constituencyresults.m", parentId: "routes/constituencyresults", path: "m", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults.m-NZ6M3IBP.js", imports: ["/build/_shared/chunk-JV3XQHDI.js", "/build/_shared/chunk-JNJH32ZZ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults.widget": { id: "routes/constituencyresults.widget", parentId: "routes/constituencyresults", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults.widget-6QPASFT7.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults": { id: "routes/electionresults", parentId: "root", path: "electionresults", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults-DXP5HCGK.js", imports: ["/build/_shared/chunk-UZVNGAJD.js", "/build/_shared/chunk-XDXXQC6D.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults._index": { id: "routes/electionresults._index", parentId: "routes/electionresults", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/electionresults._index-I7OBUFUM.js", imports: ["/build/_shared/chunk-U2OFZLD2.js", "/build/_shared/chunk-JNJH32ZZ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults.m": { id: "routes/electionresults.m", parentId: "routes/electionresults", path: "m", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults.m-LCCOHAES.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults.m._index": { id: "routes/electionresults.m._index", parentId: "routes/electionresults.m", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/electionresults.m._index-TIZOYU3N.js", imports: ["/build/_shared/chunk-U2OFZLD2.js", "/build/_shared/chunk-UZVNGAJD.js", "/build/_shared/chunk-JNJH32ZZ.js", "/build/_shared/chunk-XDXXQC6D.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults.m.widget": { id: "routes/electionresults.m.widget", parentId: "routes/electionresults.m", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults.m.widget-6XCYFTIP.js", imports: ["/build/_shared/chunk-XDXXQC6D.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults.widget": { id: "routes/electionresults.widget", parentId: "routes/electionresults", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults.widget-73SOQF5G.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "4bc5d61a", hmr: { runtime: "/build/_shared/chunk-XGDSMD3A.js", timestamp: 1701506480751 }, url: "/build/manifest-4BC5D61A.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-CCGE7VNT.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-HW4VQ743.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-XGDSMD3A.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-IMHA7L7O.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-XEZTONGX.js", imports: ["/build/_shared/chunk-2PUATGZI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults": { id: "routes/constituencyresults", parentId: "root", path: "constituencyresults", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults-FLXMCVOH.js", imports: ["/build/_shared/chunk-LP62YHNN.js", "/build/_shared/chunk-2PUATGZI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults._index": { id: "routes/constituencyresults._index", parentId: "routes/constituencyresults", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/constituencyresults._index-KOIUTZE6.js", imports: ["/build/_shared/chunk-W5AVQXMD.js", "/build/_shared/chunk-A3FDAV5G.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults.m": { id: "routes/constituencyresults.m", parentId: "routes/constituencyresults", path: "m", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults.m-533GFHSG.js", imports: ["/build/_shared/chunk-W5AVQXMD.js", "/build/_shared/chunk-A3FDAV5G.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults.widget": { id: "routes/constituencyresults.widget", parentId: "routes/constituencyresults", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults.widget-GPX2XW4F.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults": { id: "routes/electionresults", parentId: "root", path: "electionresults", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults-B2TG6FCW.js", imports: ["/build/_shared/chunk-OENJDHUC.js", "/build/_shared/chunk-2PUATGZI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults._index": { id: "routes/electionresults._index", parentId: "routes/electionresults", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/electionresults._index-JWBE2NO3.js", imports: ["/build/_shared/chunk-2LN3JORB.js", "/build/_shared/chunk-A3FDAV5G.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults.m": { id: "routes/electionresults.m", parentId: "routes/electionresults", path: "m", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults.m-LCCOHAES.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults.m._index": { id: "routes/electionresults.m._index", parentId: "routes/electionresults.m", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/electionresults.m._index-4HW3OTCM.js", imports: ["/build/_shared/chunk-2LN3JORB.js", "/build/_shared/chunk-OENJDHUC.js", "/build/_shared/chunk-A3FDAV5G.js", "/build/_shared/chunk-2PUATGZI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults.m.widget": { id: "routes/electionresults.m.widget", parentId: "routes/electionresults.m", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults.m.widget-XGZWRYUL.js", imports: ["/build/_shared/chunk-2PUATGZI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults.widget": { id: "routes/electionresults.widget", parentId: "routes/electionresults", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults.widget-KUBE22ML.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "eb9d385f", hmr: { runtime: "/build/_shared/chunk-XGDSMD3A.js", timestamp: 1701511919307 }, url: "/build/manifest-EB9D385F.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

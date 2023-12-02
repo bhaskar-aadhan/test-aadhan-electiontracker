@@ -3328,7 +3328,7 @@ Your code should look like:
 3. You might have more than one copy of React in the same app
 See https://reactjs.org/link/invalid-hook-call for tips about how to debug and fix this problem.`), dispatcher;
       }
-      function useContext16(Context) {
+      function useContext17(Context) {
         var dispatcher = resolveDispatcher();
         if (Context._context !== void 0) {
           var realContext = Context._context;
@@ -3877,7 +3877,7 @@ Check the top-level render call using <` + parentName + ">.");
         toArray,
         only: onlyChild
       };
-      exports.Children = Children3, exports.Component = Component3, exports.Fragment = REACT_FRAGMENT_TYPE, exports.Profiler = REACT_PROFILER_TYPE, exports.PureComponent = PureComponent, exports.StrictMode = REACT_STRICT_MODE_TYPE, exports.Suspense = REACT_SUSPENSE_TYPE, exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = ReactSharedInternals, exports.cloneElement = cloneElement$1, exports.createContext = createContext6, exports.createElement = createElement$1, exports.createFactory = createFactory, exports.createRef = createRef, exports.forwardRef = forwardRef13, exports.isValidElement = isValidElement2, exports.lazy = lazy, exports.memo = memo, exports.startTransition = startTransition, exports.unstable_act = act, exports.useCallback = useCallback5, exports.useContext = useContext16, exports.useDebugValue = useDebugValue, exports.useDeferredValue = useDeferredValue, exports.useEffect = useEffect12, exports.useId = useId, exports.useImperativeHandle = useImperativeHandle, exports.useInsertionEffect = useInsertionEffect, exports.useLayoutEffect = useLayoutEffect4, exports.useMemo = useMemo7, exports.useReducer = useReducer, exports.useRef = useRef7, exports.useState = useState15, exports.useSyncExternalStore = useSyncExternalStore, exports.useTransition = useTransition, exports.version = ReactVersion, typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ < "u" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop == "function" && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
+      exports.Children = Children3, exports.Component = Component3, exports.Fragment = REACT_FRAGMENT_TYPE, exports.Profiler = REACT_PROFILER_TYPE, exports.PureComponent = PureComponent, exports.StrictMode = REACT_STRICT_MODE_TYPE, exports.Suspense = REACT_SUSPENSE_TYPE, exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = ReactSharedInternals, exports.cloneElement = cloneElement$1, exports.createContext = createContext6, exports.createElement = createElement$1, exports.createFactory = createFactory, exports.createRef = createRef, exports.forwardRef = forwardRef13, exports.isValidElement = isValidElement2, exports.lazy = lazy, exports.memo = memo, exports.startTransition = startTransition, exports.unstable_act = act, exports.useCallback = useCallback5, exports.useContext = useContext17, exports.useDebugValue = useDebugValue, exports.useDeferredValue = useDeferredValue, exports.useEffect = useEffect12, exports.useId = useId, exports.useImperativeHandle = useImperativeHandle, exports.useInsertionEffect = useInsertionEffect, exports.useLayoutEffect = useLayoutEffect4, exports.useMemo = useMemo7, exports.useReducer = useReducer, exports.useRef = useRef7, exports.useState = useState15, exports.useSyncExternalStore = useSyncExternalStore, exports.useTransition = useTransition, exports.version = ReactVersion, typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ < "u" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop == "function" && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
     })();
   }
 });
@@ -26827,7 +26827,7 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
       function readContext$1(context) {
         return isInHookUserCodeInDev && error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo()."), readContext(context);
       }
-      function useContext16(context) {
+      function useContext17(context) {
         return currentHookNameInDev = "useContext", resolveCurrentlyRenderingComponent(), readContext(context);
       }
       function basicStateReducer(state, action) {
@@ -26949,7 +26949,7 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
       }
       var Dispatcher2 = {
         readContext: readContext$1,
-        useContext: useContext16,
+        useContext: useContext17,
         useMemo: useMemo7,
         useReducer,
         useRef: useRef7,
@@ -30377,7 +30377,7 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
       function readContext$1(context) {
         return isInHookUserCodeInDev && error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo()."), readContext(context);
       }
-      function useContext16(context) {
+      function useContext17(context) {
         return currentHookNameInDev = "useContext", resolveCurrentlyRenderingComponent(), readContext(context);
       }
       function basicStateReducer(state, action) {
@@ -30499,7 +30499,7 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
       }
       var Dispatcher2 = {
         readContext: readContext$1,
-        useContext: useContext16,
+        useContext: useContext17,
         useMemo: useMemo7,
         useReducer,
         useRef: useRef7,
@@ -33869,39 +33869,39 @@ var Constituency = () => {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "bg-[#050D3E] min-h-screen text-white pt-[1rem] overflow-y-hidden", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "brand-mobile-logo pt-[1rem] pb-[2rem]", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("img", { src: aadhan_logo_default, alt: "aadhan app logo", className: "block mx-auto w-[23%]" }, void 0, false, {
       fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-      lineNumber: 12,
+      lineNumber: 11,
       columnNumber: 17
     }, void 0) }, void 0, false, {
       fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-      lineNumber: 11,
+      lineNumber: 10,
       columnNumber: 13
     }, void 0),
     /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(TabBar_default, {}, void 0, false, {
       fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-      lineNumber: 14,
+      lineNumber: 13,
       columnNumber: 13
     }, void 0),
     select ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(StateLevel_default, {}, void 0, false, {
       fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-      lineNumber: 17,
+      lineNumber: 16,
       columnNumber: 17
     }, void 0) : /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(ConstituencyLevel_default, {}, void 0, false, {
       fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-      lineNumber: 19,
+      lineNumber: 18,
       columnNumber: 17
     }, void 0),
     /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "w-[95%] mx-auto mt-[2rem] flex justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(Share_default, {}, void 0, false, {
       fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-      lineNumber: 22,
+      lineNumber: 21,
       columnNumber: 17
     }, void 0) }, void 0, false, {
       fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-      lineNumber: 21,
+      lineNumber: 20,
       columnNumber: 13
     }, void 0)
   ] }, void 0, true, {
     fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-    lineNumber: 10,
+    lineNumber: 9,
     columnNumber: 9
   }, void 0);
 };
@@ -33928,6 +33928,13 @@ var getConstituenciesData = (data, stateName, constituency) => {
     let addedData = stat.candidates.sort((a, b) => b.total_votes - a.total_votes).map((candidate, index2, array) => ({ ...candidate, status: index2 === 0 ? "Leading" : "Trailing", differData: index2 === 0 ? candidate.total_votes - array[1].total_votes : 0, color: index2 === 0 ? "#00B929" : "#FF8300" }));
     stat.candidates = addedData;
   }), constituenciesData;
+};
+var getRoundNo = (data, stateName, constituency) => {
+  let constituenciesData = getConstituenciesData(data, stateName, constituency), lkey = 0;
+  return (constituenciesData?.[0]?.candidates?.map((candidate) => {
+    let keys = Object.keys(candidate.rounds);
+    return keys[keys.length - 1];
+  }))[0];
 };
 async function copyTextToClipboard(text) {
   return "clipboard" in navigator ? await navigator.clipboard.writeText(text) : document.execCommand("copy", true, text);
@@ -34029,7 +34036,7 @@ function $c512c27ab02ef895$export$fd42f52fd3ae1109(rootComponentName, defaultCon
       value
     }, children);
   }
-  function useContext16(consumerName) {
+  function useContext17(consumerName) {
     let context = (0, import_react7.useContext)(Context);
     if (context)
       return context;
@@ -34039,7 +34046,7 @@ function $c512c27ab02ef895$export$fd42f52fd3ae1109(rootComponentName, defaultCon
   }
   return Provider.displayName = rootComponentName + "Provider", [
     Provider,
-    useContext16
+    useContext17
   ];
 }
 function $c512c27ab02ef895$export$50c7b4e9d9f19c1(scopeName, createContextScopeDeps = []) {
@@ -34059,7 +34066,7 @@ function $c512c27ab02ef895$export$50c7b4e9d9f19c1(scopeName, createContextScopeD
         value
       }, children);
     }
-    function useContext16(consumerName, scope) {
+    function useContext17(consumerName, scope) {
       let Context = scope?.[scopeName][index2] || BaseContext, context = (0, import_react7.useContext)(Context);
       if (context)
         return context;
@@ -34069,7 +34076,7 @@ function $c512c27ab02ef895$export$50c7b4e9d9f19c1(scopeName, createContextScopeD
     }
     return Provider.displayName = rootComponentName + "Provider", [
       Provider,
-      useContext16
+      useContext17
     ];
   }
   let createScope = () => {
@@ -40526,42 +40533,48 @@ var Dropdown2 = ({ sx }) => {
 };
 var Dropdown2_default = Dropdown2;
 var import_jsx_dev_runtime10 = __toESM(require_jsx_dev_runtime(), 1);
-var ConstituencyLevel = () => /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "entity-1-container w-[95%] my-3 mx-auto", children: [
-  /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "dropdown-mobile-continer w-full flex justify-start items-center gap-3", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(Dropdown_default2, {}, void 0, false, {
+var ConstituencyLevel = () => {
+  let [webSocketData, select, setSelect, stateNameMobile, setStateNameMobile, webSocket2Data, constituency, setConstituency] = (0, import_react31.useContext)(ConstituencyContext), lastkey = getRoundNo(webSocket2Data, stateNameMobile, constituency);
+  return console.log("last key", lastkey), /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "entity-1-container w-[95%] my-3 mx-auto", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "dropdown-mobile-continer w-full flex justify-start items-center gap-3", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(Dropdown_default2, {}, void 0, false, {
+        fileName: "app/components/ConstituencyResultsMobile/ConstituencyLevel.jsx",
+        lineNumber: 14,
+        columnNumber: 17
+      }, void 0),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(Dropdown2_default, {}, void 0, false, {
+        fileName: "app/components/ConstituencyResultsMobile/ConstituencyLevel.jsx",
+        lineNumber: 15,
+        columnNumber: 17
+      }, void 0)
+    ] }, void 0, true, {
       fileName: "app/components/ConstituencyResultsMobile/ConstituencyLevel.jsx",
-      lineNumber: 9,
-      columnNumber: 17
+      lineNumber: 13,
+      columnNumber: 13
     }, void 0),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(Dropdown2_default, {}, void 0, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("p", { className: "my-3", children: [
+      "Round N0: ",
+      lastkey
+    ] }, void 0, true, {
       fileName: "app/components/ConstituencyResultsMobile/ConstituencyLevel.jsx",
-      lineNumber: 10,
+      lineNumber: 17,
+      columnNumber: 13
+    }, void 0),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "results-mobile-container my-3", children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(ConstituencyResults_default, {}, void 0, false, {
+      fileName: "app/components/ConstituencyResultsMobile/ConstituencyLevel.jsx",
+      lineNumber: 21,
       columnNumber: 17
+    }, void 0) }, void 0, false, {
+      fileName: "app/components/ConstituencyResultsMobile/ConstituencyLevel.jsx",
+      lineNumber: 20,
+      columnNumber: 13
     }, void 0)
   ] }, void 0, true, {
     fileName: "app/components/ConstituencyResultsMobile/ConstituencyLevel.jsx",
-    lineNumber: 8,
-    columnNumber: 13
-  }, void 0),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("p", { className: "my-3", children: "Round No: 5" }, void 0, false, {
-    fileName: "app/components/ConstituencyResultsMobile/ConstituencyLevel.jsx",
     lineNumber: 12,
-    columnNumber: 13
-  }, void 0),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "results-mobile-container my-3", children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(ConstituencyResults_default, {}, void 0, false, {
-    fileName: "app/components/ConstituencyResultsMobile/ConstituencyLevel.jsx",
-    lineNumber: 14,
-    columnNumber: 17
-  }, void 0) }, void 0, false, {
-    fileName: "app/components/ConstituencyResultsMobile/ConstituencyLevel.jsx",
-    lineNumber: 13,
-    columnNumber: 13
-  }, void 0)
-] }, void 0, true, {
-  fileName: "app/components/ConstituencyResultsMobile/ConstituencyLevel.jsx",
-  lineNumber: 7,
-  columnNumber: 9
-}, void 0);
+    columnNumber: 9
+  }, void 0);
+};
 var ConstituencyLevel_default = ConstituencyLevel;
 var import_react32 = __toESM(require_react(), 1);
 var import_jsx_dev_runtime11 = __toESM(require_jsx_dev_runtime(), 1);
@@ -42496,7 +42509,7 @@ function Index2() {
     columnNumber: 5
   }, this) : null;
 }
-var assets_manifest_default = { entry: { module: "/build/entry.client-CCGE7VNT.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-HW4VQ743.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-XGDSMD3A.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-4KDIVJ4G.js", imports: void 0, hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: true, caseSensitive: void 0, module: "/build/routes/_index-VZV3EODI.js", imports: ["/build/_shared/chunk-XDXXQC6D.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/constituencyresults": { id: "routes/constituencyresults", parentId: "root", path: "constituencyresults", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults-H7BBRQTD.js", imports: ["/build/_shared/chunk-4GAFJA2M.js", "/build/_shared/chunk-XDXXQC6D.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/constituencyresults._index": { id: "routes/constituencyresults._index", parentId: "routes/constituencyresults", path: void 0, index: true, caseSensitive: void 0, module: "/build/routes/constituencyresults._index-UQX7AX6B.js", imports: ["/build/_shared/chunk-JV3XQHDI.js", "/build/_shared/chunk-JNJH32ZZ.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/constituencyresults.m": { id: "routes/constituencyresults.m", parentId: "routes/constituencyresults", path: "m", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults.m-NZ6M3IBP.js", imports: ["/build/_shared/chunk-JV3XQHDI.js", "/build/_shared/chunk-JNJH32ZZ.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/constituencyresults.widget": { id: "routes/constituencyresults.widget", parentId: "routes/constituencyresults", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults.widget-6QPASFT7.js", imports: void 0, hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults": { id: "routes/electionresults", parentId: "root", path: "electionresults", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults-DXP5HCGK.js", imports: ["/build/_shared/chunk-UZVNGAJD.js", "/build/_shared/chunk-XDXXQC6D.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults._index": { id: "routes/electionresults._index", parentId: "routes/electionresults", path: void 0, index: true, caseSensitive: void 0, module: "/build/routes/electionresults._index-I7OBUFUM.js", imports: ["/build/_shared/chunk-U2OFZLD2.js", "/build/_shared/chunk-JNJH32ZZ.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults.m": { id: "routes/electionresults.m", parentId: "routes/electionresults", path: "m", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults.m-LCCOHAES.js", imports: void 0, hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults.m._index": { id: "routes/electionresults.m._index", parentId: "routes/electionresults.m", path: void 0, index: true, caseSensitive: void 0, module: "/build/routes/electionresults.m._index-TIZOYU3N.js", imports: ["/build/_shared/chunk-U2OFZLD2.js", "/build/_shared/chunk-UZVNGAJD.js", "/build/_shared/chunk-JNJH32ZZ.js", "/build/_shared/chunk-XDXXQC6D.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults.m.widget": { id: "routes/electionresults.m.widget", parentId: "routes/electionresults.m", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults.m.widget-6XCYFTIP.js", imports: ["/build/_shared/chunk-XDXXQC6D.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults.widget": { id: "routes/electionresults.widget", parentId: "routes/electionresults", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults.widget-73SOQF5G.js", imports: void 0, hasAction: false, hasLoader: false, hasErrorBoundary: false } }, version: "4bc5d61a", hmr: { runtime: "/build/_shared/chunk-XGDSMD3A.js", timestamp: 1701506480751 }, url: "/build/manifest-4BC5D61A.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-CCGE7VNT.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-HW4VQ743.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-XGDSMD3A.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-4KDIVJ4G.js", imports: void 0, hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: true, caseSensitive: void 0, module: "/build/routes/_index-VZV3EODI.js", imports: ["/build/_shared/chunk-XDXXQC6D.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/constituencyresults": { id: "routes/constituencyresults", parentId: "root", path: "constituencyresults", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults-H7BBRQTD.js", imports: ["/build/_shared/chunk-4GAFJA2M.js", "/build/_shared/chunk-XDXXQC6D.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/constituencyresults._index": { id: "routes/constituencyresults._index", parentId: "routes/constituencyresults", path: void 0, index: true, caseSensitive: void 0, module: "/build/routes/constituencyresults._index-462OVNVW.js", imports: ["/build/_shared/chunk-Q5JKDGSE.js", "/build/_shared/chunk-AYMTB7ZA.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/constituencyresults.m": { id: "routes/constituencyresults.m", parentId: "routes/constituencyresults", path: "m", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults.m-ARXTIJKD.js", imports: ["/build/_shared/chunk-Q5JKDGSE.js", "/build/_shared/chunk-AYMTB7ZA.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/constituencyresults.widget": { id: "routes/constituencyresults.widget", parentId: "routes/constituencyresults", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults.widget-6QPASFT7.js", imports: void 0, hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults": { id: "routes/electionresults", parentId: "root", path: "electionresults", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults-DXP5HCGK.js", imports: ["/build/_shared/chunk-UZVNGAJD.js", "/build/_shared/chunk-XDXXQC6D.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults._index": { id: "routes/electionresults._index", parentId: "routes/electionresults", path: void 0, index: true, caseSensitive: void 0, module: "/build/routes/electionresults._index-KRVVSJC6.js", imports: ["/build/_shared/chunk-FJFOHSDA.js", "/build/_shared/chunk-AYMTB7ZA.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults.m": { id: "routes/electionresults.m", parentId: "routes/electionresults", path: "m", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults.m-LCCOHAES.js", imports: void 0, hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults.m._index": { id: "routes/electionresults.m._index", parentId: "routes/electionresults.m", path: void 0, index: true, caseSensitive: void 0, module: "/build/routes/electionresults.m._index-I27KR57A.js", imports: ["/build/_shared/chunk-FJFOHSDA.js", "/build/_shared/chunk-UZVNGAJD.js", "/build/_shared/chunk-AYMTB7ZA.js", "/build/_shared/chunk-XDXXQC6D.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults.m.widget": { id: "routes/electionresults.m.widget", parentId: "routes/electionresults.m", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults.m.widget-6XCYFTIP.js", imports: ["/build/_shared/chunk-XDXXQC6D.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults.widget": { id: "routes/electionresults.widget", parentId: "routes/electionresults", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults.widget-73SOQF5G.js", imports: void 0, hasAction: false, hasLoader: false, hasErrorBoundary: false } }, version: "8188a11c", hmr: { runtime: "/build/_shared/chunk-XGDSMD3A.js", timestamp: 1701509721675 }, url: "/build/manifest-8188A11C.js" };
 var mode = "development";
 var assetsBuildDirectory = "public/build";
 var future = { v3_fetcherPersist: false };
@@ -43081,7 +43094,7 @@ var jsonError = async (request, env, _ctx, middlewareCtx) => {
 var middleware_miniflare3_json_error_default = jsonError;
 var wrap = void 0;
 
-// ../.wrangler/tmp/bundle-vQ4J7q/middleware-insertion-facade.js
+// ../.wrangler/tmp/bundle-6yotz8/middleware-insertion-facade.js
 var envWrappers = [wrap].filter(Boolean);
 var facade = {
   ...pages_template_worker_default,
@@ -43093,7 +43106,7 @@ var facade = {
 };
 var middleware_insertion_facade_default = facade;
 
-// ../.wrangler/tmp/bundle-vQ4J7q/middleware-loader.entry.ts
+// ../.wrangler/tmp/bundle-6yotz8/middleware-loader.entry.ts
 var __Facade_ScheduledController__ = class {
   constructor(scheduledTime, cron, noRetry) {
     this.scheduledTime = scheduledTime;
