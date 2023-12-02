@@ -34,6 +34,23 @@ const Share = () => {
       console.log('Share not supported on this browser, do it the old way.');
     }
   }
+  const handleOnClick = async () => {
+    onInteraction?.();
+    if (navigator?.share) {
+      try {
+        await navigator.share({
+          title: 'Election Results',
+          text: 'Aadhan News App',
+          url: 'https://adan.page.link/fC66EuG84gz654tj6',
+        });
+        onSuccess?.();
+      } catch (err) {
+        onError?.(err);
+      }
+    } else {
+      onNonNativeShare?.();
+    }
+  };
   return (
     <Dialog className="rounded-md">
       <DialogTrigger asChild>
@@ -61,7 +78,7 @@ const Share = () => {
               readOnly
             />
           </div>
-          <Link target='_blank' to={`whatsapp://send?text=${copyText}`}><img onClick={()=>handleShareBtn} ref={whatsAppRef} src={whatsappImg} className='w-8' alt='whatsapp' /></Link>
+          <Link target='_blank' to={`whatsapp://send?text=${copyText}`}><img onClick={handleOnClick} ref={whatsAppRef} src={whatsappImg} className='w-8' alt='whatsapp' /></Link>
           <Button type="submit" size="sm" className="px-3">
             <span className="sr-only">Copy</span>
             <Copy className={`h-4 w-4 ${isClicked && 'scale-[0.8]'}`} onClick={() => { copyTextToClipboard(copyText); setIsClicked(true); setTimeout(() => setIsClicked(false), 100) }} />
