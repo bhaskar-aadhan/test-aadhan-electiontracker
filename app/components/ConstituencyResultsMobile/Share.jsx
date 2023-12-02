@@ -21,7 +21,7 @@ const Share = () => {
   return (
     <Dialog className="rounded-md">
       <DialogTrigger asChild>
-        <Button className='wa-app-icon table__shadow p-1 w-8 h-8 border-0 bg-transparent hover:rotate-[20deg] transition-transform ' variant="outline">
+        <Button className='wa-app-icon table__shadow p-1 w-10 h-10 border-0 bg-transparent hover:rotate-[20deg] transition-transform ' variant="outline">
           <img src={whatsappImg} className='hover:text-[black]' alt='share' />
         </Button>
       </DialogTrigger>
