@@ -33672,7 +33672,7 @@ __export(root_exports, {
 });
 
 // app/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-AT7B5KTV.css";
+var tailwind_default = "/build/_assets/tailwind-GPWFHNAP.css";
 
 // app/root.tsx
 var import_jsx_dev_runtime2 = __toESM(require_jsx_dev_runtime(), 1), links = () => [
@@ -33861,39 +33861,44 @@ var import_jsx_dev_runtime4 = __toESM(require_jsx_dev_runtime(), 1), Constituenc
   return /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "bg-[#050D3E] min-h-screen text-white pt-[1rem] overflow-y-hidden", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "brand-mobile-logo pt-[1rem] pb-[2rem]", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("img", { src: aadhan_logo_default, alt: "aadhan app logo", className: "block mx-auto w-[23%]" }, void 0, !1, {
       fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-      lineNumber: 11,
+      lineNumber: 39,
       columnNumber: 17
     }, this) }, void 0, !1, {
       fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-      lineNumber: 10,
+      lineNumber: 38,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(TabBar_default, {}, void 0, !1, {
       fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-      lineNumber: 13,
+      lineNumber: 41,
       columnNumber: 13
     }, this),
     select ? /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(StateLevel_default, {}, void 0, !1, {
       fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-      lineNumber: 16,
+      lineNumber: 44,
       columnNumber: 17
     }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(ConstituencyLevel_default, {}, void 0, !1, {
       fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-      lineNumber: 18,
+      lineNumber: 46,
       columnNumber: 17
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "w-[95%] mx-auto mt-[2rem] flex justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(Share_default, {}, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "w-[95%] mx-auto mt-[2rem] flex justify-center items-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("button", { onClick: () => {
+      navigator?.share ? navigator.share({
+        title: "Aadhan News App",
+        url: "https://adan.page.link/fC66EuG84gz654tj6"
+      }).then(() => console.log("share response happened")).catch((err) => console.log("share error happened", err)) : console.log("native not happened");
+    }, className: "text-white", children: "share" }, void 0, !1, {
       fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-      lineNumber: 21,
+      lineNumber: 50,
       columnNumber: 17
     }, this) }, void 0, !1, {
       fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-      lineNumber: 20,
+      lineNumber: 48,
       columnNumber: 13
     }, this)
   ] }, void 0, !0, {
     fileName: "app/components/ConstituencyResultsMobile/Constituency.jsx",
-    lineNumber: 9,
+    lineNumber: 37,
     columnNumber: 9
   }, this);
 }, Constituency_default = Constituency;
@@ -41409,7 +41414,7 @@ var import_jsx_dev_runtime18 = __toESM(require_jsx_dev_runtime(), 1), labelVaria
 Label.displayName = $b73a6c6685e72184$export$be92b6f5f03c0fe9.displayName;
 
 // app/components/ConstituencyResultsMobile/Share.jsx
-var import_jsx_dev_runtime19 = __toESM(require_jsx_dev_runtime(), 1), Share = () => {
+var import_jsx_dev_runtime19 = __toESM(require_jsx_dev_runtime(), 1), Share2 = () => {
   let [copyText, setCopyText] = (0, import_react39.useState)("https://adan.page.link/fC66EuG84gz654tj6"), [isClicked, setIsClicked] = (0, import_react39.useState)(!1), whatsAppRef = (0, import_react39.useRef)(), shareButton = whatsAppRef.current, handleShareBtn = async () => {
     navigator.share ? await navigator.share({
       title: "Election Results",
@@ -41535,7 +41540,7 @@ var import_jsx_dev_runtime19 = __toESM(require_jsx_dev_runtime(), 1), Share = ()
     lineNumber: 55,
     columnNumber: 5
   }, this);
-}, Share_default = Share;
+}, Share_default = Share2;
 
 // app/routes/constituencyresults._index.jsx
 var import_jsx_dev_runtime20 = __toESM(require_jsx_dev_runtime(), 1), ConstituencyResults2 = () => /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(ConstituencyProvider, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(Constituency_default, {}, void 0, !1, {
@@ -42499,7 +42504,7 @@ function Index2() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-CCGE7VNT.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-HW4VQ743.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-XGDSMD3A.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-IMHA7L7O.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-XEZTONGX.js", imports: ["/build/_shared/chunk-2PUATGZI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults": { id: "routes/constituencyresults", parentId: "root", path: "constituencyresults", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults-FLXMCVOH.js", imports: ["/build/_shared/chunk-LP62YHNN.js", "/build/_shared/chunk-2PUATGZI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults._index": { id: "routes/constituencyresults._index", parentId: "routes/constituencyresults", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/constituencyresults._index-4OHOJZIR.js", imports: ["/build/_shared/chunk-YBNPB4DZ.js", "/build/_shared/chunk-A3FDAV5G.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults.m": { id: "routes/constituencyresults.m", parentId: "routes/constituencyresults", path: "m", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults.m-ZSTHUOYE.js", imports: ["/build/_shared/chunk-YBNPB4DZ.js", "/build/_shared/chunk-A3FDAV5G.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults.widget": { id: "routes/constituencyresults.widget", parentId: "routes/constituencyresults", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults.widget-GPX2XW4F.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults": { id: "routes/electionresults", parentId: "root", path: "electionresults", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults-B2TG6FCW.js", imports: ["/build/_shared/chunk-OENJDHUC.js", "/build/_shared/chunk-2PUATGZI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults._index": { id: "routes/electionresults._index", parentId: "routes/electionresults", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/electionresults._index-JWBE2NO3.js", imports: ["/build/_shared/chunk-2LN3JORB.js", "/build/_shared/chunk-A3FDAV5G.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults.m": { id: "routes/electionresults.m", parentId: "routes/electionresults", path: "m", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults.m-LCCOHAES.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults.m._index": { id: "routes/electionresults.m._index", parentId: "routes/electionresults.m", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/electionresults.m._index-4HW3OTCM.js", imports: ["/build/_shared/chunk-2LN3JORB.js", "/build/_shared/chunk-OENJDHUC.js", "/build/_shared/chunk-A3FDAV5G.js", "/build/_shared/chunk-2PUATGZI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults.m.widget": { id: "routes/electionresults.m.widget", parentId: "routes/electionresults.m", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults.m.widget-XGZWRYUL.js", imports: ["/build/_shared/chunk-2PUATGZI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults.widget": { id: "routes/electionresults.widget", parentId: "routes/electionresults", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults.widget-KUBE22ML.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "90ce205c", hmr: { runtime: "/build/_shared/chunk-XGDSMD3A.js", timestamp: 1701515929203 }, url: "/build/manifest-90CE205C.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-CCGE7VNT.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-HW4VQ743.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-XGDSMD3A.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-MFKNVZ5I.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-XEZTONGX.js", imports: ["/build/_shared/chunk-2PUATGZI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults": { id: "routes/constituencyresults", parentId: "root", path: "constituencyresults", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults-FLXMCVOH.js", imports: ["/build/_shared/chunk-LP62YHNN.js", "/build/_shared/chunk-2PUATGZI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults._index": { id: "routes/constituencyresults._index", parentId: "routes/constituencyresults", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/constituencyresults._index-UW72B6VY.js", imports: ["/build/_shared/chunk-XZXHTAVM.js", "/build/_shared/chunk-A3FDAV5G.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults.m": { id: "routes/constituencyresults.m", parentId: "routes/constituencyresults", path: "m", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults.m-JXDL2LX4.js", imports: ["/build/_shared/chunk-XZXHTAVM.js", "/build/_shared/chunk-A3FDAV5G.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/constituencyresults.widget": { id: "routes/constituencyresults.widget", parentId: "routes/constituencyresults", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults.widget-GPX2XW4F.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults": { id: "routes/electionresults", parentId: "root", path: "electionresults", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults-B2TG6FCW.js", imports: ["/build/_shared/chunk-OENJDHUC.js", "/build/_shared/chunk-2PUATGZI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults._index": { id: "routes/electionresults._index", parentId: "routes/electionresults", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/electionresults._index-JWBE2NO3.js", imports: ["/build/_shared/chunk-2LN3JORB.js", "/build/_shared/chunk-A3FDAV5G.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults.m": { id: "routes/electionresults.m", parentId: "routes/electionresults", path: "m", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults.m-LCCOHAES.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults.m._index": { id: "routes/electionresults.m._index", parentId: "routes/electionresults.m", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/electionresults.m._index-4HW3OTCM.js", imports: ["/build/_shared/chunk-2LN3JORB.js", "/build/_shared/chunk-OENJDHUC.js", "/build/_shared/chunk-A3FDAV5G.js", "/build/_shared/chunk-2PUATGZI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults.m.widget": { id: "routes/electionresults.m.widget", parentId: "routes/electionresults.m", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults.m.widget-XGZWRYUL.js", imports: ["/build/_shared/chunk-2PUATGZI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/electionresults.widget": { id: "routes/electionresults.widget", parentId: "routes/electionresults", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults.widget-KUBE22ML.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "f8c36c05", hmr: { runtime: "/build/_shared/chunk-XGDSMD3A.js", timestamp: 1701519226954 }, url: "/build/manifest-F8C36C05.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
