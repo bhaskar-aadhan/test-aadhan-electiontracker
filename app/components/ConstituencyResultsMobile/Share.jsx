@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { Copy } from "lucide-react";
 import { Button } from "~/components/ui/button";
 import {
@@ -11,19 +11,17 @@ import {
 } from "~/components/ui/dialog"
 import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
-import { Link } from '@remix-run/react';
 import { copyTextToClipboard } from '~/services/ElectionServices.js'
 import { whatsappImg, electionShareImg } from '~/assets/images';
 
 const Share = () => {
-  const [copyText, setCopyText] = useState("https://adan.page.link/fC66EuG84gz654tj6")
+  const [copyText, setCopyText] = useState("https://adan.page.link/rkVr2Vr5xZs1S2p39")
   const [isClicked, setIsClicked] = useState(false)
-  const whatsAppRef = useRef()
   const handleClick = () => {
     if (navigator?.share) {
       navigator.share({
         title: "Aadhan News App",
-        url: "https://adan.page.link/fC66EuG84gz654tj6",
+        url: `${copyText}`,
       }).then(() => console.log("share response happened"))
         .catch((err) => console.log("share error happened", err))
     } else {
