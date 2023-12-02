@@ -19,38 +19,17 @@ const Share = () => {
   const [copyText, setCopyText] = useState("https://adan.page.link/fC66EuG84gz654tj6")
   const [isClicked, setIsClicked] = useState(false)
   const whatsAppRef = useRef()
-
-  const shareButton = whatsAppRef.current
-  const handleShareBtn = async()=>{
-    if (navigator.share) {
-      await navigator.share({
-        title: 'Election Results',
-        text: 'Aadhan News App',
-        url: 'https://adan.page.link/fC66EuG84gz654tj6',
-      })
-        .then(() => console.log('Successful share'))
-        .catch((error) => console.log('Error sharing', error));
+  const handleClick = () => {
+    if (navigator?.share) {
+      navigator.share({
+        title: "Aadhan News App",
+        url: "https://adan.page.link/fC66EuG84gz654tj6",
+      }).then(() => console.log("share response happened"))
+        .catch((err) => console.log("share error happened", err))
     } else {
-      console.log('Share not supported on this browser, do it the old way.');
+      console.log("native not happened")
     }
   }
-  const handleOnClick = async () => {
-    onInteraction?.();
-    if (navigator?.share) {
-      try {
-        await navigator.share({
-          title: 'Election Results',
-          text: 'Aadhan News App',
-          url: 'https://adan.page.link/fC66EuG84gz654tj6',
-        });
-        onSuccess?.();
-      } catch (err) {
-        onError?.(err);
-      }
-    } else {
-      onNonNativeShare?.();
-    }
-  };
   return (
     <Dialog className="rounded-md">
       <DialogTrigger asChild>
@@ -78,7 +57,7 @@ const Share = () => {
               readOnly
             />
           </div>
-          <Link target='_blank' to={`whatsapp://send?text=${copyText}`}><img onClick={handleOnClick} ref={whatsAppRef} src={whatsappImg} className='w-8' alt='whatsapp' /></Link>
+          <button onClick={handleClick}><img src={whatsappImg} className='w-8' alt='whatsapp' /></button>
           <Button type="submit" size="sm" className="px-3">
             <span className="sr-only">Copy</span>
             <Copy className={`h-4 w-4 ${isClicked && 'scale-[0.8]'}`} onClick={() => { copyTextToClipboard(copyText); setIsClicked(true); setTimeout(() => setIsClicked(false), 100) }} />

@@ -5,23 +5,6 @@ import { aadhanLogo } from '~/assets/images';
 
 const Constituency = () => {
     const [webSocketData, select, setSelect] = useContext(ConstituencyContext);
-    // const handleOnClick = async () => {
-    //     if (navigator?.share) {
-    //       try {
-    //         await navigator.share({
-    //           title: 'Election Results',
-    //           text: 'Aadhan News App',
-    //           url: 'https://adan.page.link/fC66EuG84gz654tj6',
-    //         });
-    //         onSuccess?.();
-    //       } catch (err) {
-    //         console.log("sahre error")
-    //       }
-    //     } else {
-    //       console.log("non native share")
-    //     }
-    //   };
-
     const handleClick = () => {
         if (navigator?.share) {
             navigator.share({
@@ -46,8 +29,8 @@ const Constituency = () => {
                 <ConstituencyLevel />
             }
             <div className='w-[95%] mx-auto mt-[2rem] flex justify-center items-center'>
-                {/* <Share /> */}
-                <button onClick={handleClick} className='text-white'>share</button>
+                <Share />
+                {/* <button onClick={handleClick} className='text-white'>share</button> */}
             </div>
         </div>
     )
