@@ -23,7 +23,7 @@ export const ConstituencyProvider = ({ children }) => {
     //ws1
     const initializeWebSocket = () => {
       const socket = new WebSocket(
-        "wss://stage-cmsapis.aadhan.in/election-results/ws2"
+        "wss://cmsapis.aadhan.in/election-results/ws2"
       );
       socket.onopen = () => {
         console.log("WebSocket connection opened");
@@ -54,7 +54,7 @@ export const ConstituencyProvider = ({ children }) => {
     //ws2
     const initializeWebSocket2 = () => {
       const socket2 = new WebSocket(
-        "wss://stage-cmsapis.aadhan.in/election-results/ws1"
+        "wss://cmsapis.aadhan.in/election-results/ws1"
       );
       socket2.onopen = () => {
         console.log("WebSocket2 connection opened");
