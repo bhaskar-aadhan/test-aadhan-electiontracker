@@ -21,9 +21,9 @@ const Share = () => {
   const whatsAppRef = useRef()
 
   const shareButton = whatsAppRef.current
-  const handleShareBtn = ()=>{
+  const handleShareBtn = async()=>{
     if (navigator.share) {
-      navigator.share({
+      await navigator.share({
         title: 'Election Results',
         text: 'Aadhan News App',
         url: 'https://adan.page.link/fC66EuG84gz654tj6',
