@@ -14,7 +14,7 @@ const ConstituencyResults = () => {
           :
           <ConstituencyLevel />
         }
-        <div className='w-[95%] mx-auto mt-[2rem]'>
+        <div className='w-[95%] mx-auto mt-[2rem] flex justify-center items-center'>
           <Share />
         </div>
       </div>

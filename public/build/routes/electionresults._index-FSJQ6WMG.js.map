@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../app/routes/electionresults._index.tsx"],
-  "sourcesContent": ["// REMIX HMR BEGIN\nimport * as __hmr__ from \"remix:hmr\";\nif (import.meta) {\nimport.meta.hot = __hmr__.createHotContext(\n//@ts-expect-error\n\"app\\\\routes\\\\electionresults._index.tsx\"\n);\nimport.meta.hot.lastModified = \"1701444369015.678\";\n}\n// REMIX HMR END\n\nimport React from \"react\";\r\nimport type { MetaFunction } from \"@remix-run/cloudflare\";\r\nimport { Election } from '../components/ElectionResuts';\r\nimport { WebscoketProvider } from \"~/services/context/ElectionService\";\r\n\r\nexport const meta: MetaFunction = () => {\r\n  return [\r\n    { title: \"New Remix App\" },\r\n    { name: \"description\", content: \"Welcome to Remix!\" },\r\n  ];\r\n}\r\n\r\nconst electionresults = () => {\r\n  return (\r\n    <WebscoketProvider>\r\n      <Election />\r\n    </WebscoketProvider>\r\n  )\r\n}\r\n\r\nexport default electionresults"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AA0BM;AAxBN,IAAI,aAAa;AACjB,cAAY,MAAc;AAAA;AAAA,IAE1B;AAAA,EACA;AACA,cAAY,IAAI,eAAe;AAC/B;AAQO,IAAM,OAAqB,MAAM;AACtC,SAAO;AAAA,IACL,EAAE,OAAO,gBAAgB;AAAA,IACzB,EAAE,MAAM,eAAe,SAAS,oBAAoB;AAAA,EACtD;AACF;AAEA,IAAM,kBAAkB,MAAM;AAC5B,SACE,mDAAC,qBACC,6DAAC,sBAAD;AAAA;AAAA;AAAA;AAAA,SAAU,KADZ;AAAA;AAAA;AAAA;AAAA,SAEA;AAEJ;AAEA,IAAO,gCAAQ;",
-  "names": []
-}
