@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Copy } from "lucide-react";
 import { Button } from "~/components/ui/button";
 import {
@@ -17,8 +17,23 @@ import { whatsappImg, electionShareImg } from '~/assets/images';
 
 const Share = () => {
   const [copyText, setCopyText] = useState("https://adan.page.link/fC66EuG84gz654tj6")
-  // const [copyText, setCopyText] = useState("https://adan.page.link/RUFSiafnb2NnqkRF6")
   const [isClicked, setIsClicked] = useState(false)
+  const whatsAppRef = useRef()
+
+  const shareButton = whatsAppRef.current
+  const handleShareBtn = ()=>{
+    if (navigator.share) {
+      navigator.share({
+        title: 'Election Results',
+        text: 'Aadhan News App',
+        url: 'https://adan.page.link/fC66EuG84gz654tj6',
+      })
+        .then(() => console.log('Successful share'))
+        .catch((error) => console.log('Error sharing', error));
+    } else {
+      console.log('Share not supported on this browser, do it the old way.');
+    }
+  }
   return (
     <Dialog className="rounded-md">
       <DialogTrigger asChild>
@@ -46,7 +61,7 @@ const Share = () => {
               readOnly
             />
           </div>
-          <Link target='_blank' to={`whatsapp://send?text=${copyText}`}><img src={whatsappImg} className='w-8' alt='whatsapp' /></Link>
+          <Link target='_blank' to={`whatsapp://send?text=${copyText}`}><img onClick={()=>handleShareBtn} ref={whatsAppRef} src={whatsappImg} className='w-8' alt='whatsapp' /></Link>
           <Button type="submit" size="sm" className="px-3">
             <span className="sr-only">Copy</span>
             <Copy className={`h-4 w-4 ${isClicked && 'scale-[0.8]'}`} onClick={() => { copyTextToClipboard(copyText); setIsClicked(true); setTimeout(() => setIsClicked(false), 100) }} />

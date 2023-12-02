@@ -3366,11 +3366,11 @@ See https://reactjs.org/link/invalid-hook-call for tips about how to debug and f
         var dispatcher = resolveDispatcher();
         return dispatcher.useReducer(reducer, initialArg, init);
       }
-      function useRef7(initialValue) {
+      function useRef8(initialValue) {
         var dispatcher = resolveDispatcher();
         return dispatcher.useRef(initialValue);
       }
-      function useEffect12(create, deps) {
+      function useEffect13(create, deps) {
         var dispatcher = resolveDispatcher();
         return dispatcher.useEffect(create, deps);
       }
@@ -3899,7 +3899,7 @@ Check the top-level render call using <` + parentName + ">.");
         toArray,
         only: onlyChild
       };
-      exports.Children = Children3, exports.Component = Component3, exports.Fragment = REACT_FRAGMENT_TYPE, exports.Profiler = REACT_PROFILER_TYPE, exports.PureComponent = PureComponent, exports.StrictMode = REACT_STRICT_MODE_TYPE, exports.Suspense = REACT_SUSPENSE_TYPE, exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = ReactSharedInternals, exports.cloneElement = cloneElement$1, exports.createContext = createContext6, exports.createElement = createElement$1, exports.createFactory = createFactory, exports.createRef = createRef, exports.forwardRef = forwardRef13, exports.isValidElement = isValidElement2, exports.lazy = lazy, exports.memo = memo, exports.startTransition = startTransition, exports.unstable_act = act, exports.useCallback = useCallback5, exports.useContext = useContext17, exports.useDebugValue = useDebugValue, exports.useDeferredValue = useDeferredValue, exports.useEffect = useEffect12, exports.useId = useId, exports.useImperativeHandle = useImperativeHandle, exports.useInsertionEffect = useInsertionEffect, exports.useLayoutEffect = useLayoutEffect4, exports.useMemo = useMemo7, exports.useReducer = useReducer, exports.useRef = useRef7, exports.useState = useState15, exports.useSyncExternalStore = useSyncExternalStore, exports.useTransition = useTransition, exports.version = ReactVersion, typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ < "u" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop == "function" && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
+      exports.Children = Children3, exports.Component = Component3, exports.Fragment = REACT_FRAGMENT_TYPE, exports.Profiler = REACT_PROFILER_TYPE, exports.PureComponent = PureComponent, exports.StrictMode = REACT_STRICT_MODE_TYPE, exports.Suspense = REACT_SUSPENSE_TYPE, exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = ReactSharedInternals, exports.cloneElement = cloneElement$1, exports.createContext = createContext6, exports.createElement = createElement$1, exports.createFactory = createFactory, exports.createRef = createRef, exports.forwardRef = forwardRef13, exports.isValidElement = isValidElement2, exports.lazy = lazy, exports.memo = memo, exports.startTransition = startTransition, exports.unstable_act = act, exports.useCallback = useCallback5, exports.useContext = useContext17, exports.useDebugValue = useDebugValue, exports.useDeferredValue = useDeferredValue, exports.useEffect = useEffect13, exports.useId = useId, exports.useImperativeHandle = useImperativeHandle, exports.useInsertionEffect = useInsertionEffect, exports.useLayoutEffect = useLayoutEffect4, exports.useMemo = useMemo7, exports.useReducer = useReducer, exports.useRef = useRef8, exports.useState = useState15, exports.useSyncExternalStore = useSyncExternalStore, exports.useTransition = useTransition, exports.version = ReactVersion, typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ < "u" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop == "function" && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
     })();
   }
 });
@@ -26904,7 +26904,7 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
         var nextValue = nextCreate();
         return isInHookUserCodeInDev = false, workInProgressHook.memoizedState = [nextValue, nextDeps], nextValue;
       }
-      function useRef7(initialValue) {
+      function useRef8(initialValue) {
         currentlyRenderingComponent = resolveCurrentlyRenderingComponent(), workInProgressHook = createWorkInProgressHook();
         var previousRef = workInProgressHook.memoizedState;
         if (previousRef === null) {
@@ -26974,7 +26974,7 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
         useContext: useContext17,
         useMemo: useMemo7,
         useReducer,
-        useRef: useRef7,
+        useRef: useRef8,
         useState: useState15,
         useInsertionEffect: noop,
         useLayoutEffect: useLayoutEffect4,
@@ -30454,7 +30454,7 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
         var nextValue = nextCreate();
         return isInHookUserCodeInDev = false, workInProgressHook.memoizedState = [nextValue, nextDeps], nextValue;
       }
-      function useRef7(initialValue) {
+      function useRef8(initialValue) {
         currentlyRenderingComponent = resolveCurrentlyRenderingComponent(), workInProgressHook = createWorkInProgressHook();
         var previousRef = workInProgressHook.memoizedState;
         if (previousRef === null) {
@@ -30524,7 +30524,7 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
         useContext: useContext17,
         useMemo: useMemo7,
         useReducer,
-        useRef: useRef7,
+        useRef: useRef8,
         useState: useState15,
         useInsertionEffect: noop,
         useLayoutEffect: useLayoutEffect4,
@@ -41478,47 +41478,53 @@ var Label = React30.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */
 Label.displayName = $b73a6c6685e72184$export$be92b6f5f03c0fe9.displayName;
 var import_jsx_dev_runtime19 = __toESM(require_jsx_dev_runtime(), 1);
 var Share = () => {
-  let [copyText, setCopyText] = (0, import_react39.useState)("https://adan.page.link/fC66EuG84gz654tj6"), [isClicked, setIsClicked] = (0, import_react39.useState)(false);
+  let [copyText, setCopyText] = (0, import_react39.useState)("https://adan.page.link/fC66EuG84gz654tj6"), [isClicked, setIsClicked] = (0, import_react39.useState)(false), whatsAppRef = (0, import_react39.useRef)(), shareButton = whatsAppRef.current, handleShareBtn = () => {
+    navigator.share ? navigator.share({
+      title: "Election Results",
+      text: "Aadhan News App",
+      url: "https://adan.page.link/fC66EuG84gz654tj6"
+    }).then(() => console.log("Successful share")).catch((error) => console.log("Error sharing", error)) : console.log("Share not supported on this browser, do it the old way.");
+  };
   return /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(Dialog, { className: "rounded-md", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(DialogTrigger, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(Button, { className: "wa-app-icon table__shadow p-1 w-10 h-10 border-0 bg-transparent hover:rotate-[20deg] transition-transform ", variant: "outline", children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("img", { src: whatsapp_default, className: "hover:text-[black]", alt: "share" }, void 0, false, {
       fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
-      lineNumber: 26,
+      lineNumber: 41,
       columnNumber: 11
     }, void 0) }, void 0, false, {
       fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
-      lineNumber: 25,
+      lineNumber: 40,
       columnNumber: 9
     }, void 0) }, void 0, false, {
       fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
-      lineNumber: 24,
+      lineNumber: 39,
       columnNumber: 7
     }, void 0),
     /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(DialogContent, { className: "sm:max-w-md rounded-xl", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(DialogHeader, { children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(DialogTitle, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("img", { src: Election_default, className: "w-[95%] mx-auto rounded-lg", alt: "preview" }, void 0, false, {
           fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
-          lineNumber: 32,
+          lineNumber: 47,
           columnNumber: 13
         }, void 0) }, void 0, false, {
           fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
-          lineNumber: 31,
+          lineNumber: 46,
           columnNumber: 11
         }, void 0),
         /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(DialogDescription, { className: "text-[15px] text-black font-medium", children: "Assembly Election Results" }, void 0, false, {
           fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
-          lineNumber: 34,
+          lineNumber: 49,
           columnNumber: 11
         }, void 0)
       ] }, void 0, true, {
         fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
-        lineNumber: 30,
+        lineNumber: 45,
         columnNumber: 9
       }, void 0),
       /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("div", { className: "flex items-center space-x-2", children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("div", { className: "grid flex-1 gap-2", children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(Label, { htmlFor: "link", className: "sr-only", children: "Link" }, void 0, false, {
             fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
-            lineNumber: 40,
+            lineNumber: 55,
             columnNumber: 13
           }, void 0),
           /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
@@ -41532,56 +41538,56 @@ var Share = () => {
             false,
             {
               fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
-              lineNumber: 43,
+              lineNumber: 58,
               columnNumber: 13
             },
             void 0
           )
         ] }, void 0, true, {
           fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
-          lineNumber: 39,
+          lineNumber: 54,
           columnNumber: 11
         }, void 0),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(Link2, { target: "_blank", to: `whatsapp://send?text=${copyText}`, children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("img", { src: whatsapp_default, className: "w-8", alt: "whatsapp" }, void 0, false, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(Link2, { target: "_blank", to: `whatsapp://send?text=${copyText}`, children: /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("img", { onClick: () => handleShareBtn, ref: whatsAppRef, src: whatsapp_default, className: "w-8", alt: "whatsapp" }, void 0, false, {
           fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
-          lineNumber: 49,
+          lineNumber: 64,
           columnNumber: 73
         }, void 0) }, void 0, false, {
           fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
-          lineNumber: 49,
+          lineNumber: 64,
           columnNumber: 11
         }, void 0),
         /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(Button, { type: "submit", size: "sm", className: "px-3", children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)("span", { className: "sr-only", children: "Copy" }, void 0, false, {
             fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
-            lineNumber: 51,
+            lineNumber: 66,
             columnNumber: 13
           }, void 0),
           /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(Copy, { className: `h-4 w-4 ${isClicked && "scale-[0.8]"}`, onClick: () => {
             copyTextToClipboard(copyText), setIsClicked(true), setTimeout(() => setIsClicked(false), 100);
           } }, void 0, false, {
             fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
-            lineNumber: 52,
+            lineNumber: 67,
             columnNumber: 13
           }, void 0)
         ] }, void 0, true, {
           fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
-          lineNumber: 50,
+          lineNumber: 65,
           columnNumber: 11
         }, void 0)
       ] }, void 0, true, {
         fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
-        lineNumber: 38,
+        lineNumber: 53,
         columnNumber: 9
       }, void 0)
     ] }, void 0, true, {
       fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
-      lineNumber: 29,
+      lineNumber: 44,
       columnNumber: 7
     }, void 0)
   ] }, void 0, true, {
     fileName: "app/components/ConstituencyResultsMobile/Share.jsx",
-    lineNumber: 23,
+    lineNumber: 38,
     columnNumber: 5
   }, void 0);
 };
@@ -42544,7 +42550,7 @@ function Index2() {
     columnNumber: 5
   }, this) : null;
 }
-var assets_manifest_default = { entry: { module: "/build/entry.client-CCGE7VNT.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-HW4VQ743.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-XGDSMD3A.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-IMHA7L7O.js", imports: void 0, hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: true, caseSensitive: void 0, module: "/build/routes/_index-XEZTONGX.js", imports: ["/build/_shared/chunk-2PUATGZI.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/constituencyresults": { id: "routes/constituencyresults", parentId: "root", path: "constituencyresults", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults-FLXMCVOH.js", imports: ["/build/_shared/chunk-LP62YHNN.js", "/build/_shared/chunk-2PUATGZI.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/constituencyresults._index": { id: "routes/constituencyresults._index", parentId: "routes/constituencyresults", path: void 0, index: true, caseSensitive: void 0, module: "/build/routes/constituencyresults._index-TMECBPUB.js", imports: ["/build/_shared/chunk-7ACOKHB2.js", "/build/_shared/chunk-A3FDAV5G.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/constituencyresults.m": { id: "routes/constituencyresults.m", parentId: "routes/constituencyresults", path: "m", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults.m-U7E7PDXB.js", imports: ["/build/_shared/chunk-7ACOKHB2.js", "/build/_shared/chunk-A3FDAV5G.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/constituencyresults.widget": { id: "routes/constituencyresults.widget", parentId: "routes/constituencyresults", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults.widget-GPX2XW4F.js", imports: void 0, hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults": { id: "routes/electionresults", parentId: "root", path: "electionresults", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults-B2TG6FCW.js", imports: ["/build/_shared/chunk-OENJDHUC.js", "/build/_shared/chunk-2PUATGZI.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults._index": { id: "routes/electionresults._index", parentId: "routes/electionresults", path: void 0, index: true, caseSensitive: void 0, module: "/build/routes/electionresults._index-JWBE2NO3.js", imports: ["/build/_shared/chunk-2LN3JORB.js", "/build/_shared/chunk-A3FDAV5G.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults.m": { id: "routes/electionresults.m", parentId: "routes/electionresults", path: "m", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults.m-LCCOHAES.js", imports: void 0, hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults.m._index": { id: "routes/electionresults.m._index", parentId: "routes/electionresults.m", path: void 0, index: true, caseSensitive: void 0, module: "/build/routes/electionresults.m._index-4HW3OTCM.js", imports: ["/build/_shared/chunk-2LN3JORB.js", "/build/_shared/chunk-OENJDHUC.js", "/build/_shared/chunk-A3FDAV5G.js", "/build/_shared/chunk-2PUATGZI.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults.m.widget": { id: "routes/electionresults.m.widget", parentId: "routes/electionresults.m", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults.m.widget-XGZWRYUL.js", imports: ["/build/_shared/chunk-2PUATGZI.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults.widget": { id: "routes/electionresults.widget", parentId: "routes/electionresults", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults.widget-KUBE22ML.js", imports: void 0, hasAction: false, hasLoader: false, hasErrorBoundary: false } }, version: "bb132af5", hmr: { runtime: "/build/_shared/chunk-XGDSMD3A.js", timestamp: 1701512403577 }, url: "/build/manifest-BB132AF5.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-CCGE7VNT.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-HW4VQ743.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-XGDSMD3A.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-IMHA7L7O.js", imports: void 0, hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: true, caseSensitive: void 0, module: "/build/routes/_index-XEZTONGX.js", imports: ["/build/_shared/chunk-2PUATGZI.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/constituencyresults": { id: "routes/constituencyresults", parentId: "root", path: "constituencyresults", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults-FLXMCVOH.js", imports: ["/build/_shared/chunk-LP62YHNN.js", "/build/_shared/chunk-2PUATGZI.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/constituencyresults._index": { id: "routes/constituencyresults._index", parentId: "routes/constituencyresults", path: void 0, index: true, caseSensitive: void 0, module: "/build/routes/constituencyresults._index-5OJCIQ2R.js", imports: ["/build/_shared/chunk-R6UN26RR.js", "/build/_shared/chunk-A3FDAV5G.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/constituencyresults.m": { id: "routes/constituencyresults.m", parentId: "routes/constituencyresults", path: "m", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults.m-QATZQGOE.js", imports: ["/build/_shared/chunk-R6UN26RR.js", "/build/_shared/chunk-A3FDAV5G.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/constituencyresults.widget": { id: "routes/constituencyresults.widget", parentId: "routes/constituencyresults", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/constituencyresults.widget-GPX2XW4F.js", imports: void 0, hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults": { id: "routes/electionresults", parentId: "root", path: "electionresults", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults-B2TG6FCW.js", imports: ["/build/_shared/chunk-OENJDHUC.js", "/build/_shared/chunk-2PUATGZI.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults._index": { id: "routes/electionresults._index", parentId: "routes/electionresults", path: void 0, index: true, caseSensitive: void 0, module: "/build/routes/electionresults._index-JWBE2NO3.js", imports: ["/build/_shared/chunk-2LN3JORB.js", "/build/_shared/chunk-A3FDAV5G.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults.m": { id: "routes/electionresults.m", parentId: "routes/electionresults", path: "m", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults.m-LCCOHAES.js", imports: void 0, hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults.m._index": { id: "routes/electionresults.m._index", parentId: "routes/electionresults.m", path: void 0, index: true, caseSensitive: void 0, module: "/build/routes/electionresults.m._index-4HW3OTCM.js", imports: ["/build/_shared/chunk-2LN3JORB.js", "/build/_shared/chunk-OENJDHUC.js", "/build/_shared/chunk-A3FDAV5G.js", "/build/_shared/chunk-2PUATGZI.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults.m.widget": { id: "routes/electionresults.m.widget", parentId: "routes/electionresults.m", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults.m.widget-XGZWRYUL.js", imports: ["/build/_shared/chunk-2PUATGZI.js"], hasAction: false, hasLoader: false, hasErrorBoundary: false }, "routes/electionresults.widget": { id: "routes/electionresults.widget", parentId: "routes/electionresults", path: "widget", index: void 0, caseSensitive: void 0, module: "/build/routes/electionresults.widget-KUBE22ML.js", imports: void 0, hasAction: false, hasLoader: false, hasErrorBoundary: false } }, version: "34c6da76", hmr: { runtime: "/build/_shared/chunk-XGDSMD3A.js", timestamp: 1701514362938 }, url: "/build/manifest-34C6DA76.js" };
 var mode = "development";
 var assetsBuildDirectory = "public/build";
 var future = { v3_fetcherPersist: false };
