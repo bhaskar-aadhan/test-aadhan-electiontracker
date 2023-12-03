@@ -42,7 +42,7 @@ const getConstituenciesData = (data, stateName, constituency) => {
     constituenciesData.forEach((stat) => {
         const sortedData = stat['candidates'].sort((a, b) => b['total_votes'] - a['total_votes'])
         const addedData = sortedData.map((candidate, index, array) => (
-            { ...candidate, status: index === 0 ? "Leading" : "Trailing", differData: index === 0 ? candidate['total_votes'] - array[1]['total_votes']:0, color: index ===0 ? '#00B929':'#FF8300' }
+            { ...candidate, status: index === 0 && array[0]['total_votes'] >0 ? "Leading" : "Trailing", differData: index === 0 ? candidate['total_votes'] - array[1]['total_votes']:0, color: index ===0 && array[0]['total_votes'] >0 ? '#00B929':'#FF8300' }
         ))
         stat['candidates'] = addedData
     })
