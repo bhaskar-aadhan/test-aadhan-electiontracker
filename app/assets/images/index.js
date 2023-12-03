@@ -12,8 +12,10 @@ import signalSpinner from './signalSpinner.svg';
 import carrotUpIcon from'./carrot-up.svg';
 import newspaperImg from './newspaper.svg';
 import fiveStatesImg from './five-states.svg';
+import faviconIcon from './favicon.svg';
 
 export {
+    faviconIcon,
     aadhanLogo,
     aadhanBlackLogo,
     downArrowIcon,

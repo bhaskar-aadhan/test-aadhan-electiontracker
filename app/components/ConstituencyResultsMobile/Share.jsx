@@ -14,14 +14,14 @@ import { Label } from "~/components/ui/label";
 import { copyTextToClipboard } from '~/services/ElectionServices.js'
 import { whatsappImg, electionShareImg } from '~/assets/images';
 
-const Share = () => {
+const Share = ({text}) => {
   const [copyText, setCopyText] = useState("https://adan.page.link/rkVr2Vr5xZs1S2p39")
   const [isClicked, setIsClicked] = useState(false)
   const handleClick = () => {
     if (navigator?.share) {
       navigator.share({
         title: "Aadhan News App",
-        url: `${copyText}`,
+        url: `${text}`,
       }).then(() => console.log("share response happened"))
         .catch((err) => console.log("share error happened", err))
     } else {
@@ -51,14 +51,14 @@ const Share = () => {
             </Label>
             <Input
               id="link"
-              defaultValue={copyText}
+              defaultValue={text}
               readOnly
             />
           </div>
           <button onClick={handleClick}><img src={whatsappImg} className='w-8' alt='whatsapp' /></button>
           <Button type="submit" size="sm" className="px-3">
             <span className="sr-only">Copy</span>
-            <Copy className={`h-4 w-4 ${isClicked && 'scale-[0.8]'}`} onClick={() => { copyTextToClipboard(copyText); setIsClicked(true); setTimeout(() => setIsClicked(false), 100) }} />
+            <Copy className={`h-4 w-4 ${isClicked && 'scale-[0.8]'}`} onClick={() => { copyTextToClipboard(text); setIsClicked(true); setTimeout(() => setIsClicked(false), 100) }} />
           </Button>
         </div>
       </DialogContent>

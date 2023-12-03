@@ -1,12 +1,9 @@
 import React from 'react';
-import { ConstituencyProvider } from '../services/context/ConstituencyService';
 import { Constituency } from '../components/ConstituencyResultsMobile';
 
 const ConstituencyResults = () => {
   return (
-    <ConstituencyProvider>
-      <Constituency />
-    </ConstituencyProvider>
+      <Constituency text={"https://adan.page.link/RTuNkcKMNW8mjZY67"} />
   )
 }
 

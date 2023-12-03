@@ -3,7 +3,7 @@ import { ConstituencyContext } from '~/services/context/ConstituencyService';
 import { TabBar, StateLevel, ConstituencyLevel, Share } from '.';
 import { aadhanLogo } from '~/assets/images';
 
-const Constituency = () => {
+const Constituency = ({text}) => {
     const [webSocketData, select, setSelect] = useContext(ConstituencyContext);
     const handleClick = () => {
         if (navigator?.share) {
@@ -29,7 +29,7 @@ const Constituency = () => {
                 <ConstituencyLevel />
             }
             <div className='w-[95%] mx-auto mt-[2rem] flex justify-center items-center'>
-                <Share />
+                <Share text={""} />
                 {/* <button onClick={handleClick} className='text-white'>share</button> */}
             </div>
         </div>
