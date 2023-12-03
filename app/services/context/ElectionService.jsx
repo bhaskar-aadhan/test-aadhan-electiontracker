@@ -1,62 +1,57 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 import { ballotGif } from "~/assets/images";
-
+import { useQuery, dehydrate, HydrationBoundary, QueryClient } from "@tanstack/react-query";
 export const ElectionContext = createContext("aadhan");
+
+export const getElectionData = async () => {
+  const response = await fetch(
+    `https://cmsapis.aadhan.in/election-results/election`
+  );
+  const electionData = await response.json();
+  const data = await electionData;
+  console.log("eld", data);
+  return data;
+};
+
+export const loader = async () => {
+  const queryClient = new QueryClient();
+  try {
+    await queryClient.prefetchQuery({
+      queryKey: ["election"],
+      queryFn: getElectionData,
+    });
+    return json({ dehydratedState: dehydrate(queryClient) });
+  }
+  catch (error) {
+    console.log("index prefecth error", error);
+  }
+};
 
 export const WebscoketProvider = ({ children }) => {
   const [webSocketData, setWebSocketData] = useState(null);
   const [stateName, setStateName] = useState("Telangana");
+  const [interval, setInterval] = useState(60000);
+  //REST API
+  const apiDataQuery = useQuery({
+    queryKey: ['election'],
+    queryFn: getElectionData,
+    refetchInterval: interval,
+    refetchOnWindowFocus: true,
+    refetchOnMount: true,
+    refetchOnReconnect: true
+  })
 
-  //WEBSOCKET
   useEffect(() => {
-    document.addEventListener("visibilitychange", handleVisibilityChange);
-    function handleVisibilityChange() {
-      if (document.visibilityState === "visible") {
-        // App has come to the foreground
-        initializeWebSocket();
-      }
-    }
-    const initializeWebSocket = () => {
-      console.log("initializeWebSocket");
+    setWebSocketData(apiDataQuery.data)
+  }, [apiDataQuery.data])
+  console.log("rest api data", webSocketData)
 
-      const socket = new WebSocket(
-        "wss://cmsapis.aadhan.in/election-results/ws33"
-      );
-      socket.onopen = () => {
-        console.log("WebSocket connection opened");
-      };
-      socket.onmessage = (event) => {
-        const wsdata = event.data;
-        const wsData = JSON.parse(wsdata);
-        setWebSocketData(wsData);
-        console.log("websocket data: ", wsData, typeof wsData);
-      };
-      socket.onclose = (event) => {
-        console.log(
-          `WebSocket connection closed code=${event.code}, reason=${event.reason}`
-        );
-        if (event.wasClean) {
-          console.log(
-            `WebSocket connection closed cleanly, code=${event.code}, reason=${event.reason}`
-          );
-        } else {
-          console.error("WebSocket connection abruptly closed");
-          // setTimeout(initializeWebSocket, 1000);
-        }
-      };
-      socket.onerror = (error) => {
-        console.error("WebSocket error:", error);
-      };
-    };
-    initializeWebSocket();
-  }, []);
-
-  if (webSocketData === null) {
+  if (apiDataQuery.isLoading || webSocketData === null) {
     return (
       <div className="min-h-screen grid place-content-center" style={{ background: `linear-gradient( -80deg , #d7e9ff, #7db3ff, #d7e9ff)` }}>
         <div className="">
           <img src={ballotGif} alt="ballot gif" />
-        </div>     
+        </div>
       </div>
     )
   }

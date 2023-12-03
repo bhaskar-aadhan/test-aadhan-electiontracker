@@ -1,103 +1,87 @@
 import React, { useState, useEffect, createContext } from 'react';
 import { ballotGif } from "~/assets/images";
-
+import { useQuery, dehydrate, HydrationBoundary, QueryClient } from "@tanstack/react-query";
 export const ConstituencyContext = createContext("aadhan mobile")
+
+export const getElectionData = async () => {
+  const response = await fetch(
+    `https://cmsapis.aadhan.in/election-results/average-party`
+  );
+  const electionData = await response.json();
+  const data = await electionData;
+  console.log("eld", data);
+  return data;
+};
+export const getElection2Data = async () => {
+  const response = await fetch(
+    `https://cmsapis.aadhan.in/election-results/candidate`
+  );
+  const election2Data = await response.json();
+  const data = await election2Data;
+  console.log("el2d", data);
+  return data;
+};
+
+export const loader = async () => {
+  const queryClient = new QueryClient();
+  try {
+    await queryClient.prefetchQuery({
+      queryKey: ["election2"],
+      queryFn: getElectionData,
+    });
+    return json({ dehydratedState: dehydrate(queryClient) });
+  }
+  catch (error) {
+    console.log("index prefecth error", error);
+  }
+};
 
 export const ConstituencyProvider = ({ children }) => {
   const [webSocketData, setWebSocketData] = useState(null);
-  const [ select, setSelect ] = useState(true)
-  const [ stateNameMobile, setStateNameMobile ] = useState("Telangana")
+  const [select, setSelect] = useState(true)
+  const [stateNameMobile, setStateNameMobile] = useState("Telangana")
   const [webSocket2Data, setWebSocket2Data] = useState(null);
-  const [ constituency, setConstituency ] = useState("Gajwel")
+  const [constituency, setConstituency] = useState("Gajwel")
+  const [interval, setInterval] = useState(1000)
 
-  //WEBSOCKET
+  //REST API
+  const apiDataQuery = useQuery({
+    queryKey: ['election2'],
+    queryFn: getElectionData,
+    refetchInterval: interval,
+    refetchOnWindowFocus: true,
+    refetchOnMount: true,
+    refetchOnReconnect: true
+  })
+  const api2DataQuery = useQuery({
+    queryKey: ['election3'],
+    queryFn: getElection2Data,
+    refetchInterval: interval,
+    refetchOnWindowFocus: true,
+    refetchOnMount: true,
+    refetchOnReconnect: true
+  })
+
   useEffect(() => {
-    document.addEventListener("visibilitychange", handleVisibilityChange);
-    function handleVisibilityChange() {
-      if (document.visibilityState === "visible") {
-        // App has come to the foreground
-        initializeWebSocket();
-        initializeWebSocket2();
-      }
-    }
-    //ws1
-    const initializeWebSocket = () => {
-      const socket = new WebSocket(
-        "wss://cmsapis.aadhan.in/election-results/ws23"
-      );
-      socket.onopen = () => {
-        console.log("WebSocket connection opened");
-      };
-      socket.onmessage = (event) => {
-        const wsdata = event.data;
-        const wsData = JSON.parse(wsdata);
-        setWebSocketData(wsData);
-        console.log("websocket data: ", wsData, typeof wsData);
-      };
-      socket.onclose = (event) => {
-        console.log(
-          `WebSocket connection closed code=${event.code}, reason=${event.reason}`
-        );
-        if (event.wasClean) {
-          console.log(
-            `WebSocket connection closed cleanly, code=${event.code}, reason=${event.reason}`
-          );
-        } else {
-          console.error("WebSocket connection abruptly closed");
-          // setTimeout(initializeWebSocket, 1000);
-        }
-      };
-      socket.onerror = (error) => {
-        console.error("WebSocket error:", error);
-      };
-    };
-    //ws2
-    const initializeWebSocket2 = () => {
-      const socket2 = new WebSocket(
-        "wss://cmsapis.aadhan.in/election-results/ws13"
-      );
-      socket2.onopen = () => {
-        console.log("WebSocket2 connection opened");
-      };
-      socket2.onmessage = (event) => {
-        const wsdata = event.data;
-        const wsData = JSON.parse(wsdata);
-        setWebSocket2Data(wsData);
-        console.log("websocket2 data: ", wsData, typeof wsData);
-      };
-      socket2.onclose = (event) => {
-        console.log(
-          `WebSocket connection closed code=${event.code}, reason=${event.reason}`
-        );
-        if (event.wasClean) {
-          console.log(
-            `WebSocket connection closed cleanly, code=${event.code}, reason=${event.reason}`
-          );
-        } else {
-          console.error("WebSocket connection abruptly closed");
-          // setTimeout(initializeWebSocket2, 1000);
-        }
-      };
-      socket2.onerror = (error) => {
-        console.error("WebSocket error:", error);
-      };
-    };
-    initializeWebSocket();
-    initializeWebSocket2();
-  }, []);
+    setWebSocketData(apiDataQuery.data)
+  }, [apiDataQuery.data])
+  useEffect(() => {
+    setWebSocket2Data(api2DataQuery.data)
+  }, [api2DataQuery.data])
+  console.log("rest2, rest3 api data", webSocketData, webSocket2Data)
 
-  if (webSocketData === null || webSocket2Data === null) {
+  if (apiDataQuery.isLoading || api2DataQuery.isLoading || webSocketData === null || webSocket2Data === null) {
     return (
       <div className="min-h-screen grid place-content-center" style={{ background: `linear-gradient( -80deg , #d7e9ff, #7db3ff, #d7e9ff)` }}>
         <div className="">
           <img src={ballotGif} alt="ballot gif" />
-        </div>     
+        </div>
       </div>
     )
   }
   return (
-      <ConstituencyContext.Provider value={[webSocketData,select,setSelect,stateNameMobile,setStateNameMobile,webSocket2Data,constituency,setConstituency]}>
-        {children}
-      </ConstituencyContext.Provider>
-    )
+    <ConstituencyContext.Provider value={[webSocketData, select, setSelect, stateNameMobile, setStateNameMobile, webSocket2Data, constituency, setConstituency]}>
+      {children}
+    </ConstituencyContext.Provider>
+  )
 }
