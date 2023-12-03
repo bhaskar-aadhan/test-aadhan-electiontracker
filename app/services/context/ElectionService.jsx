@@ -30,7 +30,7 @@ export const loader = async () => {
 export const WebscoketProvider = ({ children }) => {
   const [webSocketData, setWebSocketData] = useState(null);
   const [stateName, setStateName] = useState("Telangana");
-  const [interval, setInterval] = useState(60000);
+  const [interval, setInterval] = useState(30000);
   //REST API
   const apiDataQuery = useQuery({
     queryKey: ['election'],

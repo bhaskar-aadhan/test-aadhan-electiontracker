@@ -1,5 +1,6 @@
 import React from 'react';
 import { Outlet } from '@remix-run/react';
+import { WebscoketProvider } from '~/services/context/ElectionService';
 
 export const meta = () => {
   return [
@@ -10,7 +11,10 @@ export const meta = () => {
 
 const ElectionresultsMobile = () => {
   return (
+    <WebscoketProvider>
       <Outlet />
+    </WebscoketProvider>
+
   )
 }
 

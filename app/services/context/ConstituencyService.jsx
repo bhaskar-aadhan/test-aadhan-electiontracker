@@ -42,7 +42,7 @@ export const ConstituencyProvider = ({ children }) => {
   const [stateNameMobile, setStateNameMobile] = useState("Telangana")
   const [webSocket2Data, setWebSocket2Data] = useState(null);
   const [constituency, setConstituency] = useState("Gajwel")
-  const [interval, setInterval] = useState(1000)
+  const [interval, setInterval] = useState(30000)
 
   //REST API
   const apiDataQuery = useQuery({
