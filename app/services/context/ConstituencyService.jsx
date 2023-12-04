@@ -24,10 +24,14 @@ export const getElection2Data = async () => {
 
 export const loader = async () => {
   const queryClient = new QueryClient();
-  try {
+  try { 
     await queryClient.prefetchQuery({
       queryKey: ["election2"],
       queryFn: getElectionData,
+    });
+    await queryClient.prefetchQuery({
+      queryKey: ["election3"],
+      queryFn: getElection2Data,
     });
     return json({ dehydratedState: dehydrate(queryClient) });
   }
@@ -39,7 +43,7 @@ export const loader = async () => {
 export const ConstituencyProvider = ({ children }) => {
   const [webSocketData, setWebSocketData] = useState(null);
   const [select, setSelect] = useState(true)
-  const [stateNameMobile, setStateNameMobile] = useState("Telangana")
+  const [stateNameMobile, setStateNameMobile] = useState("Mizoram")
   const [webSocket2Data, setWebSocket2Data] = useState(null);
   const [constituency, setConstituency] = useState("Gajwel")
   const [interval, setInterval] = useState(30000)
@@ -68,9 +72,9 @@ export const ConstituencyProvider = ({ children }) => {
   useEffect(() => {
     setWebSocket2Data(api2DataQuery.data)
   }, [api2DataQuery.data])
-  console.log("rest2, rest3 api data", webSocketData, webSocket2Data)
+  console.log("rest2, rest3 api data", webSocketData, webSocket2Data, apiDataQuery.data, apiDataQuery.status, api2DataQuery.data, api2DataQuery.status)
 
-  if (apiDataQuery.isLoading || api2DataQuery.isLoading || webSocketData === null || webSocket2Data === null) {
+  if (apiDataQuery.isLoading || api2DataQuery.isPending || webSocketData === null || webSocket2Data === null) {
     return (
       <div className="min-h-screen grid place-content-center" style={{ background: `linear-gradient( -80deg , #d7e9ff, #7db3ff, #d7e9ff)` }}>
         <div className="">

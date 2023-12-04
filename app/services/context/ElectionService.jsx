@@ -29,7 +29,7 @@ export const loader = async () => {
 
 export const WebscoketProvider = ({ children }) => {
   const [webSocketData, setWebSocketData] = useState(null);
-  const [stateName, setStateName] = useState("Telangana");
+  const [stateName, setStateName] = useState("Mizoram");
   const [interval, setInterval] = useState(30000);
   //REST API
   const apiDataQuery = useQuery({

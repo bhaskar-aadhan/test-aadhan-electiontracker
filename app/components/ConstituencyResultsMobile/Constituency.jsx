@@ -21,13 +21,13 @@ const Constituency = ({text}) => {
             <div className="brand-mobile-logo pt-[1rem] pb-[2rem]">
                 <img src={aadhanLogo} alt="aadhan app logo" className='block mx-auto w-[23%]' />
             </div>
-            <TabBar />
-            {select
-                ?
+            {/* <TabBar /> */}
+            {/* {select
+                ? */}
                 <StateLevel />
-                :
+                {/* :
                 <ConstituencyLevel />
-            }
+            } */}
             <div className='w-[95%] mx-auto mt-[2rem] flex justify-center items-center'>
                 <Share text={""} />
                 {/* <button onClick={handleClick} className='text-white'>share</button> */}
