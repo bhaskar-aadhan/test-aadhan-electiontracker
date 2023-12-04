@@ -12,15 +12,15 @@ export const getElectionData = async () => {
   console.log("eld", data);
   return data;
 };
-export const getElection2Data = async () => {
-  const response = await fetch(
-    `https://cmsapis.aadhan.in/election-results/candidate`
-  );
-  const election2Data = await response.json();
-  const data = await election2Data;
-  console.log("el2d", data);
-  return data;
-};
+// export const getElection2Data = async () => {
+//   const response = await fetch(
+//     `https://cmsapis.aadhan.in/election-results/candidate`
+//   );
+//   const election2Data = await response.json();
+//   const data = await election2Data;
+//   console.log("el2d", data);
+//   return data;
+// };
 
 export const loader = async () => {
   const queryClient = new QueryClient();
@@ -29,10 +29,10 @@ export const loader = async () => {
       queryKey: ["election2"],
       queryFn: getElectionData,
     });
-    await queryClient.prefetchQuery({
-      queryKey: ["election3"],
-      queryFn: getElection2Data,
-    });
+    // await queryClient.prefetchQuery({
+    //   queryKey: ["election3"],
+    //   queryFn: getElection2Data,
+    // });
     return json({ dehydratedState: dehydrate(queryClient) });
   }
   catch (error) {
@@ -57,24 +57,24 @@ export const ConstituencyProvider = ({ children }) => {
     refetchOnMount: true,
     refetchOnReconnect: true
   })
-  const api2DataQuery = useQuery({
-    queryKey: ['election3'],
-    queryFn: getElection2Data,
-    refetchInterval: interval,
-    refetchOnWindowFocus: true,
-    refetchOnMount: true,
-    refetchOnReconnect: true
-  })
+  // const api2DataQuery = useQuery({
+  //   queryKey: ['election3'],
+  //   queryFn: getElection2Data,
+  //   refetchInterval: interval,
+  //   refetchOnWindowFocus: true,
+  //   refetchOnMount: true,
+  //   refetchOnReconnect: true
+  // })
 
   useEffect(() => {
     setWebSocketData(apiDataQuery.data)
   }, [apiDataQuery.data])
-  useEffect(() => {
-    setWebSocket2Data(api2DataQuery.data)
-  }, [api2DataQuery.data])
-  console.log("rest2, rest3 api data", webSocketData, webSocket2Data, apiDataQuery.data, apiDataQuery.status, api2DataQuery.data, api2DataQuery.status)
+  // useEffect(() => {
+  //   setWebSocket2Data(api2DataQuery.data)
+  // }, [api2DataQuery.data])
+  console.log("rest2, rest3 api data", webSocketData, apiDataQuery.data, apiDataQuery.status)
 
-  if (apiDataQuery.isLoading || api2DataQuery.isPending || webSocketData === null || webSocket2Data === null) {
+  if (apiDataQuery.isLoading || webSocketData === null || webSocketData === undefined) {
     return (
       <div className="min-h-screen grid place-content-center" style={{ background: `linear-gradient( -80deg , #d7e9ff, #7db3ff, #d7e9ff)` }}>
         <div className="">
