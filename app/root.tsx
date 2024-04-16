@@ -1,86 +1,137 @@
-import { useState } from "react";
-import type { LinksFunction } from "@remix-run/cloudflare";
-import { cssBundleHref } from "@remix-run/css-bundle";
+import type {
+	LinksFunction,
+	LoaderFunctionArgs,
+	MetaFunction,
+} from '@remix-run/cloudflare';
+import * as React from 'react';
 import {
-  Links,
-  LiveReload,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
-  useRouteError,
-  isRouteErrorResponse
-} from "@remix-run/react";
-import stylesheet from "~/tailwind.css";
-import {
-  QueryClient,
-  QueryClientProvider,
-} from "@tanstack/react-query";
-import { faviconIcon } from "~/assets/images";
+	Links,
+	Meta,
+	Outlet,
+	Scripts,
+	ScrollRestoration,
+	isRouteErrorResponse,
+	json,
+	useLoaderData,
+	useRouteError,
+} from '@remix-run/react';
+import stylesUrl from '~/styles.css?url';
+import resStyle from '~/resposiveStyle.css?url'
+import { type Menu, ErrorLayout, Layout } from './layout';
 
-export const links: LinksFunction = () => [
-  { rel: "icon", href: faviconIcon },
-  { rel: "stylesheet", href: stylesheet },
-  ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
-];
+export const links: LinksFunction = () => {
+	return [{ rel: 'stylesheet', href: stylesUrl },{rel:'stylesheet',href: resStyle}];
+};
+
+export const meta: MetaFunction = () => {
+	return [
+		{ charset: 'utf-8' },
+		{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
+		{ title: 'remix-cloudlfare-template' },
+	];
+};
+
+export function loader({ context }: LoaderFunctionArgs) {
+	const menus: Menu[] = [
+		{
+			title: 'Docs',
+			links: [
+				{
+					title: 'Overview',
+					to: '/',
+				},
+			],
+		},
+		{
+			title: 'Useful links',
+			links: [
+				{
+					title: 'GitHub',
+					to: `https://github.com/${context.env.GITHUB_OWNER}/${context.env.GITHUB_REPO}`,
+				},
+				{
+					title: 'Remix docs',
+					to: 'https://remix.run/docs',
+				},
+				{
+					title: 'Cloudflare docs',
+					to: 'https://developers.cloudflare.com/pages',
+				},
+			],
+		},
+	];
+
+	return json({
+		menus,
+	});
+}
 
 export default function App() {
-  const [queryClient] = useState(
-    () =>
-      new QueryClient({
-        defaultOptions: {
-          queries: {
-            // With SSR, we usually want to set some default staleTime
-            // above 0 to avoid refetching immediately on the client
-            // staleTime: 2000,
-          },
-        },
-      }),
-  )
-  return (
-    <html lang="en">
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <Meta />
-        <Links />
-      </head>
-      <body>
-        <QueryClientProvider client={queryClient}>
-          <Outlet />
-          <ScrollRestoration />
-          <Scripts />
-          <LiveReload />
-        </QueryClientProvider>
-      </body>
-    </html>
-  );
+	const { menus } = useLoaderData<typeof loader>();
+
+	return (
+		<Document >
+		
+				<Outlet />
+	
+		</Document>
+	);
+}
+
+function Document({
+	children,
+	title,
+}: {
+	children: React.ReactNode;
+	title?: string;
+}) {
+	return (
+		<html lang="en">
+			<head>
+				<meta charSet="utf-8" />
+				{title ? <title>{title}</title> : null}
+				<Meta />
+				<Links />
+			</head>
+			<body style={{ backgroundImage: 'linear-gradient(to right, #3C4274, #4D1E62)' }}>
+				{children}
+				<ScrollRestoration />
+				<Scripts />
+			</body>
+		</html>
+	);
 }
 
 export function ErrorBoundary() {
-  const error = useRouteError();
-  console.log("form remix error boundary", error);
+	const error = useRouteError();
 
+	// Log the error to the console
+	console.error(error);
 
-  if (isRouteErrorResponse(error)) {
-    return (
-      <div>
-        <h1>
-          {error.status} {error.statusText}
-        </h1>
-        <p>{error.data}</p>
-      </div>
-    );
-  } else if (error instanceof Error) {
-    return (
-      <div>
-        <h1>Error</h1>
-        <p>{error.message}</p>
-        <p>The stack trace is:</p>
-        <pre>{error.stack}</pre>
-      </div>
-    );
-  } else {
-    return <h1>Unknown Error</h1>;
-  }
+	if (isRouteErrorResponse(error)) {
+		const title = `${error.status} ${error.statusText}`;
+
+		let message;
+		switch (error.status) {
+			case 401:
+				message =
+					'Oops! Looks like you tried to visit a page that you do not have access to.';
+				break;
+			case 404:
+				message =
+					'Oops! Looks like you tried to visit a page that does not exist.';
+				break;
+			default:
+				message = JSON.stringify(error.data, null, 2);
+				break;
+		}
+
+		return (
+			<></>
+		);
+	}
+
+	return (
+<></>
+	);
 }

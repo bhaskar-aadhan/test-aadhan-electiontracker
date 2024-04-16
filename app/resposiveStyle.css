@@ -1,0 +1,67 @@
+.scheduleBtn{
+	background-color: blue;
+}
+
+.tab_div {
+	
+	
+	
+  }
+  
+  .tabs {
+
+	 display: flex;
+	 justify-content: space-between;
+     
+  }
+  
+
+
+  .tab_ {
+	text-align: center;
+	cursor: pointer;
+	color: rgb(204, 209, 212);
+  }
+  
+  .tab_.active {
+	color: #fff; /* Active tab color */
+	border-bottom:solid #fff ;
+	transition: left 0.35s ease-in-out;
+  }
+  
+  .underline {
+	position: relative;
+	height: 3px;
+	background-color: #fff; /* Underline color */
+	transition: left 0.3s ease-in-out;
+  }
+  
+  
+
+
+  .snake-tab-container {
+	position: relative;
+  }
+  
+  .snake-tabs {
+	display: flex;
+  }
+  
+  .snake-tab {
+	flex: 1;
+	padding: 10px 20px;
+	text-align: center;
+	cursor: pointer;
+  }
+  
+  .snake-tab.active {
+	color: blue; /* Active tab color */
+  }
+  
+  .snake-underline {
+	position: absolute;
+	bottom: 0;
+	background-color: blue; /* Underline color */
+	transition: left 0.3s ease-in-out;
+  }
+  

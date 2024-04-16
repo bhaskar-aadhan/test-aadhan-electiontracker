@@ -1,50 +1,53 @@
-import { useState, useEffect } from "react";
-import type { MetaFunction } from "@remix-run/cloudflare";
-import { Link } from "@remix-run/react";
-import { aadhanBlackLogo } from "~/assets/images";
+import type { LoaderFunctionArgs } from '@remix-run/cloudflare';
+import { json, useLoaderData } from '@remix-run/react';
+import { getFileContentWithCache } from '~/services/github.server';
+import { parse } from '~/services/markdoc.server';
+import DropDown from '~/Components/DropDown';
+import ScheduleButtons from '~/Components/Schedulebutton/ScheduleButtons';
+import IndiaMap from '~/Components/Map/IndiaMap';
+import Navbar from '~/Components/Navbar/Navbar';
+import Tab from '~/Components/Tab/Tab';
+import Zoom from '../Components/Zoom';
+import * as topojson from 'topojson-client';
+import SwitchTab from '../Components/SwitchTab.jsx/SwitchTab'
+import indiaJson from '~/MapData/india.json'
+import General from '~/Components/GeneralElections/General'
+import Assembly from '~/Components/Assembly Elections/Assembly'
 
-export const meta: MetaFunction = () => {
-  return [
-    { title: "Aadhan Election Tracker" },
-    { name: "description", content: "Aadhan Media Short News App" },
-  ];
-};
+
+export async function loader({ context }: LoaderFunctionArgs) {
+	const content = await getFileContentWithCache(context, 'README.md');
+
+	return json(
+		{
+			content: parse(content),
+		},
+		{
+			headers: {
+				'Cache-Control': 'public, max-age=3600',
+			},
+		},
+	);
+}
+
 
 export default function Index() {
-  const [mounted, setMounted] = useState(false);
+	const { content } = useLoaderData<typeof loader>();
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  //viewport finder logic
-  // const [viewportWidth, setViewportWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
-  // const handleResize = () => {
-  //   setViewportWidth(window.innerWidth);
-  // };
-  // useEffect(() => {
-  //   if (typeof window !== 'undefined') {
-  //     setViewportWidth(window.innerWidth);
-  //     window.addEventListener('resize', handleResize);
-
-  //     return () => {
-  //       window.removeEventListener('resize', handleResize);
-  //     }
-  //   }
-  // }, [])
-
-  if (!mounted) {
-    return null; // return this null to avoid hydration errors
-  }
-  return (
-    <div className="min-h-screen w-full grid place-content-center">
-      <div className="w-full mx-auto border-[1px] border-red-300 table__shadow rounded-md" style={{padding:'2rem'}}>
-        <img src={aadhanBlackLogo} alt="aadhan logo" className="block mx-auto" />
-        <div className="route-links-container my-5 flex flex-col justify-center items-start gap-2">
-            <Link className="route-link text-blue-700 hover:text-blue-500 underline" to="/electionresults">Election Results</Link>
-            <Link className="route-link text-blue-700 hover:text-blue-500 underline" to="/constituencyresults">Constituency Results</Link>
-        </div>
-      </div>
-    </div>
-  );
+	return (
+		<div style={{  maxWidth: '700px',
+		margin: '0 auto',
+		padding: '20px',}}  className="flex flex-col px-5 py-5 ">
+			<div >
+				<Navbar />
+				<Tab />
+			</div>
+            
+			<div className='mt-8 border p-2 bg-white' >
+			
+                <SwitchTab tab1={< General/>} tab2={<Assembly/>}/>
+				
+			</div>
+		</div>
+	);
 }
